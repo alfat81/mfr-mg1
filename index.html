@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ru" prefix="og: https://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Официальный сайт Комиссии по фигурному управлению мотоциклом (мотоджимхане) при Мотоциклетной Федерации России. Новости, события, соревнования.">
+    <meta name="keywords" content="мотоджимхана, фигурное управление мотоциклом, МФР, мотоспорт, соревнования, мотоциклетная федерация">
+    <meta property="og:title" content="Главная | Комиссия по фигурному управлению мотоциклом | МФР">
+    <meta property="og:description" content="Официальный сайт Комиссии по фигурному управлению мотоциклом при МФР">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mfr-mg.ru/">
+    
+    <title>Главная | Комиссия по фигурному управлению мотоциклом | МФР</title>
+    
+    <!-- Предзагрузка критических ресурсов -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;600;700&display=swap" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    
+    <!-- Основные стили -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Шрифты с font-display: swap -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+</head>
+<body>
+    <div class="container">
+        <!-- Шапка сайта -->
+        <header class="header">
+            <div class="logo-container">
+                <div class="logo-left">
+                    <picture>
+                        <source srcset="images/logo_sm.webp" type="image/webp">
+                        <source srcset="images/logo_sm.png" type="image/png">
+                        <img src="images/logo_sm.png" alt="Логотип комиссии по фигурному управлению мотоциклом" class="logo-img" width="80" height="80" loading="eager">
+                    </picture>
+                </div>
+                <div class="logo-right">
+                    <div class="official-name">МОТОЦИКЛЕТНАЯ ФЕДЕРАЦИЯ РОССИИ</div>
+                    <div class="commission-name">КОМИССИЯ ПО ФИГУРНОМУ УПРАВЛЕНИЮ МОТОЦИКЛОМ (МОТОДЖИМХАНА)</div>
+                </div>
+            </div>
+            
+            <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <!-- Основная навигация -->
+            <nav class="main-nav" aria-label="Основная навигация">
+                <ul>
+                    <li><a href="index.html" class="nav-link active" aria-current="page">Главная</a></li>
+                    <li><a href="about.html" class="nav-link">О комиссии</a></li>
+                    <li><a href="structure.html" class="nav-link">Структура комиссии</a></li>
+                    <li><a href="calendar.html" class="nav-link">Календарь соревнований</a></li>
+                    <li><a href="documents.html" class="nav-link">Полезные документы</a></li>
+                    <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+                    <li><a href="partners.html" class="nav-link">Партнеры</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Мобильное меню -->
+            <nav class="mobile-menu" aria-label="Мобильная навигация" hidden>
+                <div class="mobile-nav">
+                    <ul>
+                        <li><a href="index.html" class="nav-link active">Главная</a></li>
+                        <li><a href="about.html" class="nav-link">О комиссии</a></li>
+                        <li><a href="structure.html" class="nav-link">Структура комиссии</a></li>
+                        <li><a href="calendar.html" class="nav-link">Календарь соревнований</a></li>
+                        <li><a href="documents.html" class="nav-link">Полезные документы</a></li>
+                        <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+                        <li><a href="partners.html" class="nav-link">Партнеры</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Основное содержимое -->
+        <main class="content">
+            <!-- Герой-секция -->
+            <section class="hero-section" aria-labelledby="hero-title">
+                <div class="hero-content">
+                    <h1 id="hero-title">Мотоджимхана России</h1>
+                    <p class="hero-subtitle">Фигурное управление мотоциклом - спорт мастерства и точности</p>
+                    <div class="hero-actions">
+                        <a href="calendar.html" class="btn btn-primary">
+                            <i class="fas fa-calendar-alt"></i> Календарь соревнований
+                        </a>
+                        <a href="documents.html" class="btn btn-secondary">
+                            <i class="fas fa-file-alt"></i> Правила и документы
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <picture>
+                        <source srcset="images/hero-moto.webp" type="image/webp">
+                        <source srcset="images/hero-moto.jpg" type="image/jpeg">
+                        <img src="images/hero-moto.jpg" alt="Спортсмен выполняет фигуру на мотоцикле" loading="eager" width="600" height="400">
+                    </picture>
+                </div>
+            </section>
+
+            <!-- Ближайшие события -->
+            <section class="events-section section" aria-labelledby="events-title">
+                <h2 id="events-title" class="section-title">Ближайшие события</h2>
+                <div class="events-grid">
+                    <article class="event-card">
+                        <div class="event-date">
+                            <span class="event-day">15</span>
+                            <span class="event-month">Май</span>
+                        </div>
+                        <div class="event-content">
+                            <h3>Кубок России. Этап 1</h3>
+                            <p class="event-location"><i class="fas fa-map-marker-alt"></i> Москва, Мотодром "Сокол"</p>
+                            <p class="event-description">Первый этап Кубка России по мотоджимхане. Регистрация открыта до 10 мая.</p>
+                            <a href="calendar.html#event1" class="event-link">Подробнее <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    
+                    <article class="event-card">
+                        <div class="event-date">
+                            <span class="event-day">12</span>
+                            <span class="event-month">Июнь</span>
+                        </div>
+                        <div class="event-content">
+                            <h3>Чемпионат Центрального федерального округа</h3>
+                            <p class="event-location"><i class="fas fa-map-marker-alt"></i> Нижний Новгород</p>
+                            <p class="event-description">Отборочные соревнования для участия в Чемпионате России.</p>
+                            <a href="calendar.html#event2" class="event-link">Подробнее <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    
+                    <article class="event-card">
+                        <div class="event-date">
+                            <span class="event-day">05</span>
+                            <span class="event-month">Июль</span>
+                        </div>
+                        <div class="event-content">
+                            <h3>Семинар для судей</h3>
+                            <p class="event-location"><i class="fas fa-map-marker-alt"></i> Онлайн</p>
+                            <p class="event-description">Обучение и сертификация судей по мотоджимхане. Бесплатно для членов МФР.</p>
+                            <a href="calendar.html#event3" class="event-link">Подробнее <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="events-actions">
+                    <a href="calendar.html" class="btn btn-outline">
+                        <i class="fas fa-calendar"></i> Весь календарь
+                    </a>
+                </div>
+            </section>
+
+            <!-- О виде спорта -->
+            <section class="sport-section section" style="background-color: var(--gray-100);">
+                <div class="sport-container">
+                    <div class="sport-image">
+                        <picture>
+                            <source srcset="images/sport-about.webp" type="image/webp">
+                            <source srcset="images/sport-about.jpg" type="image/jpeg">
+                            <img src="images/sport-about.jpg" alt="Трасса мотоджимханы с конусами" loading="lazy" width="500" height="350">
+                        </picture>
+                    </div>
+                    <div class="sport-content">
+                        <h2 class="section-title">Что такое мотоджимхана?</h2>
+                        <p>Мотоджимхана (фигурное управление мотоциклом) - это вид мотоспорта, в котором участники на время проходят специальную трассу, обозначенную конусами.</p>
+                        <p>Главные особенности:</p>
+                        <ul class="sport-features">
+                            <li><i class="fas fa-check-circle"></i> <strong>Доступность</strong> - подходит для мотоциклистов любого уровня</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Безопасность</strong> - низкие скорости, полная экипировка</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Техника</strong> - развитие навыков управления мотоциклом</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Сообщество</strong> - дружеская атмосфера и взаимопомощь</li>
+                        </ul>
+                        <a href="about.html" class="btn btn-primary">
+                            <i class="fas fa-info-circle"></i> Узнать больше о комиссии
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Преимущества -->
+            <section class="benefits-section section" aria-labelledby="benefits-title">
+                <h2 id="benefits-title" class="section-title">Почему мотоджимхана?</h2>
+                <div class="benefits-grid">
+                    <article class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Обучение и развитие</h3>
+                        <p>Лучший способ улучшить навыки управления мотоциклом в безопасных условиях.</p>
+                    </article>
+                    
+                    <article class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Сообщество</h3>
+                        <p>Присоединяйтесь к сообществу единомышленников по всей России.</p>
+                    </article>
+                    
+                    <article class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Безопасность</h3>
+                        <p>Все соревнования проводятся с соблюдением строгих мер безопасности.</p>
+                    </article>
+                    
+                    <article class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3>Спортивные разряды</h3>
+                        <p>Возможность получить официальные спортивные разряды и звания.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Новости -->
+            <section class="news-section section" style="background-color: var(--gray-100);" aria-labelledby="news-title">
+                <h2 id="news-title" class="section-title">Последние новости</h2>
+                <div class="news-grid">
+                    <article class="news-card">
+                        <div class="news-image">
+                            <picture>
+                                <source srcset="images/news1.webp" type="image/webp">
+                                <source srcset="images/news1.jpg" type="image/jpeg">
+                                <img src="images/news1.jpg" alt="Итоги чемпионата 2024" loading="lazy" width="400" height="250">
+                            </picture>
+                        </div>
+                        <div class="news-content">
+                            <div class="news-date">10.04.2024</div>
+                            <h3>Итоги Чемпионата России 2024</h3>
+                            <p>Подведены итоги Чемпионата России по мотоджимхане, который прошел в Москве.</p>
+                            <a href="#" class="news-link">Читать далее</a>
+                        </div>
+                    </article>
+                    
+                    <article class="news-card">
+                        <div class="news-image">
+                            <picture>
+                                <source srcset="images/news2.webp" type="image/webp">
+                                <source srcset="images/news2.jpg" type="image/jpeg">
+                                <img src="images/news2.jpg" alt="Новые правила соревнований" loading="lazy" width="400" height="250">
+                            </picture>
+                        </div>
+                        <div class="news-content">
+                            <div class="news-date">28.03.2024</div>
+                            <h3>Обновление правил на 2024 год</h3>
+                            <p>Комиссия утвердила изменения в правилах проведения соревнований.</p>
+                            <a href="#" class="news-link">Читать далее</a>
+                        </div>
+                    </article>
+                    
+                    <article class="news-card">
+                        <div class="news-image">
+                            <picture>
+                                <source srcset="images/news3.webp" type="image/webp">
+                                <source srcset="images/news3.jpg" type="image/jpeg">
+                                <img src="images/news3.jpg" alt="Детская школа мотоджимханы" loading="lazy" width="400" height="250">
+                            </picture>
+                        </div>
+                        <div class="news-content">
+                            <div class="news-date">15.03.2024</div>
+                            <h3>Открытие детской школы</h3>
+                            <p>В Нижнем Новгороде начала работу детско-юношеская школа мотоджимханы.</p>
+                            <a href="#" class="news-link">Читать далее</a>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="news-actions">
+                    <a href="#" class="btn btn-outline">
+                        <i class="fas fa-newspaper"></i> Все новости
+                    </a>
+                </div>
+            </section>
+
+            <!-- Партнеры -->
+            <section class="partners-section section" aria-labelledby="partners-title">
+                <h2 id="partners-title" class="section-title">Наши партнеры</h2>
+                <div class="partners-grid">
+                    <a href="partners.html" class="partner-logo">
+                        <picture>
+                            <source srcset="images/partner1.webp" type="image/webp">
+                            <source srcset="images/partner1.png" type="image/png">
+                            <img src="images/partner1.png" alt="Партнер 1" loading="lazy" width="150" height="80">
+                        </picture>
+                    </a>
+                    <a href="partners.html" class="partner-logo">
+                        <picture>
+                            <source srcset="images/partner2.webp" type="image/webp">
+                            <source srcset="images/partner2.png" type="image/png">
+                            <img src="images/partner2.png" alt="Партнер 2" loading="lazy" width="150" height="80">
+                        </picture>
+                    </a>
+                    <a href="partners.html" class="partner-logo">
+                        <picture>
+                            <source srcset="images/partner3.webp" type="image/webp">
+                            <source srcset="images/partner3.png" type="image/png">
+                            <img src="images/partner3.png" alt="Партнер 3" loading="lazy" width="150" height="80">
+                        </picture>
+                    </a>
+                    <a href="partners.html" class="partner-logo">
+                        <picture>
+                            <source srcset="images/partner4.webp" type="image/webp">
+                            <source srcset="images/partner4.png" type="image/png">
+                            <img src="images/partner4.png" alt="Партнер 4" loading="lazy" width="150" height="80">
+                        </picture>
+                    </a>
+                </div>
+                
+                <div class="partners-actions">
+                    <a href="partners.html" class="btn btn-outline">
+                        <i class="fas fa-handshake"></i> Все партнеры
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <!-- Подвал сайта -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logos">
+                    <a href="https://www.mfr.ru/" target="_blank" rel="noopener noreferrer">
+                        <picture>
+                            <source srcset="images/mfr_logo.webp" type="image/webp">
+                            <source srcset="images/mfr_logo.png" type="image/png">
+                            <img src="images/mfr_logo.png" alt="Логотип Мотоциклетной Федерации России" width="120" height="60" loading="lazy">
+                        </picture>
+                    </a>
+                    <a href="https://www.minsport.gov.ru/" target="_blank" rel="noopener noreferrer">
+                        <picture>
+                            <source srcset="images/logo_minsport.webp" type="image/webp">
+                            <source srcset="images/logo_minsport.png" type="image/png">
+                            <img src="images/logo_minsport.png" alt="Логотип Министерства спорта РФ" width="120" height="60" loading="lazy">
+                        </picture>
+                    </a>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="documents.html" class="document-link">Документы комиссии</a>
+                    <a href="https://www.mfr.ru/" target="_blank" rel="noopener noreferrer">Официальный сайт МФР</a>
+                    <a href="https://www.mfr.ru/disciplines/motodzhimkhana/" target="_blank" rel="noopener noreferrer">Страница мотоджимханы на сайте МФР</a>
+                </div>
+                
+                <div class="footer-contacts">
+                    <p><i class="fas fa-envelope" aria-hidden="true"></i> serovdima@list.ru</p>
+                    <p><i class="fas fa-phone" aria-hidden="true"></i> +7 (977) 823-63-90</p>
+                </div>
+                
+                <div class="copyright">
+                    <p>© 2025 Мотоциклетная Федерация России</p>
+                    <p class="powered-by">powered by Motogymkhana NN</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Скрипты -->
+    <script>
+        // Активация мобильного меню
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            if (menuToggle && mobileMenu) {
+                menuToggle.addEventListener('click', function() {
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', !isExpanded);
+                    mobileMenu.hidden = isExpanded;
+                    
+                    // Анимация иконки
+                    const icon = this.querySelector('i');
+                    if (isExpanded) {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    } else {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                    }
+                });
+            }
+            
+            // Плавная прокрутка для якорных ссылок
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Анимация карточек при прокрутке
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                    }
+                });
+            }, observerOptions);
+            
+            // Наблюдаем за карточками событий, преимуществ и новостей
+            document.querySelectorAll('.event-card, .benefit-card, .news-card').forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
