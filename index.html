@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Официальный сайт Комиссии по фигурному управлению мотоциклом (мотоджимхане) при Мотоциклетной Федерации России. Новости, соревнования, документы.">
-    <meta name="keywords" content="мотоджимхана, фигурное управление мотоциклом, МФР, Мотоциклетная Федерация России, мотоспорт, соревнования, кубок России">
+    <meta name="description" content="Официальный сайт Комиссии по фигурному управлению мотоциклом (мотоджимхане) при Мотоциклетной Федерации России. Новости, события, соревнования.">
+    <meta name="keywords" content="мотоджимхана, фигурное управление мотоциклом, МФР, мотоспорт, соревнования, мотоциклетная федерация">
     <meta property="og:title" content="Главная | Комиссия по фигурному управлению мотоциклом | МФР">
     <meta property="og:description" content="Официальный сайт Комиссии по фигурному управлению мотоциклом при МФР">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mfr-mg.ru/index.html">
+    <meta property="og:url" content="https://mfr-mg.ru/">
+    
     <title>Главная | Комиссия по фигурному управлению мотоциклом | МФР</title>
     
     <!-- Предзагрузка критических ресурсов -->
@@ -23,180 +24,375 @@
     <style>
         /* Дополнительные стили для главной страницы */
         
+        /* Переменные для главной страницы */
+        :root {
+            --primary-color: #e74c3c;
+            --secondary-color: #3498db;
+            --accent-color: #f1c40f;
+            --dark-color: #2c3e50;
+            --light-color: #ecf0f1;
+            --gray-light: #f8f9fa;
+            --gray-medium: #95a5a6;
+            --gray-dark: #7f8c8d;
+        }
+        
         /* Герой-секция главной страницы */
-        .main-hero {
-            min-height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            padding: 60px 20px;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/hero-main.webp');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            animation: slowBackgroundMove 40s ease-in-out infinite;
-        }
-        
-        .main-hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 900px;
-        }
-        
-        .main-hero h1 {
-            font-size: 4rem;
-            margin-bottom: 1.5rem;
-            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
-            animation: fadeInUp 1s ease-out;
-        }
-        
-        .main-hero p {
-            font-size: 1.8rem;
-            margin-bottom: 2.5rem;
-            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
-            animation: fadeInUp 1s ease-out 0.3s both;
-        }
-        
-        .hero-cta {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-            animation: fadeInUp 1s ease-out 0.6s both;
-        }
-        
-        .btn-hero {
-            padding: 15px 35px;
-            font-size: 1.2rem;
-            border-radius: 50px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-hero-primary {
-            background: linear-gradient(to right, #e74c3c, #c0392b);
-            color: white;
-            border: none;
-        }
-        
-        .btn-hero-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-        
-        .btn-hero-primary:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(231, 76, 60, 0.4);
-        }
-        
-        .btn-hero-secondary:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-            transform: translateY(-5px);
-        }
-        
-        /* Секция плиток */
-        .tiles-section {
+        .hero-section {
+            min-height: 85vh;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin: 60px 0;
-        }
-        
-        .tile {
-            background-color: white;
-            border-radius: 12px;
-            padding: 35px 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            transition: all 0.4s ease;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
+            grid-template-columns: 1fr 1fr;
             align-items: center;
+            gap: 60px;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, rgba(44, 62, 80, 0.95) 0%, rgba(52, 152, 219, 0.9) 100%);
+            color: white;
             position: relative;
             overflow: hidden;
         }
         
-        .tile::before {
+        .hero-section::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
-            height: 6px;
-            border-radius: 12px 12px 0 0;
+            bottom: 0;
+            background-image: url('images/hero-bg-pattern.png');
+            background-size: 300px;
+            opacity: 0.1;
+            z-index: 1;
         }
         
-        .tile-blue::before { background: linear-gradient(to right, #3498db, #2980b9); }
-        .tile-red::before { background: linear-gradient(to right, #e74c3c, #c0392b); }
-        .tile-yellow::before { background: linear-gradient(to right, #f1c40f, #f39c12); }
-        .tile-green::before { background: linear-gradient(to right, #2ecc71, #27ae60); }
-        .tile-orange::before { background: linear-gradient(to right, #e67e22, #d35400); }
-        .tile-purple::before { background: linear-gradient(to right, #9b59b6, #8e44ad); }
-        
-        .tile:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
         }
         
-        .tile-icon {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
+        .hero-section h1 {
+            font-size: 3.8rem;
+            margin-bottom: 1.5rem;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 1s ease-out;
         }
         
-        .tile-blue .tile-icon { color: #3498db; }
-        .tile-red .tile-icon { color: #e74c3c; }
-        .tile-yellow .tile-icon { color: #f1c40f; }
-        .tile-green .tile-icon { color: #2ecc71; }
-        .tile-orange .tile-icon { color: #e67e22; }
-        .tile-purple .tile-icon { color: #9b59b6; }
+        .hero-subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 2.5rem;
+            color: var(--light-color);
+            line-height: 1.4;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
         
-        .tile-title {
-            font-size: 1.5rem;
+        .hero-actions {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+        
+        .hero-image {
+            position: relative;
+            z-index: 2;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: transform 0.5s ease;
+            animation: fadeInRight 1s ease-out 0.9s both;
+        }
+        
+        .hero-image:hover {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        /* Кнопки главной страницы */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 32px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(to right, var(--primary-color), #c0392b);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(231, 76, 60, 0.4);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(to right, var(--secondary-color), #2980b9);
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(52, 152, 219, 0.4);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--dark-color);
+            border: 2px solid var(--dark-color);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--dark-color);
+            color: white;
+            transform: translateY(-5px);
+        }
+        
+        /* Секция событий */
+        .events-section {
+            padding: 80px 0;
+        }
+        
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        
+        .event-card {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            display: flex;
+            height: 100%;
+        }
+        
+        .event-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .event-date {
+            flex: 0 0 100px;
+            background: linear-gradient(to bottom, var(--primary-color), #c0392b);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .event-day {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+        
+        .event-month {
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-top: 5px;
+        }
+        
+        .event-content {
+            flex: 1;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .event-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+        
+        .event-location {
+            color: var(--primary-color);
+            font-size: 0.95rem;
             margin-bottom: 15px;
-            color: #2c3e50;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
         
-        .tile-text {
-            color: #555;
-            margin-bottom: 25px;
+        .event-description {
+            color: var(--gray-dark);
             line-height: 1.6;
+            margin-bottom: 20px;
             flex-grow: 1;
         }
         
-        .tile-link {
-            display: inline-block;
-            padding: 10px 25px;
-            background: linear-gradient(to right, #2c3e50, #34495e);
-            color: white;
+        .event-link {
+            color: var(--secondary-color);
             text-decoration: none;
-            border-radius: 50px;
             font-weight: 600;
-            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: gap 0.3s ease;
         }
         
-        .tile-link:hover {
-            background: linear-gradient(to right, #34495e, #2c3e50);
-            transform: scale(1.05);
+        .event-link:hover {
+            gap: 12px;
+            color: var(--primary-color);
+        }
+        
+        .events-actions {
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        /* Секция о спорте */
+        .sport-section {
+            padding: 100px 0;
+            background-color: var(--gray-light) !important;
+        }
+        
+        .sport-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .sport-image {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            transition: transform 0.5s ease;
+        }
+        
+        .sport-image:hover {
+            transform: scale(1.03);
+        }
+        
+        .sport-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .sport-content .section-title {
+            text-align: left;
+            margin-bottom: 25px;
+        }
+        
+        .sport-content .section-title::after {
+            left: 0;
+            transform: none;
+        }
+        
+        .sport-content p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+        }
+        
+        .sport-features {
+            list-style: none;
+            margin: 25px 0 35px;
+            padding: 0;
+        }
+        
+        .sport-features li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 1.05rem;
+        }
+        
+        .sport-features i {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+        
+        .sport-features strong {
+            color: var(--dark-color);
+        }
+        
+        /* Секция преимуществ */
+        .benefits-section {
+            padding: 80px 0;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .benefit-card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 35px 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            border-top: 4px solid transparent;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            border-top-color: var(--secondary-color);
+        }
+        
+        .benefit-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+        
+        .benefit-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        
+        .benefit-card p {
+            color: var(--gray-dark);
+            line-height: 1.6;
         }
         
         /* Секция новостей */
-        .announcements-section {
-            margin: 80px 0;
+        .news-section {
+            padding: 80px 0;
+            background-color: var(--gray-light) !important;
         }
         
         .news-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 30px;
-            margin-top: 40px;
+            margin: 50px 0;
         }
         
         .news-card {
@@ -205,8 +401,6 @@
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
             transition: all 0.4s ease;
-            display: flex;
-            flex-direction: column;
             height: 100%;
         }
         
@@ -215,432 +409,294 @@
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
         }
         
-        .news-card-header {
-            padding: 25px 25px 15px;
-            border-bottom: 1px solid #eee;
+        .news-image {
+            height: 220px;
+            overflow: hidden;
+        }
+        
+        .news-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .news-card:hover .news-image img {
+            transform: scale(1.05);
+        }
+        
+        .news-content {
+            padding: 25px;
         }
         
         .news-date {
             font-size: 0.9rem;
-            color: #7f8c8d;
-            margin-bottom: 10px;
+            color: var(--primary-color);
             font-weight: 600;
+            margin-bottom: 10px;
         }
         
-        .news-card h3 {
+        .news-content h3 {
             font-size: 1.4rem;
-            color: #2c3e50;
             margin-bottom: 15px;
+            color: var(--dark-color);
             line-height: 1.4;
         }
         
-        .news-card-content {
-            padding: 0 25px 20px;
-            flex-grow: 1;
+        .news-content p {
+            color: var(--gray-dark);
+            line-height: 1.6;
+            margin-bottom: 20px;
         }
         
-        .news-card p {
-            color: #555;
-            line-height: 1.7;
-        }
-        
-        .news-card-footer {
-            padding: 20px 25px 25px;
-            border-top: 1px solid #eee;
-        }
-        
-        .read-more {
-            color: #e74c3c;
+        .news-link {
+            color: var(--secondary-color);
             text-decoration: none;
             font-weight: 600;
             display: inline-flex;
             align-items: center;
-            transition: all 0.3s ease;
+            gap: 8px;
         }
         
-        .read-more::after {
+        .news-link::after {
             content: '→';
-            margin-left: 8px;
             transition: transform 0.3s ease;
         }
         
-        .read-more:hover {
-            color: #c0392b;
-        }
-        
-        .read-more:hover::after {
+        .news-link:hover::after {
             transform: translateX(5px);
         }
         
-        /* Секция галереи */
-        .gallery-section {
-            margin: 80px 0;
+        .news-actions {
+            text-align: center;
+            margin-top: 40px;
         }
         
-        .gallery-grid {
+        /* Секция партнеров */
+        .partners-section {
+            padding: 80px 0;
+        }
+        
+        .partners-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            align-items: center;
+            justify-items: center;
+            margin: 50px 0;
         }
         
-        .gallery-item {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: all 0.4s ease;
-            position: relative;
-        }
-        
-        .gallery-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-        }
-        
-        .gallery-item img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.5s ease;
-        }
-        
-        .gallery-item:hover img {
-            transform: scale(1.05);
-        }
-        
-        .gallery-caption {
-            padding: 20px;
-            background-color: white;
-            text-align: center;
-            font-weight: 600;
-            color: #2c3e50;
-        }
-        
-        .gallery-cta {
-            text-align: center;
-            margin-top: 40px;
-        }
-        
-        /* Кнопки */
-        .btn {
-            display: inline-block;
-            padding: 14px 32px;
-            background: linear-gradient(to right, #e74c3c, #c0392b);
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 1rem;
-            text-align: center;
-        }
-        
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(231, 76, 60, 0.3);
-        }
-        
-        .btn-secondary {
-            background: linear-gradient(to right, #3498db, #2980b9);
-        }
-        
-        .btn-secondary:hover {
-            box-shadow: 0 10px 20px rgba(52, 152, 219, 0.3);
-        }
-        
-        /* Модальные окна */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.7);
-            z-index: 2000;
+        .partner-logo {
+            display: flex;
             align-items: center;
             justify-content: center;
             padding: 20px;
-        }
-        
-        .modal.active {
-            display: flex;
-            animation: fadeIn 0.3s ease-out;
-        }
-        
-        .modal-content {
             background-color: white;
-            border-radius: 12px;
-            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            height: 120px;
             width: 100%;
-            max-height: 90vh;
-            overflow-y: auto;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            animation: slideUp 0.4s ease-out;
         }
         
-        .modal-header {
-            padding: 25px 30px 20px;
-            border-bottom: 1px solid #eee;
+        .partner-logo:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .partner-logo img {
+            max-width: 150px;
+            max-height: 80px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+        
+        .partners-actions {
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        /* Подвал главной страницы */
+        .footer-contacts {
+            text-align: center;
+            margin: 25px 0;
+        }
+        
+        .footer-contacts p {
+            margin-bottom: 10px;
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: var(--light-color);
         }
         
-        .modal-header h2 {
-            margin: 0;
-            color: #2c3e50;
+        .footer-contacts i {
+            color: var(--primary-color);
         }
         
-        .close-modal {
-            font-size: 1.8rem;
-            color: #95a5a6;
-            cursor: pointer;
-            line-height: 1;
+        .document-link {
+            color: var(--light-color);
+            text-decoration: none;
             transition: color 0.3s ease;
         }
         
-        .close-modal:hover {
-            color: #e74c3c;
+        .document-link:hover {
+            color: var(--primary-color);
         }
         
-        .modal-body {
-            padding: 25px 30px;
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #2c3e50;
-        }
-        
-        .form-control {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-        }
-        
-        .form-control:focus {
-            border-color: #3498db;
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
-        }
-        
-        .password-hint {
+        .powered-by {
             font-size: 0.9rem;
-            color: #7f8c8d;
-            margin-top: 8px;
+            color: var(--gray-medium);
+            font-style: italic;
+            margin-top: 5px;
         }
         
-        /* Админ-панель */
-        .admin-tabs {
-            display: flex;
-            border-bottom: 1px solid #eee;
-            margin-bottom: 25px;
+        /* Анимации для главной страницы */
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
         
-        .tab-btn {
-            padding: 12px 20px;
-            background: none;
-            border: none;
-            border-bottom: 3px solid transparent;
-            font-weight: 600;
-            color: #7f8c8d;
-            cursor: pointer;
-            transition: all 0.3s ease;
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
         
-        .tab-btn:hover {
-            color: #2c3e50;
+        /* Анимации при скролле */
+        .animate-in {
+            animation: fadeInUp 0.8s ease-out forwards;
         }
         
-        .tab-btn.active {
-            color: #e74c3c;
-            border-bottom-color: #e74c3c;
-        }
-        
-        .tab-content {
-            display: none;
-        }
-        
-        .tab-content.active {
-            display: block;
-            animation: fadeIn 0.5s ease-out;
-        }
-        
-        .help-text {
-            font-size: 0.9rem;
-            color: #7f8c8d;
-            margin-top: 8px;
-        }
-        
-        .admin-list {
-            margin-top: 30px;
-            border: 1px solid #eee;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        
-        .admin-list-item {
-            padding: 15px 20px;
-            border-bottom: 1px solid #eee;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .admin-list-item:last-child {
-            border-bottom: none;
-        }
-        
-        .admin-list-item .competition-info h4 {
-            margin: 0 0 5px 0;
-            color: #2c3e50;
-        }
-        
-        .admin-list-item .competition-info p {
-            margin: 0;
-            color: #7f8c8d;
-            font-size: 0.9rem;
-        }
-        
-        .admin-actions {
-            display: flex;
-            gap: 10px;
-        }
-        
-        .btn-icon {
-            padding: 8px 12px;
-            background: none;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            cursor: pointer;
-            color: #7f8c8d;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-icon:hover {
-            background-color: #f9f9f9;
-            color: #2c3e50;
-        }
-        
-        .btn-icon.delete:hover {
-            background-color: #ffeaea;
-            color: #e74c3c;
-            border-color: #e74c3c;
-        }
-        
-        /* Адаптивные стили */
+        /* Адаптивные стили для главной страницы */
         @media (max-width: 992px) {
-            .main-hero h1 {
+            .hero-section {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding: 60px 20px;
+            }
+            
+            .hero-content {
+                max-width: 100%;
+            }
+            
+            .hero-section h1 {
                 font-size: 3rem;
             }
             
-            .main-hero p {
+            .hero-subtitle {
                 font-size: 1.5rem;
             }
             
-            .hero-cta {
-                flex-direction: column;
-                align-items: center;
+            .hero-actions {
+                justify-content: center;
             }
             
-            .btn-hero {
-                width: 100%;
-                max-width: 300px;
+            .hero-image {
+                transform: none;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+            
+            .hero-image:hover {
+                transform: scale(1.02);
+            }
+            
+            .sport-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .sport-content .section-title {
+                text-align: center;
+            }
+            
+            .sport-content .section-title::after {
+                left: 50%;
+                transform: translateX(-50%);
             }
         }
         
         @media (max-width: 768px) {
-            .main-hero {
-                min-height: 70vh;
-                background-attachment: scroll;
+            .hero-section {
+                min-height: auto;
             }
             
-            .main-hero h1 {
+            .hero-section h1 {
                 font-size: 2.5rem;
             }
             
-            .main-hero p {
+            .hero-subtitle {
                 font-size: 1.3rem;
             }
             
-            .tiles-section {
-                grid-template-columns: 1fr;
-                gap: 20px;
+            .hero-actions {
+                flex-direction: column;
+                align-items: center;
             }
             
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+            
+            .events-grid,
+            .benefits-grid,
             .news-grid {
                 grid-template-columns: 1fr;
             }
             
-            .gallery-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .admin-tabs {
+            .event-card {
                 flex-direction: column;
             }
             
-            .tab-btn {
-                border-bottom: none;
-                border-right: 3px solid transparent;
-                text-align: left;
+            .event-date {
+                flex: none;
+                flex-direction: row;
+                justify-content: center;
+                gap: 15px;
+                padding: 15px;
             }
             
-            .tab-btn.active {
-                border-right-color: #e74c3c;
-                border-bottom-color: transparent;
+            .event-day {
+                font-size: 2rem;
+            }
+            
+            .partners-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
             }
         }
         
         @media (max-width: 576px) {
-            .gallery-grid {
+            .hero-section h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .partners-grid {
                 grid-template-columns: 1fr;
             }
             
-            .modal-content {
-                padding: 15px;
-            }
-            
-            .modal-header {
-                padding: 20px 15px;
-            }
-            
-            .modal-body {
-                padding: 20px 15px;
-            }
-        }
-        
-        /* Анимации */
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
+            .partner-logo {
+                height: 100px;
             }
         }
     </style>
@@ -672,6 +728,7 @@
                     <div class="commission-name">КОМИССИЯ ПО ФИГУРНОМУ УПРАВЛЕНИЮ МОТОЦИКЛОМ (МОТОДЖИМХАНА)</div>
                 </div>
             </div>
+            
             <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false">
                 <i class="fas fa-bars"></i>
             </button>
@@ -686,7 +743,6 @@
                     <li><a href="documents.html" class="nav-link">Полезные документы</a></li>
                     <li><a href="contacts.html" class="nav-link">Контакты</a></li>
                     <li><a href="partners.html" class="nav-link">Партнеры</a></li>
-                    <li><a href="#" class="nav-link admin-link" id="admin-link"><i class="fas fa-user-shield"></i> Админка</a></li>
                 </ul>
             </nav>
             
@@ -701,143 +757,254 @@
                         <li><a href="documents.html" class="nav-link">Полезные документы</a></li>
                         <li><a href="contacts.html" class="nav-link">Контакты</a></li>
                         <li><a href="partners.html" class="nav-link">Партнеры</a></li>
-                        <li><a href="#" class="nav-link admin-link" id="mobile-admin-link"><i class="fas fa-user-shield"></i> Админка</a></li>
                     </ul>
                 </div>
             </nav>
         </header>
-        
+
         <!-- Основное содержимое -->
         <main class="content">
             <!-- Герой-секция -->
-            <section class="main-hero" aria-labelledby="main-hero-title">
-                <div class="main-hero-content">
-                    <h1 id="main-hero-title">Комиссия по фигурному управлению мотоциклом</h1>
-                    <p>Развитие мотоджимханы в России. Организация соревнований, подготовка спортсменов, популяризация мотоспорта.</p>
-                    <div class="hero-cta">
-                        <a href="calendar.html" class="btn btn-hero btn-hero-primary">Календарь соревнований</a>
-                        <a href="about.html" class="btn btn-hero btn-hero-secondary">О комиссии</a>
+            <section class="hero-section" aria-labelledby="hero-title">
+                <div class="hero-content">
+                    <h1 id="hero-title">Мотоджимхана России</h1>
+                    <p class="hero-subtitle">Фигурное управление мотоциклом - спорт мастерства и точности</p>
+                    <div class="hero-actions">
+                        <a href="calendar.html" class="btn btn-primary">
+                            <i class="fas fa-calendar-alt"></i> Календарь соревнований
+                        </a>
+                        <a href="documents.html" class="btn btn-secondary">
+                            <i class="fas fa-file-alt"></i> Правила и документы
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <picture>
+                        <source srcset="images/hero-moto.webp" type="image/webp">
+                        <source srcset="images/hero-moto.jpg" type="image/jpeg">
+                        <img src="images/hero-moto.jpg" alt="Спортсмен выполняет фигуру на мотоцикле" loading="eager" width="600" height="400">
+                    </picture>
+                </div>
+            </section>
+
+            <!-- Ближайшие события -->
+            <section class="events-section section" aria-labelledby="events-title">
+                <h2 id="events-title" class="section-title">Ближайшие события</h2>
+                <div class="events-grid">
+                    <article class="event-card">
+                        <div class="event-date">
+                            <span class="event-day">15</span>
+                            <span class="event-month">Май</span>
+                        </div>
+                        <div class="event-content">
+                            <h3>Кубок России. Этап 1</h3>
+                            <p class="event-location"><i class="fas fa-map-marker-alt"></i> Москва, Мотодром "Сокол"</p>
+                            <p class="event-description">Первый этап Кубка России по мотоджимхане. Регистрация открыта до 10 мая.</p>
+                            <a href="calendar.html#event1" class="event-link">Подробнее <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    
+                    <article class="event-card">
+                        <div class="event-date">
+                            <span class="event-day">12</span>
+                            <span class="event-month">Июнь</span>
+                        </div>
+                        <div class="event-content">
+                            <h3>Чемпионат Центрального федерального округа</h3>
+                            <p class="event-location"><i class="fas fa-map-marker-alt"></i> Нижний Новгород</p>
+                            <p class="event-description">Отборочные соревнования для участия в Чемпионате России.</p>
+                            <a href="calendar.html#event2" class="event-link">Подробнее <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    
+                    <article class="event-card">
+                        <div class="event-date">
+                            <span class="event-day">05</span>
+                            <span class="event-month">Июль</span>
+                        </div>
+                        <div class="event-content">
+                            <h3>Семинар для судей</h3>
+                            <p class="event-location"><i class="fas fa-map-marker-alt"></i> Онлайн</p>
+                            <p class="event-description">Обучение и сертификация судей по мотоджимхане. Бесплатно для членов МФР.</p>
+                            <a href="calendar.html#event3" class="event-link">Подробнее <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="events-actions">
+                    <a href="calendar.html" class="btn btn-outline">
+                        <i class="fas fa-calendar"></i> Весь календарь
+                    </a>
+                </div>
+            </section>
+
+            <!-- О виде спорта -->
+            <section class="sport-section section">
+                <div class="sport-container">
+                    <div class="sport-image">
+                        <picture>
+                            <source srcset="images/sport-about.webp" type="image/webp">
+                            <source srcset="images/sport-about.jpg" type="image/jpeg">
+                            <img src="images/sport-about.jpg" alt="Трасса мотоджимханы с конусами" loading="lazy" width="500" height="350">
+                        </picture>
+                    </div>
+                    <div class="sport-content">
+                        <h2 class="section-title">Что такое мотоджимхана?</h2>
+                        <p>Мотоджимхана (фигурное управление мотоциклом) - это вид мотоспорта, в котором участники на время проходят специальную трассу, обозначенную конусами.</p>
+                        <p>Главные особенности:</p>
+                        <ul class="sport-features">
+                            <li><i class="fas fa-check-circle"></i> <strong>Доступность</strong> - подходит для мотоциклистов любого уровня</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Безопасность</strong> - низкие скорости, полная экипировка</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Техника</strong> - развитие навыков управления мотоциклом</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Сообщество</strong> - дружеская атмосфера и взаимопомощь</li>
+                        </ul>
+                        <a href="about.html" class="btn btn-primary">
+                            <i class="fas fa-info-circle"></i> Узнать больше о комиссии
+                        </a>
                     </div>
                 </div>
             </section>
-            
-            <!-- Секция плиток -->
-            <section class="tiles-section section">
-                <div class="tile tile-blue">
-                    <i class="fas fa-info-circle tile-icon"></i>
-                    <h2 class="tile-title">О комиссии</h2>
-                    <p class="tile-text">История создания, цели и задачи комиссии по фигурному управлению мотоциклом</p>
-                    <a href="about.html" class="tile-link">Подробнее</a>
-                </div>
-                
-                <div class="tile tile-red">
-                    <i class="fas fa-sitemap tile-icon"></i>
-                    <h2 class="tile-title">Структура комиссии</h2>
-                    <p class="tile-text">Руководство и региональные представители по всей России</p>
-                    <a href="structure.html" class="tile-link">Подробнее</a>
-                </div>
-                
-                <div class="tile tile-yellow">
-                    <i class="fas fa-calendar-alt tile-icon"></i>
-                    <h2 class="tile-title">Календарь соревнований</h2>
-                    <p class="tile-text">Официальные соревнования по фигурному управлению мотоциклом</p>
-                    <a href="calendar.html" class="tile-link">Подробнее</a>
-                </div>
-                
-                <div class="tile tile-green">
-                    <i class="fas fa-file-alt tile-icon"></i>
-                    <h2 class="tile-title">Полезные документы</h2>
-                    <p class="tile-text">Правила, регламенты и другие нормативные документы</p>
-                    <a href="documents.html" class="tile-link">Подробнее</a>
-                </div>
-                
-                <div class="tile tile-orange">
-                    <i class="fas fa-handshake tile-icon"></i>
-                    <h2 class="tile-title">Партнеры</h2>
-                    <p class="tile-text">Привлечение партнеров для проведения Кубка России и создания долгосрочных отношений с рекламодателями</p>
-                    <a href="partners.html" class="tile-link">Подробнее</a>
-                </div>
-                
-                <div class="tile tile-purple">
-                    <i class="fas fa-address-book tile-icon"></i>
-                    <h2 class="tile-title">Контакты</h2>
-                    <p class="tile-text">Как связаться с комиссией и региональными представителями</p>
-                    <a href="contacts.html" class="tile-link">Подробнее</a>
+
+            <!-- Преимущества -->
+            <section class="benefits-section section" aria-labelledby="benefits-title">
+                <h2 id="benefits-title" class="section-title">Почему мотоджимхана?</h2>
+                <div class="benefits-grid">
+                    <article class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Обучение и развитие</h3>
+                        <p>Лучший способ улучшить навыки управления мотоциклом в безопасных условиях.</p>
+                    </article>
+                    
+                    <article class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Сообщество</h3>
+                        <p>Присоединяйтесь к сообществу единомышленников по всей России.</p>
+                    </article>
+                    
+                    <article class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Безопасность</h3>
+                        <p>Все соревнования проводятся с соблюдением строгих мер безопасности.</p>
+                    </article>
+                    
+                    <article class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3>Спортивные разряды</h3>
+                        <p>Возможность получить официальные спортивные разряды и звания.</p>
+                    </article>
                 </div>
             </section>
-            
-            <!-- Секция новостей -->
-            <section class="announcements-section section" aria-labelledby="announcements-title">
-                <h2 id="announcements-title" class="section-title"><i class="fas fa-bullhorn"></i> Анонсы и новости</h2>
+
+            <!-- Новости -->
+            <section class="news-section section" aria-labelledby="news-title">
+                <h2 id="news-title" class="section-title">Последние новости</h2>
                 <div class="news-grid">
                     <article class="news-card">
-                        <div class="news-card-header">
-                            <div class="news-date">15.12.2025</div>
-                            <h3>Утвержден календарь соревнований на 2026 год</h3>
+                        <div class="news-image">
+                            <picture>
+                                <source srcset="images/news1.webp" type="image/webp">
+                                <source srcset="images/news1.jpg" type="image/jpeg">
+                                <img src="images/news1.jpg" alt="Итоги чемпионата 2024" loading="lazy" width="400" height="250">
+                            </picture>
                         </div>
-                        <div class="news-card-content">
-                            <p>31 октября на Конференции Федерации мотоциклетного спорта России был утвержден новый состав Комиссии фигурного управления мотоциклом и календарь соревнований на 2026 год.</p>
-                        </div>
-                        <div class="news-card-footer">
-                            <a href="#" class="read-more">Читать подробнее</a>
-                        </div>
-                    </article>
-                    
-                    <article class="news-card">
-                        <div class="news-card-header">
-                            <div class="news-date">08.11.2025</div>
-                            <h3>Составлен новый состав комиссии</h3>
-                        </div>
-                        <div class="news-card-content">
-                            <p>Председателем комиссии переизбран Дмитрий Серов. В новом составе появились новые региональные представители из Тульской области и Москвы.</p>
-                        </div>
-                        <div class="news-card-footer">
-                            <a href="structure.html" class="read-more">Читать подробнее</a>
+                        <div class="news-content">
+                            <div class="news-date">10.04.2024</div>
+                            <h3>Итоги Чемпионата России 2024</h3>
+                            <p>Подведены итоги Чемпионата России по мотоджимхане, который прошел в Москве.</p>
+                            <a href="#" class="news-link">Читать далее</a>
                         </div>
                     </article>
                     
                     <article class="news-card">
-                        <div class="news-card-header">
-                            <div class="news-date">25.10.2025</div>
-                            <h3>Обновлены правила соревнований</h3>
+                        <div class="news-image">
+                            <picture>
+                                <source srcset="images/news2.webp" type="image/webp">
+                                <source srcset="images/news2.jpg" type="image/jpeg">
+                                <img src="images/news2.jpg" alt="Новые правила соревнований" loading="lazy" width="400" height="250">
+                            </picture>
                         </div>
-                        <div class="news-card-content">
-                            <p>Утверждена новая редакция правил соревнований по фигурному управлению мотоциклом с изменениями в системе оценки и требованиям к экипировке.</p>
-                        </div>
-                        <div class="news-card-footer">
-                            <a href="documents.html" class="read-more">Читать подробнее</a>
+                        <div class="news-content">
+                            <div class="news-date">28.03.2024</div>
+                            <h3>Обновление правил на 2024 год</h3>
+                            <p>Комиссия утвердила изменения в правилах проведения соревнований.</p>
+                            <a href="#" class="news-link">Читать далее</a>
                         </div>
                     </article>
+                    
+                    <article class="news-card">
+                        <div class="news-image">
+                            <picture>
+                                <source srcset="images/news3.webp" type="image/webp">
+                                <source srcset="images/news3.jpg" type="image/jpeg">
+                                <img src="images/news3.jpg" alt="Детская школа мотоджимханы" loading="lazy" width="400" height="250">
+                            </picture>
+                        </div>
+                        <div class="news-content">
+                            <div class="news-date">15.03.2024</div>
+                            <h3>Открытие детской школы</h3>
+                            <p>В Нижнем Новгороде начала работу детско-юношеская школа мотоджимханы.</p>
+                            <a href="#" class="news-link">Читать далее</a>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="news-actions">
+                    <a href="#" class="btn btn-outline">
+                        <i class="fas fa-newspaper"></i> Все новости
+                    </a>
                 </div>
             </section>
-            
-            <!-- Секция галереи -->
-            <section class="gallery-section section" aria-labelledby="gallery-title">
-                <h2 id="gallery-title" class="section-title"><i class="fas fa-images"></i> Наши соревнования</h2>
-                <div class="gallery-grid">
-                    <div class="gallery-item">
-                        <img src="images/competition1.jpg" alt="Соревнования в Твери" loading="lazy">
-                        <div class="gallery-caption">Чемпионат России 2024, Тверская область</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/competition2.jpg" alt="Соревнования в Нижнем Новгороде" loading="lazy">
-                        <div class="gallery-caption">Кубок России, Нижний Новгород</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/competition3.jpg" alt="Тренировки в Москву" loading="lazy">
-                        <div class="gallery-caption">Сборная тренировка, Москва</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/competition4.jpg" alt="Детские соревнования" loading="lazy">
-                        <div class="gallery-caption">Первенство среди юниоров, Смоленск</div>
-                    </div>
+
+            <!-- Партнеры -->
+            <section class="partners-section section" aria-labelledby="partners-title">
+                <h2 id="partners-title" class="section-title">Наши партнеры</h2>
+                <div class="partners-grid">
+                    <a href="partners.html" class="partner-logo">
+                        <picture>
+                            <source srcset="images/partner1.webp" type="image/webp">
+                            <source srcset="images/partner1.png" type="image/png">
+                            <img src="images/partner1.png" alt="Партнер 1" loading="lazy" width="150" height="80">
+                        </picture>
+                    </a>
+                    <a href="partners.html" class="partner-logo">
+                        <picture>
+                            <source srcset="images/partner2.webp" type="image/webp">
+                            <source srcset="images/partner2.png" type="image/png">
+                            <img src="images/partner2.png" alt="Партнер 2" loading="lazy" width="150" height="80">
+                        </picture>
+                    </a>
+                    <a href="partners.html" class="partner-logo">
+                        <picture>
+                            <source srcset="images/partner3.webp" type="image/webp">
+                            <source srcset="images/partner3.png" type="image/png">
+                            <img src="images/partner3.png" alt="Партнер 3" loading="lazy" width="150" height="80">
+                        </picture>
+                    </a>
+                    <a href="partners.html" class="partner-logo">
+                        <picture>
+                            <source srcset="images/partner4.webp" type="image/webp">
+                            <source srcset="images/partner4.png" type="image/png">
+                            <img src="images/partner4.png" alt="Партнер 4" loading="lazy" width="150" height="80">
+                        </picture>
+                    </a>
                 </div>
-                <div class="gallery-cta">
-                    <a href="#" class="btn">Смотреть все фотографии</a>
+                
+                <div class="partners-actions">
+                    <a href="partners.html" class="btn btn-outline">
+                        <i class="fas fa-handshake"></i> Все партнеры
+                    </a>
                 </div>
             </section>
         </main>
-        
+
         <!-- Подвал сайта -->
         <footer class="footer">
             <div class="footer-content">
@@ -857,366 +1024,87 @@
                         </picture>
                     </a>
                 </div>
+                
                 <div class="footer-links">
-                    <a href="https://disk.yandex.ru/d/ubxzU_0RzkFsJw" target="_blank" rel="noopener noreferrer">Документы комиссии</a>
+                    <a href="documents.html" class="document-link">Документы комиссии</a>
                     <a href="https://www.mfr.ru/" target="_blank" rel="noopener noreferrer">Официальный сайт МФР</a>
                     <a href="https://www.mfr.ru/disciplines/motodzhimkhana/" target="_blank" rel="noopener noreferrer">Страница мотоджимханы на сайте МФР</a>
                 </div>
-                <div class="footer-info">
-                    <p>&copy; 2025 Комиссия по фигурному управлению мотоциклом (мотоджимхане) при Мотоциклетной Федерации России</p>
-                    <p>Все права защищены. Контактная информация: <a href="mailto:info@mfr-mg.ru">info@mfr-mg.ru</a></p>
+                
+                <div class="footer-contacts">
+                    <p><i class="fas fa-envelope" aria-hidden="true"></i> serovdima@list.ru</p>
+                    <p><i class="fas fa-phone" aria-hidden="true"></i> +7 (977) 823-63-90</p>
+                </div>
+                
+                <div class="copyright">
+                    <p>© 2025 Мотоциклетная Федерация России</p>
+                    <p class="powered-by">powered by Motogymkhana NN</p>
                 </div>
             </div>
         </footer>
     </div>
-    
-    <!-- Модальное окно входа в админ-панель -->
-    <div class="modal" id="admin-login-modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Вход в админ-панель</h2>
-                <span class="close-modal" id="close-login-modal">&times;</span>
-            </div>
-            <div class="modal-body">
-                <div class="form-group">
-                    <label for="admin-password">Пароль</label>
-                    <input type="password" id="admin-password" class="form-control" placeholder="Введите пароль">
-                    <p class="password-hint">Пароль предоставлен Председателем комиссии</p>
-                </div>
-                <button id="login-btn" class="btn">Войти</button>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Модальное окно админ-панели -->
-    <div class="modal" id="admin-modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Панель администратора</h2>
-                <span class="close-modal" id="close-admin-modal">&times;</span>
-            </div>
-            <div class="modal-body">
-                <div class="admin-tabs">
-                    <button class="tab-btn active" data-tab="calendar">Календарь соревнований</button>
-                    <button class="tab-btn" data-tab="documents">Документы</button>
-                    <button class="tab-btn" data-tab="structure">Структура комиссии</button>
-                </div>
-                
-                <div class="tab-content active" id="calendar-tab">
-                    <h3>Управление соревнованиями</h3>
-                    <div class="form-group">
-                        <label for="competition-name">Название соревнования</label>
-                        <input type="text" id="competition-name" class="form-control" placeholder="Введите название соревнования">
-                    </div>
-                    <div class="form-group">
-                        <label for="competition-date">Дата проведения</label>
-                        <input type="date" id="competition-date" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label for="competition-location">Место проведения</label>
-                        <input type="text" id="competition-location" class="form-control" placeholder="Введите место проведения">
-                    </div>
-                    <div class="form-group">
-                        <label for="competition-contact">Контактное лицо</label>
-                        <input type="text" id="competition-contact" class="form-control" placeholder="Введите контактное лицо">
-                    </div>
-                    <div class="form-group">
-                        <label for="protocol-file">Протокол соревнований (URL)</label>
-                        <input type="url" id="protocol-file" class="form-control" placeholder="Ссылка на протокол в Яндекс.Диске">
-                        <p class="help-text">Протоколы должны быть загружены в Яндекс.Диск: <a href="https://disk.yandex.ru/d/ubxzU_0RzkFsJw" target="_blank" rel="noopener noreferrer">https://disk.yandex.ru/d/ubxzU_0RzkFsJw</a></p>
-                    </div>
-                    <button id="add-competition-btn" class="btn">
-                        <i class="fas fa-plus"></i> Добавить соревнование
-                    </button>
-                    <div id="competitions-list" class="admin-list">
-                        <!-- Список соревнований будет загружаться здесь -->
-                    </div>
-                </div>
-                
-                <div class="tab-content" id="documents-tab">
-                    <h3>Управление документами</h3>
-                    <p>Все документы хранятся на Яндекс.Диске: <a href="https://disk.yandex.ru/d/ubxzU_0RzkFsJw" target="_blank" rel="noopener noreferrer">https://disk.yandex.ru/d/ubxzU_0RzkFsJw</a></p>
-                    <p>Для добавления новых документов используйте интерфейс Яндекс.Диска</p>
-                </div>
-                
-                <div class="tab-content" id="structure-tab">
-                    <h3>Управление структурой комиссии</h3>
-                    <p>Для редактирования структуры комиссии обратитесь к Председателю комиссии</p>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- JavaScript -->
+    <!-- Скрипты -->
     <script>
+        // Активация мобильного меню
         document.addEventListener('DOMContentLoaded', function() {
-            // Мобильное меню
             const menuToggle = document.querySelector('.menu-toggle');
             const mobileMenu = document.querySelector('.mobile-menu');
-            const menuIcon = menuToggle.querySelector('i');
             
-            menuToggle.addEventListener('click', function() {
-                const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-                menuToggle.setAttribute('aria-expanded', !isExpanded);
-                mobileMenu.hidden = isExpanded;
-                
-                if (!isExpanded) {
-                    mobileMenu.style.display = 'block';
-                    menuIcon.classList.remove('fa-bars');
-                    menuIcon.classList.add('fa-times');
-                } else {
-                    mobileMenu.style.display = 'none';
-                    menuIcon.classList.remove('fa-times');
-                    menuIcon.classList.add('fa-bars');
-                }
-            });
-            
-            // Закрытие меню при клике на ссылку
-            const mobileLinks = mobileMenu.querySelectorAll('.nav-link');
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    mobileMenu.hidden = true;
-                    mobileMenu.style.display = 'none';
-                    menuToggle.setAttribute('aria-expanded', 'false');
-                    menuIcon.classList.remove('fa-times');
-                    menuIcon.classList.add('fa-bars');
-                });
-            });
-            
-            // Анимация элементов при скролле
-            const animateOnScroll = function() {
-                const elements = document.querySelectorAll('.tile, .news-card, .gallery-item');
-                
-                elements.forEach(element => {
-                    const elementPosition = element.getBoundingClientRect().top;
-                    const screenPosition = window.innerHeight / 1.2;
+            if (menuToggle && mobileMenu) {
+                menuToggle.addEventListener('click', function() {
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', !isExpanded);
+                    mobileMenu.hidden = isExpanded;
                     
-                    if (elementPosition < screenPosition) {
-                        element.style.opacity = '1';
-                        element.style.transform = 'translateY(0)';
+                    // Анимация иконки
+                    const icon = this.querySelector('i');
+                    if (isExpanded) {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    } else {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
                     }
                 });
+            }
+            
+            // Плавная прокрутка для якорных ссылок
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Анимация карточек при прокрутке
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
             };
             
-            // Устанавливаем начальные стили для анимации
-            const animatedElements = document.querySelectorAll('.tile, .news-card, .gallery-item');
-            animatedElements.forEach(element => {
-                element.style.opacity = '0';
-                element.style.transform = 'translateY(30px)';
-                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            });
-            
-            window.addEventListener('scroll', animateOnScroll);
-            // Инициализация при загрузке
-            animateOnScroll();
-            
-            // Модальные окна админки
-            const adminLink = document.getElementById('admin-link');
-            const mobileAdminLink = document.getElementById('mobile-admin-link');
-            const adminLoginModal = document.getElementById('admin-login-modal');
-            const adminModal = document.getElementById('admin-modal');
-            const closeLoginModal = document.getElementById('close-login-modal');
-            const closeAdminModal = document.getElementById('close-admin-modal');
-            const loginBtn = document.getElementById('login-btn');
-            const adminPassword = document.getElementById('admin-password');
-            
-            // Правильный пароль (в реальном проекте это должно быть на сервере)
-            const correctPassword = 'mfr2025';
-            
-            // Открытие модального окна входа
-            function openLoginModal() {
-                adminLoginModal.classList.add('active');
-                adminPassword.value = '';
-            }
-            
-            adminLink.addEventListener('click', function(e) {
-                e.preventDefault();
-                openLoginModal();
-            });
-            
-            mobileAdminLink.addEventListener('click', function(e) {
-                e.preventDefault();
-                openLoginModal();
-            });
-            
-            // Закрытие модальных окон
-            closeLoginModal.addEventListener('click', function() {
-                adminLoginModal.classList.remove('active');
-            });
-            
-            closeAdminModal.addEventListener('click', function() {
-                adminModal.classList.remove('active');
-            });
-            
-            // Закрытие при клике вне модального окна
-            window.addEventListener('click', function(e) {
-                if (e.target === adminLoginModal) {
-                    adminLoginModal.classList.remove('active');
-                }
-                if (e.target === adminModal) {
-                    adminModal.classList.remove('active');
-                }
-            });
-            
-            // Проверка пароля
-            loginBtn.addEventListener('click', function() {
-                if (adminPassword.value === correctPassword) {
-                    adminLoginModal.classList.remove('active');
-                    adminModal.classList.add('active');
-                    
-                    // Загружаем сохраненные соревнования из localStorage
-                    loadCompetitions();
-                } else {
-                    alert('Неверный пароль! Попробуйте снова.');
-                    adminPassword.value = '';
-                    adminPassword.focus();
-                }
-            });
-            
-            // Ввод пароля по нажатию Enter
-            adminPassword.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    loginBtn.click();
-                }
-            });
-            
-            // Система вкладок в админ-панели
-            const tabBtns = document.querySelectorAll('.tab-btn');
-            const tabContents = document.querySelectorAll('.tab-content');
-            
-            tabBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const tabId = this.getAttribute('data-tab');
-                    
-                    // Убираем активный класс со всех кнопок
-                    tabBtns.forEach(b => b.classList.remove('active'));
-                    // Добавляем активный класс текущей кнопке
-                    this.classList.add('active');
-                    
-                    // Скрываем все вкладки
-                    tabContents.forEach(content => {
-                        content.classList.remove('active');
-                    });
-                    
-                    // Показываем выбранную вкладку
-                    document.getElementById(`${tabId}-tab`).classList.add('active');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                    }
                 });
+            }, observerOptions);
+            
+            // Наблюдаем за карточками событий, преимуществ и новостей
+            document.querySelectorAll('.event-card, .benefit-card, .news-card').forEach(card => {
+                observer.observe(card);
             });
-            
-            // Управление соревнованиями
-            const addCompetitionBtn = document.getElementById('add-competition-btn');
-            const competitionName = document.getElementById('competition-name');
-            const competitionDate = document.getElementById('competition-date');
-            const competitionLocation = document.getElementById('competition-location');
-            const competitionContact = document.getElementById('competition-contact');
-            const protocolFile = document.getElementById('protocol-file');
-            const competitionsList = document.getElementById('competitions-list');
-            
-            // Загрузка соревнований из localStorage
-            function loadCompetitions() {
-                competitionsList.innerHTML = '';
-                const competitions = JSON.parse(localStorage.getItem('competitions')) || [];
-                
-                if (competitions.length === 0) {
-                    competitionsList.innerHTML = '<p class="help-text" style="text-align: center; padding: 20px;">Соревнований пока нет. Добавьте первое соревнование.</p>';
-                    return;
-                }
-                
-                competitions.forEach((competition, index) => {
-                    const competitionItem = document.createElement('div');
-                    competitionItem.className = 'admin-list-item';
-                    competitionItem.innerHTML = `
-                        <div class="competition-info">
-                            <h4>${competition.name}</h4>
-                            <p>Дата: ${competition.date} | Место: ${competition.location}</p>
-                            <p>Контакт: ${competition.contact} ${competition.protocol ? `| <a href="${competition.protocol}" target="_blank">Протокол</a>` : ''}</p>
-                        </div>
-                        <div class="admin-actions">
-                            <button class="btn-icon delete" data-index="${index}">
-                                <i class="fas fa-trash"></i>
-                            </button>
-                        </div>
-                    `;
-                    competitionsList.appendChild(competitionItem);
-                });
-                
-                // Добавляем обработчики для кнопок удаления
-                document.querySelectorAll('.btn-icon.delete').forEach(btn => {
-                    btn.addEventListener('click', function() {
-                        const index = parseInt(this.getAttribute('data-index'));
-                        deleteCompetition(index);
-                    });
-                });
-            }
-            
-            // Добавление нового соревнования
-            addCompetitionBtn.addEventListener('click', function() {
-                if (!competitionName.value.trim()) {
-                    alert('Введите название соревнования');
-                    competitionName.focus();
-                    return;
-                }
-                
-                if (!competitionDate.value) {
-                    alert('Выберите дату проведения');
-                    competitionDate.focus();
-                    return;
-                }
-                
-                if (!competitionLocation.value.trim()) {
-                    alert('Введите место проведения');
-                    competitionLocation.focus();
-                    return;
-                }
-                
-                const competition = {
-                    name: competitionName.value,
-                    date: competitionDate.value,
-                    location: competitionLocation.value,
-                    contact: competitionContact.value,
-                    protocol: protocolFile.value
-                };
-                
-                // Получаем существующие соревнования
-                const competitions = JSON.parse(localStorage.getItem('competitions')) || [];
-                competitions.push(competition);
-                
-                // Сохраняем в localStorage
-                localStorage.setItem('competitions', JSON.stringify(competitions));
-                
-                // Очищаем поля формы
-                competitionName.value = '';
-                competitionDate.value = '';
-                competitionLocation.value = '';
-                competitionContact.value = '';
-                protocolFile.value = '';
-                
-                // Обновляем список
-                loadCompetitions();
-                
-                alert('Соревнование успешно добавлено!');
-            });
-            
-            // Удаление соревнования
-            function deleteCompetition(index) {
-                if (confirm('Вы уверены, что хотите удалить это соревнование?')) {
-                    const competitions = JSON.parse(localStorage.getItem('competitions')) || [];
-                    competitions.splice(index, 1);
-                    localStorage.setItem('competitions', JSON.stringify(competitions));
-                    loadCompetitions();
-                }
-            }
-            
-            // Устанавливаем минимальную дату как сегодняшнюю
-            const today = new Date().toISOString().split('T')[0];
-            competitionDate.min = today;
-            
-            // Инициализация при загрузке страницы
-            loadCompetitions();
         });
     </script>
-    
-    <!-- ВКонтакте виджет (опционально) -->
-    <script src="https://vk.com/js/api/openapi.js?169" async></script>
 </body>
 </html>
