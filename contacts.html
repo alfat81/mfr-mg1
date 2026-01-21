@@ -20,6 +20,628 @@
     <!-- Основные стили -->
     <link rel="stylesheet" href="styles.css">
     
+    <!-- Дополнительные стили для страницы контактов -->
+    <style>
+        /* Дополнительные стили для страницы контактов */
+        
+        :root {
+            --primary-color: #e74c3c;
+            --secondary-color: #3498db;
+            --accent-color: #f1c40f;
+            --success-color: #2ecc71;
+            --warning-color: #e67e22;
+            --danger-color: #e74c3c;
+            --dark-color: #2c3e50;
+            --light-color: #ecf0f1;
+            --gray-light: #f8f9fa;
+            --gray-medium: #95a5a6;
+            --gray-dark: #7f8c8d;
+        }
+        
+        /* Герой-секция контактов */
+        .contacts-hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, rgba(44, 62, 80, 0.9) 0%, rgba(52, 152, 219, 0.8) 100%), 
+                        url('images/contacts-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            animation: slowBackgroundMove 40s ease-in-out infinite;
+        }
+        
+        .contacts-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+        
+        .contacts-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .contacts-hero p {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: var(--light-color);
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+        
+        /* Основные контакты */
+        .main-contacts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .contact-card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            text-align: center;
+            border-top: 4px solid var(--secondary-color);
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            border-top-color: var(--primary-color);
+        }
+        
+        .contact-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+        
+        .contact-card h3 {
+            font-size: 1.5rem;
+            color: var(--dark-color);
+            margin-bottom: 20px;
+        }
+        
+        .contact-details {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        .contact-details p {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            color: var(--gray-dark);
+        }
+        
+        .contact-details i {
+            color: var(--primary-color);
+            width: 20px;
+            text-align: center;
+        }
+        
+        .contact-description {
+            color: var(--dark-color);
+            line-height: 1.6;
+            font-size: 0.95rem;
+            text-align: left;
+        }
+        
+        /* Форма обратной связи */
+        .contact-form-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 40px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .form-info {
+            padding: 30px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+        
+        .form-info h3 {
+            font-size: 1.8rem;
+            color: var(--dark-color);
+            margin-bottom: 15px;
+        }
+        
+        .form-info p {
+            color: var(--gray-dark);
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+        
+        .form-tips {
+            margin-top: 30px;
+        }
+        
+        .tip {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: var(--gray-light);
+            border-radius: 8px;
+        }
+        
+        .tip i {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+        
+        .tip p {
+            margin: 0;
+            color: var(--dark-color);
+            font-size: 0.95rem;
+        }
+        
+        /* Форма */
+        .contact-form {
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark-color);
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: 'Roboto', sans-serif;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--secondary-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+        }
+        
+        .file-upload {
+            position: relative;
+        }
+        
+        .file-upload input[type="file"] {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+        
+        .file-upload-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 20px;
+            background-color: var(--gray-light);
+            border: 1px dashed var(--gray-medium);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .file-upload-label:hover {
+            background-color: #e8f4fc;
+            border-color: var(--secondary-color);
+        }
+        
+        .file-upload-label i {
+            color: var(--secondary-color);
+        }
+        
+        .file-list {
+            margin-top: 15px;
+        }
+        
+        .file-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 15px;
+            background-color: var(--gray-light);
+            border-radius: 6px;
+            margin-bottom: 8px;
+        }
+        
+        .file-name {
+            font-size: 0.9rem;
+            color: var(--dark-color);
+        }
+        
+        .file-remove {
+            background: none;
+            border: none;
+            color: var(--danger-color);
+            cursor: pointer;
+            padding: 5px;
+            font-size: 0.9rem;
+        }
+        
+        .file-hint {
+            font-size: 0.85rem;
+            color: var(--gray-medium);
+            margin-top: 8px;
+        }
+        
+        .checkbox-label {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            cursor: pointer;
+            color: var(--dark-color);
+        }
+        
+        .checkbox-label input[type="checkbox"] {
+            margin-top: 5px;
+        }
+        
+        .form-actions {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        /* Региональные представители */
+        .regions-map {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+            min-height: 500px;
+        }
+        
+        .map-container {
+            position: relative;
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+        
+        .simple-map {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, #e3f2fd, #bbdefb);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .map-point {
+            position: absolute;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .map-point .point {
+            width: 16px;
+            height: 16px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .map-point .point-label {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white;
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--dark-color);
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .map-point:hover .point-label {
+            opacity: 1;
+        }
+        
+        .map-point.active .point {
+            background-color: var(--secondary-color);
+            transform: scale(1.2);
+        }
+        
+        /* Расположение точек на карте */
+        .moscow { top: 30%; left: 40%; }
+        .spb { top: 20%; left: 30%; }
+        .nn { top: 35%; left: 45%; }
+        .kazan { top: 40%; left: 50%; }
+        .krasnodar { top: 60%; left: 40%; }
+        .ekb { top: 40%; left: 60%; }
+        
+        .regions-list {
+            background-color: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            overflow-y: auto;
+            max-height: 500px;
+        }
+        
+        .region-contact {
+            display: none;
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        .region-contact.active {
+            display: block;
+        }
+        
+        .region-contact h3 {
+            font-size: 1.6rem;
+            color: var(--dark-color);
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--gray-light);
+        }
+        
+        .region-representative {
+            background-color: var(--gray-light);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+        
+        .region-representative p {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .region-clubs h4,
+        .region-training h4 {
+            font-size: 1.2rem;
+            color: var(--dark-color);
+            margin-bottom: 10px;
+        }
+        
+        .region-clubs ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 25px;
+        }
+        
+        .region-clubs li {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--gray-light);
+            color: var(--gray-dark);
+        }
+        
+        .region-clubs li:last-child {
+            border-bottom: none;
+        }
+        
+        .region-training p {
+            color: var(--gray-dark);
+            margin-bottom: 10px;
+        }
+        
+        .all-regions-link {
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        /* FAQ секция */
+        .faq-container {
+            max-width: 800px;
+            margin: 40px auto 0;
+        }
+        
+        .faq-item {
+            background-color: white;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .faq-question {
+            width: 100%;
+            padding: 25px 30px;
+            background: none;
+            border: none;
+            text-align: left;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--dark-color);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background-color: var(--gray-light);
+        }
+        
+        .faq-question i {
+            color: var(--primary-color);
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 30px;
+        }
+        
+        .faq-answer p,
+        .faq-answer ol,
+        .faq-answer ul {
+            padding-bottom: 25px;
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+        
+        .faq-answer ol,
+        .faq-answer ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+        
+        .faq-answer li {
+            margin-bottom: 10px;
+        }
+        
+        .faq-answer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .faq-answer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Адаптивные стили */
+        @media (max-width: 992px) {
+            .contacts-hero h1 {
+                font-size: 3rem;
+            }
+            
+            .contacts-hero p {
+                font-size: 1.5rem;
+            }
+            
+            .contact-form-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .form-info {
+                order: 2;
+            }
+            
+            .contact-form {
+                order: 1;
+            }
+            
+            .regions-map {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .regions-list {
+                max-height: 400px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .contacts-hero {
+                min-height: 50vh;
+                background-attachment: scroll;
+            }
+            
+            .contacts-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .contacts-hero p {
+                font-size: 1.3rem;
+            }
+            
+            .main-contacts-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-actions {
+                flex-direction: column;
+            }
+            
+            .form-actions .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .contacts-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .contact-form {
+                padding: 25px 20px;
+            }
+            
+            .form-info {
+                padding: 25px 20px;
+            }
+            
+            .faq-question {
+                padding: 20px;
+                font-size: 1rem;
+            }
+            
+            .faq-answer {
+                padding: 0 20px;
+            }
+        }
+    </style>
+    
     <!-- Шрифты с font-display: swap -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     
@@ -150,7 +772,7 @@
             </section>
 
             <!-- Форма обратной связи -->
-            <section class="contact-form-section section" style="background-color: var(--gray-100);" aria-labelledby="contact-form-title">
+            <section class="contact-form-section section" style="background-color: var(--gray-light);" aria-labelledby="contact-form-title">
                 <h2 id="contact-form-title" class="section-title">Форма обратной связи</h2>
                 <div class="contact-form-container">
                     <div class="form-info">
@@ -259,7 +881,7 @@
                     <div class="map-container">
                         <!-- Упрощенная карта России с метками -->
                         <div class="simple-map">
-                            <div class="map-point moscow" data-city="moscow">
+                            <div class="map-point moscow active" data-city="moscow">
                                 <div class="point"></div>
                                 <div class="point-label">Москва</div>
                             </div>
@@ -361,7 +983,7 @@
             </section>
 
             <!-- Часто задаваемые вопросы -->
-            <section class="faq-section section" style="background-color: var(--gray-100);" aria-labelledby="faq-title">
+            <section class="faq-section section" style="background-color: var(--gray-light);" aria-labelledby="faq-title">
                 <h2 id="faq-title" class="section-title">Часто задаваемые вопросы</h2>
                 <div class="faq-container">
                     <div class="faq-item">
@@ -500,25 +1122,28 @@
             const mapPoints = document.querySelectorAll('.map-point');
             const regionContacts = document.querySelectorAll('.region-contact');
 
+            function showRegionContact(city) {
+                // Удаляем активный класс у всех точек
+                mapPoints.forEach(p => p.classList.remove('active'));
+                // Добавляем активный класс выбранной точке
+                document.querySelector(`.map-point[data-city="${city}"]`).classList.add('active');
+                
+                // Скрываем все контакты регионов
+                regionContacts.forEach(contact => {
+                    contact.classList.remove('active');
+                });
+                
+                // Показываем соответствующий контакт региона
+                const targetContact = document.getElementById(`${city}-contact`);
+                if (targetContact) {
+                    targetContact.classList.add('active');
+                }
+            }
+
             mapPoints.forEach(point => {
                 point.addEventListener('click', function() {
                     const city = this.getAttribute('data-city');
-                    
-                    // Удаляем активный класс у всех точек
-                    mapPoints.forEach(p => p.classList.remove('active'));
-                    // Добавляем активный класс текущей точке
-                    this.classList.add('active');
-                    
-                    // Скрываем все контакты регионов
-                    regionContacts.forEach(contact => {
-                        contact.classList.remove('active');
-                    });
-                    
-                    // Показываем соответствующий контакт региона
-                    const targetContact = document.getElementById(`${city}-contact`);
-                    if (targetContact) {
-                        targetContact.classList.add('active');
-                    }
+                    showRegionContact(city);
                 });
             });
 
@@ -599,27 +1224,18 @@
                 question.addEventListener('click', function() {
                     const isExpanded = this.getAttribute('aria-expanded') === 'true';
                     const answer = this.nextElementSibling;
-                    
-                    // Закрываем все остальные FAQ
-                    faqQuestions.forEach(q => {
-                        if (q !== this) {
-                            q.setAttribute('aria-expanded', 'false');
-                            q.querySelector('i').classList.remove('fa-chevron-up');
-                            q.querySelector('i').classList.add('fa-chevron-down');
-                            q.nextElementSibling.style.maxHeight = null;
-                        }
-                    });
+                    const icon = this.querySelector('i');
                     
                     // Открываем/закрываем текущий FAQ
                     if (isExpanded) {
                         this.setAttribute('aria-expanded', 'false');
-                        this.querySelector('i').classList.remove('fa-chevron-up');
-                        this.querySelector('i').classList.add('fa-chevron-down');
+                        icon.classList.remove('fa-chevron-up');
+                        icon.classList.add('fa-chevron-down');
                         answer.style.maxHeight = null;
                     } else {
                         this.setAttribute('aria-expanded', 'true');
-                        this.querySelector('i').classList.remove('fa-chevron-down');
-                        this.querySelector('i').classList.add('fa-chevron-up');
+                        icon.classList.remove('fa-chevron-down');
+                        icon.classList.add('fa-chevron-up');
                         answer.style.maxHeight = answer.scrollHeight + 'px';
                     }
                 });
@@ -641,6 +1257,33 @@
                     }
                 });
             });
+
+            // Анимация появления элементов при скролле
+            const animateOnScroll = function() {
+                const elements = document.querySelectorAll('.contact-card, .faq-item, .form-info, .contact-form');
+                
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+                    
+                    if (elementPosition < screenPosition) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+            
+            // Устанавливаем начальные стили для анимации
+            const animatedElements = document.querySelectorAll('.contact-card, .faq-item, .form-info, .contact-form');
+            animatedElements.forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            });
+            
+            window.addEventListener('scroll', animateOnScroll);
+            // Инициализация при загрузке
+            animateOnScroll();
         });
     </script>
 </body>
