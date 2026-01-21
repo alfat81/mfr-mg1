@@ -1,448 +1,962 @@
 <!DOCTYPE html>
 <html lang="ru" prefix="og: https://ogp.me/ns#">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Структура Комиссии по фигурному управлению мотоциклом при МФР: руководство, региональные представители, контактная информация.">
-    <meta name="keywords" content="структура комиссии, руководство МФР, региональные представители, контакты, мотоджимхана">
-    <meta property="og:title" content="Структура комиссии | Комиссия по фигурному управлению мотоциклом | МФР">
-    <meta property="og:description" content="Структура и руководство Комиссии по фигурному управлению мотоциклом при МФР">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mfr-mg.ru/structure.html">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Структура Комиссии по фигурному управлению мотоциклом при МФР: руководство, региональные представители, контактная информация.">
+  <meta name="keywords" content="структура комиссии, руководство МФР, региональные представители, контакты, мотоджимхана">
+  <meta property="og:title" content="Структура комиссии | Комиссия по фигурному управлению мотоциклом | МФР">
+  <meta property="og:description" content="Структура и руководство Комиссии по фигурному управлению мотоциклом при МФР">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mfr-mg.ru/structure.html">
+  <title>Структура комиссии | Комиссия по фигурному управлению мотоциклом | МФР</title>
+  <!-- Предзагрузка критических ресурсов -->
+  <link rel="preload" href="styles.css" as="style">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;600;700&display=swap" as="style">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+  <!-- Основные стили -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Дополнительные стили для страницы структуры -->
+  <style>
+    /* Дополнительные стили для страницы структуры */
+    :root {
+      --primary-color: #e74c3c;
+      --secondary-color: #3498db;
+      --accent-color: #f1c40f;
+      --dark-color: #2c3e50;
+      --light-color: #ecf0f1;
+      --gray-light: #f8f9fa;
+      --gray-medium: #95a5a6;
+      --gray-dark: #7f8c8d;
+    }
     
-    <title>Структура комиссии | Комиссия по фигурному управлению мотоциклом | МФР</title>
+    /* Герой-секция структуры */
+    .structure-hero {
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, rgba(44, 62, 80, 0.9) 0%, rgba(231, 76, 60, 0.8) 100%),
+        url('images/structure-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      animation: slowBackgroundMove 40s ease-in-out infinite;
+    }
     
-    <!-- Предзагрузка критических ресурсов -->
-    <link rel="preload" href="styles.css" as="style">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;600;700&display=swap" as="style">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    @keyframes slowBackgroundMove {
+      0% {
+        background-position: center;
+        background-size: 100%;
+      }
+      50% {
+        background-position: 20% center;
+        background-size: 105%;
+      }
+      100% {
+        background-position: center;
+        background-size: 100%;
+      }
+    }
     
-    <!-- Основные стили -->
-    <link rel="stylesheet" href="styles.css">
+    .structure-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(44, 62, 80, 0.85) 0%, rgba(231, 76, 60, 0.7) 100%);
+      z-index: 1;
+    }
     
-    <!-- Шрифты с font-display: swap -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    .structure-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+    }
     
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    .structure-hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      color: white;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+      animation: fadeInUp 1s ease-out;
+    }
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    .structure-hero p {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+      color: var(--light-color);
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+      animation: fadeInUp 1s ease-out 0.3s both;
+    }
+    
+    /* Руководство комиссии */
+    .leadership-section {
+      padding: 80px 0;
+    }
+    
+    .leadership-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    
+    .leader-card {
+      background-color: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      transition: all 0.4s ease;
+      text-align: center;
+      border-top: 4px solid transparent;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .leader-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+    
+    .leader-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    }
+    
+    .leader-image {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid var(--primary-color);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .leader-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    
+    .leader-badge {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 40px;
+      height: 40px;
+      background-color: var(--primary-color);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.2rem;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .leader-info h3 {
+      font-size: 1.6rem;
+      margin-bottom: 5px;
+      color: var(--dark-color);
+    }
+    
+    .leader-position {
+      font-size: 1.1rem;
+      color: var(--primary-color);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    
+    .leader-contacts {
+      margin: 15px 0;
+      color: var(--gray-dark);
+    }
+    
+    .leader-contacts p {
+      margin-bottom: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .leader-contacts i {
+      color: var(--primary-color);
+      width: 20px;
+      text-align: center;
+    }
+    
+    .leader-bio {
+      color: var(--gray-dark);
+      line-height: 1.6;
+      font-style: italic;
+      margin-top: 15px;
+      font-size: 0.95rem;
+    }
+    
+    /* Региональные представители */
+    .regions-section {
+      padding: 80px 0;
+      background-color: var(--gray-light) !important;
+    }
+    
+    .regions-filter {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+    
+    .filter-btn {
+      padding: 10px 20px;
+      background-color: white;
+      border: 2px solid var(--dark-color);
+      border-radius: 50px;
+      color: var(--dark-color);
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .filter-btn:hover {
+      background-color: var(--dark-color);
+      color: white;
+      transform: translateY(-2px);
+    }
+    
+    .filter-btn.active {
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);
+      color: white;
+    }
+    
+    .regions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+    
+    .region-card {
+      background-color: white;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      transition: all 0.4s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      border-left: 4px solid var(--secondary-color);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.6s ease forwards;
+    }
+    
+    .region-card:nth-child(1) { animation-delay: 0.1s; }
+    .region-card:nth-child(2) { animation-delay: 0.2s; }
+    .region-card:nth-child(3) { animation-delay: 0.3s; }
+    .region-card:nth-child(4) { animation-delay: 0.4s; }
+    .region-card:nth-child(5) { animation-delay: 0.5s; }
+    .region-card:nth-child(6) { animation-delay: 0.6s; }
+    
+    .region-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+      border-left-color: var(--primary-color);
+    }
+    
+    .region-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid var(--gray-light);
+    }
+    
+    .region-header h3 {
+      font-size: 1.4rem;
+      color: var(--dark-color);
+      margin: 0;
+    }
+    
+    .region-badge {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    
+    .region-content {
+      flex-grow: 1;
+    }
+    
+    .region-representative {
+      font-weight: 600;
+      color: var(--dark-color);
+      margin-bottom: 10px;
+    }
+    
+    .region-contacts {
+      color: var(--gray-dark);
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+    
+    .region-contacts i {
+      color: var(--primary-color);
+      margin-right: 5px;
+    }
+    
+    .region-clubs {
+      color: var(--gray-dark);
+      font-style: italic;
+      margin-bottom: 20px;
+      font-size: 0.95rem;
+    }
+    
+    .region-link {
+      display: inline-block;
+      color: var(--secondary-color);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 15px;
+      border: 1px solid var(--secondary-color);
+      border-radius: 50px;
+      transition: all 0.3s ease;
+    }
+    
+    .region-link:hover {
+      background-color: var(--secondary-color);
+      color: white;
+      transform: translateX(5px);
+    }
+    
+    /* Стать представителем */
+    .become-representative {
+      padding: 80px 0;
+      background: linear-gradient(135deg, rgba(52, 152, 219, 0.9) 0%, rgba(44, 62, 80, 0.9) 100%),
+        url('images/become-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .become-representative::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(52, 152, 219, 0.9) 0%, rgba(44, 62, 80, 0.9) 100%);
+      z-index: 1;
+    }
+    
+    .become-title {
+      color: white;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .become-title::after {
+      background: linear-gradient(to right, white, var(--accent-color));
+    }
+    
+    .representative-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      max-width: 1200px;
+      margin: 40px auto 0;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .representative-info {
+      padding-right: 20px;
+    }
+    
+    .representative-info p {
+      font-size: 1.2rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    
+    .requirements-list {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 20px;
+    }
+    
+    .requirements-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+    
+    .requirements-list li:last-child {
+      border-bottom: none;
+    }
+    
+    .requirements-list i {
+      color: var(--accent-color);
+      font-size: 1.2rem;
+      margin-top: 3px;
+    }
+    
+    .representative-form {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      color: var(--dark-color);
+    }
+    
+    .representative-form h3 {
+      color: var(--dark-color);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: var(--dark-color);
+    }
+    
+    .form-control {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid var(--gray-medium);
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+    
+    .form-control:focus {
+      outline: none;
+      border-color: var(--secondary-color);
+      box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 28px;
+      background: linear-gradient(to right, var(--primary-color), #c0392b);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      text-align: center;
+      gap: 10px;
+    }
+    
+    .btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(231, 76, 60, 0.4);
+    }
+    
+    /* Адаптивные стили */
+    @media (max-width: 992px) {
+      .representative-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      
+      .representative-info {
+        padding-right: 0;
+        text-align: center;
+      }
+      
+      .structure-hero h1 {
+        font-size: 3rem;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .structure-hero {
+        min-height: 50vh;
+        background-attachment: scroll;
+      }
+      
+      .structure-hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .structure-hero p {
+        font-size: 1.5rem;
+      }
+      
+      .representative-content {
+        grid-template-columns: 1fr;
+      }
+      
+      .representative-info p {
+        font-size: 1.1rem;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .structure-hero h1 {
+        font-size: 2.2rem;
+      }
+      
+      .structure-hero p {
+        font-size: 1.3rem;
+      }
+      
+      .leader-image {
+        width: 120px;
+        height: 120px;
+      }
+      
+      .leader-info h3 {
+        font-size: 1.4rem;
+      }
+      
+      .btn {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+      }
+    }
+  </style>
+  <!-- Шрифты с font-display: swap -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
 </head>
 <body>
-    <div class="container">
-        <!-- Шапка сайта -->
-        <header class="header">
-            <div class="logo-container">
-                <div class="logo-left">
-                    <picture>
-                        <source srcset="images/logo_sm.webp" type="image/webp">
-                        <source srcset="images/logo_sm.png" type="image/png">
-                        <img src="images/logo_sm.png" alt="Логотип комиссии по фигурному управлению мотоциклом" class="logo-img" width="80" height="80" loading="eager">
-                    </picture>
-                </div>
-                <div class="logo-right">
-                    <div class="official-name">МОТОЦИКЛЕТНАЯ ФЕДЕРАЦИЯ РОССИИ</div>
-                    <div class="commission-name">КОМИССИЯ ПО ФИГУРНОМУ УПРАВЛЕНИЮ МОТОЦИКЛОМ (МОТОДЖИМХАНА)</div>
-                </div>
+  <div class="container">
+    <!-- Шапка сайта -->
+    <header class="header">
+      <div class="logo-container">
+        <div class="logo-left">
+          <picture>
+            <source srcset="images/logo_sm.webp" type="image/webp">
+            <source srcset="images/logo_sm.png" type="image/png">
+            <img src="images/logo_sm.png" alt="Логотип комиссии по фигурному управлению мотоциклом" class="logo-img" width="80" height="80" loading="eager">
+          </picture>
+        </div>
+        <div class="logo-right">
+          <div class="official-name">МОТОЦИКЛЕТНАЯ ФЕДЕРАЦИЯ РОССИИ</div>
+          <div class="commission-name">КОМИССИЯ ПО ФИГУРНОМУ УПРАВЛЕНИЮ МОТОЦИКЛОМ (МОТОДЖИМХАНА)</div>
+        </div>
+      </div>
+      <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+      <!-- Основная навигация -->
+      <nav class="main-nav" aria-label="Основная навигация">
+        <ul>
+          <li><a href="index.html" class="nav-link">Главная</a></li>
+          <li><a href="about.html" class="nav-link">О комиссии</a></li>
+          <li><a href="structure.html" class="nav-link active" aria-current="page">Структура комиссии</a></li>
+          <li><a href="calendar.html" class="nav-link">Календарь соревнований</a></li>
+          <li><a href="documents.html" class="nav-link">Полезные документы</a></li>
+          <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+          <li><a href="partners.html" class="nav-link">Партнеры</a></li>
+        </ul>
+      </nav>
+      <!-- Мобильное меню -->
+      <nav class="mobile-menu" aria-label="Мобильная навигация" hidden>
+        <div class="mobile-nav">
+          <ul>
+            <li><a href="index.html" class="nav-link">Главная</a></li>
+            <li><a href="about.html" class="nav-link">О комиссии</a></li>
+            <li><a href="structure.html" class="nav-link active">Структура комиссии</a></li>
+            <li><a href="calendar.html" class="nav-link">Календарь соревнований</a></li>
+            <li><a href="documents.html" class="nav-link">Полезные документы</a></li>
+            <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+            <li><a href="partners.html" class="nav-link">Партнеры</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- Основное содержимое -->
+    <main class="content">
+      <!-- Герой-секция -->
+      <section class="structure-hero" aria-labelledby="structure-hero-title">
+        <div class="structure-hero-content">
+          <h1 id="structure-hero-title">Структура комиссии</h1>
+          <p>Руководство и региональные представители Комиссии по фигурному управлению мотоциклом</p>
+        </div>
+      </section>
+      <!-- Руководство комиссии -->
+      <section class="leadership-section section" aria-labelledby="leadership-title">
+        <h2 id="leadership-title" class="section-title">Руководство комиссии</h2>
+        <div class="leadership-grid">
+          <article class="leader-card">
+            <div class="leader-image">
+              <picture>
+                <source srcset="images/leader1.webp" type="image/webp">
+                <source srcset="images/leader1.jpg" type="image/jpeg">
+                <img src="images/leader1.jpg" alt="Дмитрий Серов, Председатель комиссии" loading="lazy" width="200" height="200">
+              </picture>
+              <div class="leader-badge">
+                <i class="fas fa-crown"></i>
+              </div>
             </div>
-            
-            <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false">
-                <i class="fas fa-bars"></i>
-            </button>
-            
-            <!-- Основная навигация -->
-            <nav class="main-nav" aria-label="Основная навигация">
-                <ul>
-                    <li><a href="index.html" class="nav-link">Главная</a></li>
-                    <li><a href="about.html" class="nav-link">О комиссии</a></li>
-                    <li><a href="structure.html" class="nav-link active" aria-current="page">Структура комиссии</a></li>
-                    <li><a href="calendar.html" class="nav-link">Календарь соревнований</a></li>
-                    <li><a href="documents.html" class="nav-link">Полезные документы</a></li>
-                    <li><a href="contacts.html" class="nav-link">Контакты</a></li>
-                    <li><a href="partners.html" class="nav-link">Партнеры</a></li>
-                </ul>
-            </nav>
-            
-            <!-- Мобильное меню -->
-            <nav class="mobile-menu" aria-label="Мобильная навигация" hidden>
-                <div class="mobile-nav">
-                    <ul>
-                        <li><a href="index.html" class="nav-link">Главная</a></li>
-                        <li><a href="about.html" class="nav-link">О комиссии</a></li>
-                        <li><a href="structure.html" class="nav-link active">Структура комиссии</a></li>
-                        <li><a href="calendar.html" class="nav-link">Календарь соревнований</a></li>
-                        <li><a href="documents.html" class="nav-link">Полезные документы</a></li>
-                        <li><a href="contacts.html" class="nav-link">Контакты</a></li>
-                        <li><a href="partners.html" class="nav-link">Партнеры</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-
-        <!-- Основное содержимое -->
-        <main class="content">
-            <!-- Герой-секция -->
-            <section class="structure-hero" aria-labelledby="structure-hero-title">
-                <div class="structure-hero-content">
-                    <h1 id="structure-hero-title">Структура комиссии</h1>
-                    <p>Руководство и региональные представители Комиссии по фигурному управлению мотоциклом</p>
-                </div>
-            </section>
-
-            <!-- Руководство комиссии -->
-            <section class="leadership-section section" aria-labelledby="leadership-title">
-                <h2 id="leadership-title" class="section-title">Руководство комиссии</h2>
-                <div class="leadership-grid">
-                    <article class="leader-card">
-                        <div class="leader-image">
-                            <picture>
-                                <source srcset="images/leader1.webp" type="image/webp">
-                                <source srcset="images/leader1.jpg" type="image/jpeg">
-                                <img src="images/leader1.jpg" alt="Дмитрий Серов, Председатель комиссии" loading="lazy" width="200" height="200">
-                            </picture>
-                            <div class="leader-badge">
-                                <i class="fas fa-crown"></i>
-                            </div>
-                        </div>
-                        <div class="leader-info">
-                            <h3>Дмитрий Серов</h3>
-                            <p class="leader-position">Председатель комиссии</p>
-                            <div class="leader-contacts">
-                                <p><i class="fas fa-phone"></i> +7 (977) 823-63-90</p>
-                                <p><i class="fas fa-envelope"></i> serovdima@list.ru</p>
-                                <p><i class="fas fa-map-marker-alt"></i> Москва</p>
-                            </div>
-                            <p class="leader-bio">Основатель и идеолог развития мотоджимханы в России. Мастер спорта по мотоциклетному спорту.</p>
-                        </div>
-                    </article>
-                    
-                    <article class="leader-card">
-                        <div class="leader-image">
-                            <picture>
-                                <source srcset="images/leader2.webp" type="image/webp">
-                                <source srcset="images/leader2.jpg" type="image/jpeg">
-                                <img src="images/leader2.jpg" alt="Александр Петров, Заместитель председателя" loading="lazy" width="200" height="200">
-                            </picture>
-                            <div class="leader-badge">
-                                <i class="fas fa-user-tie"></i>
-                            </div>
-                        </div>
-                        <div class="leader-info">
-                            <h3>Александр Петров</h3>
-                            <p class="leader-position">Заместитель председателя</p>
-                            <div class="leader-contacts">
-                                <p><i class="fas fa-phone"></i> +7 (915) 456-78-90</p>
-                                <p><i class="fas fa-envelope"></i> petrov@mfr-mg.ru</p>
-                                <p><i class="fas fa-map-marker-alt"></i> Санкт-Петербург</p>
-                            </div>
-                            <p class="leader-bio">Координатор региональных соревнований. Ответственный за развитие вида спорта в СЗФО.</p>
-                        </div>
-                    </article>
-                    
-                    <article class="leader-card">
-                        <div class="leader-image">
-                            <picture>
-                                <source srcset="images/leader3.webp" type="image/webp">
-                                <source srcset="images/leader3.jpg" type="image/jpeg">
-                                <img src="images/leader3.jpg" alt="Мария Смирнова, Секретарь комиссии" loading="lazy" width="200" height="200">
-                            </picture>
-                            <div class="leader-badge">
-                                <i class="fas fa-file-signature"></i>
-                            </div>
-                        </div>
-                        <div class="leader-info">
-                            <h3>Мария Смирнова</h3>
-                            <p class="leader-position">Секретарь комиссии</p>
-                            <div class="leader-contacts">
-                                <p><i class="fas fa-phone"></i> +7 (926) 123-45-67</p>
-                                <p><i class="fas fa-envelope"></i> smirnova@mfr-mg.ru</p>
-                                <p><i class="fas fa-map-marker-alt"></i> Нижний Новгород</p>
-                            </div>
-                            <p class="leader-bio">Организация документооборота, ведение протоколов, взаимодействие с региональными представителями.</p>
-                        </div>
-                    </article>
-                </div>
-            </section>
-
-            <!-- Региональные представители -->
-            <section class="regions-section section" style="background-color: var(--gray-100);" aria-labelledby="regions-title">
-                <h2 id="regions-title" class="section-title">Региональные представители</h2>
-                <div class="regions-filter">
-                    <button class="filter-btn active" data-region="all">Все регионы</button>
-                    <button class="filter-btn" data-region="central">Центральный ФО</button>
-                    <button class="filter-btn" data-region="northwest">Северо-Западный ФО</button>
-                    <button class="filter-btn" data-region="south">Южный ФО</button>
-                    <button class="filter-btn" data-region="volga">Приволжский ФО</button>
-                </div>
-                
-                <div class="regions-grid">
-                    <article class="region-card" data-region="central">
-                        <div class="region-header">
-                            <h3>Москва</h3>
-                            <span class="region-badge">Центральный ФО</span>
-                        </div>
-                        <div class="region-content">
-                            <p class="region-representative"><strong>Представитель:</strong> Иван Козлов</p>
-                            <p class="region-contacts">
-                                <i class="fas fa-phone"></i> +7 (916) 789-01-23<br>
-                                <i class="fas fa-envelope"></i> moscow@mfr-mg.ru
-                            </p>
-                            <p class="region-clubs">Клубы: Мотодром "Сокол", МСК "Восток"</p>
-                            <a href="contacts.html#moscow" class="region-link">Контакты клубов</a>
-                        </div>
-                    </article>
-                    
-                    <article class="region-card" data-region="northwest">
-                        <div class="region-header">
-                            <h3>Санкт-Петербург</h3>
-                            <span class="region-badge">Северо-Западный ФО</span>
-                        </div>
-                        <div class="region-content">
-                            <p class="region-representative"><strong>Представитель:</strong> Ольга Николаева</p>
-                            <p class="region-contacts">
-                                <i class="fas fa-phone"></i> +7 (911) 234-56-78<br>
-                                <i class="fas fa-envelope"></i> spb@mfr-mg.ru
-                            </p>
-                            <p class="region-clubs">Клубы: Мотоклуб "Нева", "Северная столица"</p>
-                            <a href="contacts.html#spb" class="region-link">Контакты клубов</a>
-                        </div>
-                    </article>
-                    
-                    <article class="region-card" data-region="volga">
-                        <div class="region-header">
-                            <h3>Нижний Новгород</h3>
-                            <span class="region-badge">Приволжский ФО</span>
-                        </div>
-                        <div class="region-content">
-                            <p class="region-representative"><strong>Представитель:</strong> Сергей Волков</p>
-                            <p class="region-contacts">
-                                <i class="fas fa-phone"></i> +7 (831) 456-78-90<br>
-                                <i class="fas fa-envelope"></i> nn@mfr-mg.ru
-                            </p>
-                            <p class="region-clubs">Клубы: Motogymkhana NN, "Волга"</p>
-                            <a href="contacts.html#nn" class="region-link">Контакты клубов</a>
-                        </div>
-                    </article>
-                    
-                    <article class="region-card" data-region="south">
-                        <div class="region-header">
-                            <h3>Краснодар</h3>
-                            <span class="region-badge">Южный ФО</span>
-                        </div>
-                        <div class="region-content">
-                            <p class="region-representative"><strong>Представитель:</strong> Андрей Семенов</p>
-                            <p class="region-contacts">
-                                <i class="fas fa-phone"></i> +7 (861) 789-01-23<br>
-                                <i class="fas fa-envelope"></i> krasnodar@mfr-mg.ru
-                            </p>
-                            <p class="region-clubs">Клубы: "Кубань", Мотодром "Юг"</p>
-                            <a href="contacts.html#krasnodar" class="region-link">Контакты клубов</a>
-                        </div>
-                    </article>
-                    
-                    <article class="region-card" data-region="central">
-                        <div class="region-header">
-                            <h3>Казань</h3>
-                            <span class="region-badge">Приволжский ФО</span>
-                        </div>
-                        <div class="region-content">
-                            <p class="region-representative"><strong>Представитель:</strong> Ринат Галеев</p>
-                            <p class="region-contacts">
-                                <i class="fas fa-phone"></i> +7 (843) 123-45-67<br>
-                                <i class="fas fa-envelope"></i> kazan@mfr-mg.ru
-                            </p>
-                            <p class="region-clubs">Клубы: "Татарстан", МСК "Кама"</p>
-                            <a href="contacts.html#kazan" class="region-link">Контакты клубов</a>
-                        </div>
-                    </article>
-                    
-                    <article class="region-card" data-region="northwest">
-                        <div class="region-header">
-                            <h3>Екатеринбург</h3>
-                            <span class="region-badge">Уральский ФО</span>
-                        </div>
-                        <div class="region-content">
-                            <p class="region-representative"><strong>Представитель:</strong> Денис Павлов</p>
-                            <p class="region-contacts">
-                                <i class="fas fa-phone"></i> +7 (343) 456-78-90<br>
-                                <i class="fas fa-envelope"></i> ekb@mfr-mg.ru
-                            </p>
-                            <p class="region-clubs">Клубы: "Урал", Мотодром "Свердловск"</p>
-                            <a href="contacts.html#ekb" class="region-link">Контакты клубов</a>
-                        </div>
-                    </article>
-                </div>
-            </section>
-
-            <!-- Стать представителем -->
-            <section class="become-representative section" aria-labelledby="become-title">
-                <h2 id="become-title" class="section-title">Стать региональным представителем</h2>
-                <div class="representative-content">
-                    <div class="representative-info">
-                        <p>Если в вашем регионе еще нет представителя комиссии, вы можете подать заявку на это звание.</p>
-                        <p>Требования к представителю:</p>
-                        <ul class="requirements-list">
-                            <li><i class="fas fa-check"></i> Опыт организации мотоспортивных мероприятий</li>
-                            <li><i class="fas fa-check"></i> Наличие мотоциклетного клуба или площадки для тренировок</li>
-                            <li><i class="fas fa-check"></i> Готовность проводить не менее 2 соревнований в год</li>
-                            <li><i class="fas fa-check"></i> Членство в Мотоциклетной Федерации России</li>
-                        </ul>
-                    </div>
-                    <div class="representative-form">
-                        <h3>Подать заявку</h3>
-                        <form id="representative-form">
-                            <div class="form-group">
-                                <label for="applicant-name">Ф.И.О.</label>
-                                <input type="text" id="applicant-name" required placeholder="Введите ваше ФИО">
-                            </div>
-                            <div class="form-group">
-                                <label for="applicant-region">Регион</label>
-                                <input type="text" id="applicant-region" required placeholder="Ваш регион">
-                            </div>
-                            <div class="form-group">
-                                <label for="applicant-email">Email</label>
-                                <input type="email" id="applicant-email" required placeholder="example@mail.ru">
-                            </div>
-                            <div class="form-group">
-                                <label for="applicant-phone">Телефон</label>
-                                <input type="tel" id="applicant-phone" required placeholder="+7 (XXX) XXX-XX-XX">
-                            </div>
-                            <button type="submit" class="btn btn-primary">
-                                <i class="fas fa-paper-plane"></i> Отправить заявку
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <!-- Подвал сайта -->
-        <footer class="footer">
-            <div class="footer-content">
-                <div class="footer-logos">
-                    <a href="https://www.mfr.ru/" target="_blank" rel="noopener noreferrer">
-                        <picture>
-                            <source srcset="images/mfr_logo.webp" type="image/webp">
-                            <source srcset="images/mfr_logo.png" type="image/png">
-                            <img src="images/mfr_logo.png" alt="Логотип Мотоциклетной Федерации России" width="120" height="60" loading="lazy">
-                        </picture>
-                    </a>
-                    <a href="https://www.minsport.gov.ru/" target="_blank" rel="noopener noreferrer">
-                        <picture>
-                            <source srcset="images/logo_minsport.webp" type="image/webp">
-                            <source srcset="images/logo_minsport.png" type="image/png">
-                            <img src="images/logo_minsport.png" alt="Логотип Министерства спорта РФ" width="120" height="60" loading="lazy">
-                        </picture>
-                    </a>
-                </div>
-                
-                <div class="footer-links">
-                    <a href="documents.html" class="document-link">Документы комиссии</a>
-                    <a href="https://www.mfr.ru/" target="_blank" rel="noopener noreferrer">Официальный сайт МФР</a>
-                    <a href="https://www.mfr.ru/disciplines/motodzhimkhana/" target="_blank" rel="noopener noreferrer">Страница мотоджимханы на сайте МФР</a>
-                </div>
-                
-                <div class="footer-contacts">
-                    <p><i class="fas fa-envelope" aria-hidden="true"></i> serovdima@list.ru</p>
-                    <p><i class="fas fa-phone" aria-hidden="true"></i> +7 (977) 823-63-90</p>
-                </div>
-                
-                <div class="copyright">
-                    <p>© 2025 Мотоциклетная Федерация России</p>
-                    <p class="powered-by">powered by Motogymkhana NN</p>
-                </div>
+            <div class="leader-info">
+              <h3>Дмитрий Серов</h3>
+              <p class="leader-position">Председатель комиссии</p>
+              <div class="leader-contacts">
+                <p><i class="fas fa-phone"></i> +7 (977) 823-63-90</p>
+                <p><i class="fas fa-envelope"></i> serovdima@list.ru</p>
+                <p><i class="fas fa-map-marker-alt"></i> Москва</p>
+              </div>
+              <p class="leader-bio">Основатель и идеолог развития мотоджимханы в России. Мастер спорта по мотоциклетному спорту.</p>
             </div>
-        </footer>
-    </div>
-
-    <!-- Скрипты -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Активация мобильного меню
-            const menuToggle = document.querySelector('.menu-toggle');
-            const mobileMenu = document.querySelector('.mobile-menu');
-            
-            if (menuToggle && mobileMenu) {
-                menuToggle.addEventListener('click', function() {
-                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
-                    this.setAttribute('aria-expanded', !isExpanded);
-                    mobileMenu.hidden = isExpanded;
-                    
-                    const icon = this.querySelector('i');
-                    if (isExpanded) {
-                        icon.classList.remove('fa-times');
-                        icon.classList.add('fa-bars');
-                    } else {
-                        icon.classList.remove('fa-bars');
-                        icon.classList.add('fa-times');
-                    }
-                });
-            }
-            
-            // Фильтрация регионов
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            const regionCards = document.querySelectorAll('.region-card');
-            
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // Удаляем активный класс у всех кнопок
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    // Добавляем активный класс текущей кнопке
-                    this.classList.add('active');
-                    
-                    const region = this.getAttribute('data-region');
-                    
-                    // Показываем/скрываем карточки регионов
-                    regionCards.forEach(card => {
-                        if (region === 'all' || card.getAttribute('data-region') === region) {
-                            card.style.display = 'block';
-                            setTimeout(() => {
-                                card.style.opacity = '1';
-                                card.style.transform = 'translateY(0)';
-                            }, 10);
-                        } else {
-                            card.style.opacity = '0';
-                            card.style.transform = 'translateY(20px)';
-                            setTimeout(() => {
-                                card.style.display = 'none';
-                            }, 300);
-                        }
-                    });
-                });
-            });
-            
-            // Обработка формы
-            const representativeForm = document.getElementById('representative-form');
-            if (representativeForm) {
-                representativeForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    
-                    // Здесь должна быть отправка формы на сервер
-                    // Временно просто показываем сообщение
-                    alert('Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в течение 3 рабочих дней.');
-                    this.reset();
-                });
-            }
-            
-            // Плавная прокрутка
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-                    
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 80,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
+          </article>
+          <article class="leader-card">
+            <div class="leader-image">
+              <picture>
+                <source srcset="images/leader2.webp" type="image/webp">
+                <source srcset="images/leader2.jpg" type="image/jpeg">
+                <img src="images/leader2.jpg" alt="Александр Петров, Заместитель председателя" loading="lazy" width="200" height="200">
+              </picture>
+              <div class="leader-badge">
+                <i class="fas fa-user-tie"></i>
+              </div>
+            </div>
+            <div class="leader-info">
+              <h3>Александр Петров</h3>
+              <p class="leader-position">Заместитель председателя</p>
+              <div class="leader-contacts">
+                <p><i class="fas fa-phone"></i> +7 (915) 456-78-90</p>
+                <p><i class="fas fa-envelope"></i> petrov@mfr-mg.ru</p>
+                <p><i class="fas fa-map-marker-alt"></i> Санкт-Петербург</p>
+              </div>
+              <p class="leader-bio">Координатор региональных соревнований. Ответственный за развитие вида спорта в СЗФО.</p>
+            </div>
+          </article>
+          <article class="leader-card">
+            <div class="leader-image">
+              <picture>
+                <source srcset="images/leader3.webp" type="image/webp">
+                <source srcset="images/leader3.jpg" type="image/jpeg">
+                <img src="images/leader3.jpg" alt="Мария Смирнова, Секретарь комиссии" loading="lazy" width="200" height="200">
+              </picture>
+              <div class="leader-badge">
+                <i class="fas fa-file-signature"></i>
+              </div>
+            </div>
+            <div class="leader-info">
+              <h3>Мария Смирнова</h3>
+              <p class="leader-position">Секретарь комиссии</p>
+              <div class="leader-contacts">
+                <p><i class="fas fa-phone"></i> +7 (926) 123-45-67</p>
+                <p><i class="fas fa-envelope"></i> smirnova@mfr-mg.ru</p>
+                <p><i class="fas fa-map-marker-alt"></i> Нижний Новгород</p>
+              </div>
+              <p class="leader-bio">Организация документооборота, ведение протоколов, взаимодействие с региональными представителями.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- Региональные представители -->
+      <section class="regions-section section" aria-labelledby="regions-title">
+        <h2 id="regions-title" class="section-title">Региональные представители</h2>
+        <div class="regions-filter">
+          <button class="filter-btn active" data-region="all">Все регионы</button>
+          <button class="filter-btn" data-region="central">Центральный ФО</button>
+          <button class="filter-btn" data-region="northwest">Северо-Западный ФО</button>
+          <button class="filter-btn" data-region="south">Южный ФО</button>
+          <button class="filter-btn" data-region="volga">Приволжский ФО</button>
+        </div>
+        <div class="regions-grid">
+          <article class="region-card" data-region="central">
+            <div class="region-header">
+              <h3>Москва</h3>
+              <span class="region-badge">Центральный ФО</span>
+            </div>
+            <div class="region-content">
+              <p class="region-representative"><strong>Представитель:</strong> Иван Козлов</p>
+              <p class="region-contacts">
+                <i class="fas fa-phone"></i> +7 (916) 789-01-23<br>
+                <i class="fas fa-envelope"></i> moscow@mfr-mg.ru
+              </p>
+              <p class="region-clubs">Клубы: Мотодром "Сокол", МСК "Восток"</p>
+              <a href="contacts.html#moscow" class="region-link">Контакты клубов</a>
+            </div>
+          </article>
+          <article class="region-card" data-region="northwest">
+            <div class="region-header">
+              <h3>Санкт-Петербург</h3>
+              <span class="region-badge">Северо-Западный ФО</span>
+            </div>
+            <div class="region-content">
+              <p class="region-representative"><strong>Представитель:</strong> Ольга Николаева</p>
+              <p class="region-contacts">
+                <i class="fas fa-phone"></i> +7 (911) 234-56-78<br>
+                <i class="fas fa-envelope"></i> spb@mfr-mg.ru
+              </p>
+              <p class="region-clubs">Клубы: Мотоклуб "Нева", "Северная столица"</p>
+              <a href="contacts.html#spb" class="region-link">Контакты клубов</a>
+            </div>
+          </article>
+          <article class="region-card" data-region="volga">
+            <div class="region-header">
+              <h3>Нижний Новгород</h3>
+              <span class="region-badge">Приволжский ФО</span>
+            </div>
+            <div class="region-content">
+              <p class="region-representative"><strong>Представитель:</strong> Сергей Волков</p>
+              <p class="region-contacts">
+                <i class="fas fa-phone"></i> +7 (831) 456-78-90<br>
+                <i class="fas fa-envelope"></i> nn@mfr-mg.ru
+              </p>
+              <p class="region-clubs">Клубы: Motogymkhana NN, "Волга"</p>
+              <a href="contacts.html#nn" class="region-link">Контакты клубов</a>
+            </div>
+          </article>
+          <article class="region-card" data-region="south">
+            <div class="region-header">
+              <h3>Краснодар</h3>
+              <span class="region-badge">Южный ФО</span>
+            </div>
+            <div class="region-content">
+              <p class="region-representative"><strong>Представитель:</strong> Андрей Семенов</p>
+              <p class="region-contacts">
+                <i class="fas fa-phone"></i> +7 (861) 789-01-23<br>
+                <i class="fas fa-envelope"></i> krasnodar@mfr-mg.ru
+              </p>
+              <p class="region-clubs">Клубы: "Кубань", Мотодром "Юг"</p>
+              <a href="contacts.html#krasnodar" class="region-link">Контакты клубов</a>
+            </div>
+          </article>
+          <article class="region-card" data-region="central">
+            <div class="region-header">
+              <h3>Казань</h3>
+              <span class="region-badge">Приволжский ФО</span>
+            </div>
+            <div class="region-content">
+              <p class="region-representative"><strong>Представитель:</strong> Ринат Галеев</p>
+              <p class="region-contacts">
+                <i class="fas fa-phone"></i> +7 (843) 123-45-67<br>
+                <i class="fas fa-envelope"></i> kazan@mfr-mg.ru
+              </p>
+              <p class="region-clubs">Клубы: "Татарстан", МСК "Кама"</p>
+              <a href="contacts.html#kazan" class="region-link">Контакты клубов</a>
+            </div>
+          </article>
+          <article class="region-card" data-region="northwest">
+            <div class="region-header">
+              <h3>Екатеринбург</h3>
+              <span class="region-badge">Уральский ФО</span>
+            </div>
+            <div class="region-content">
+              <p class="region-representative"><strong>Представитель:</strong> Денис Павлов</p>
+              <p class="region-contacts">
+                <i class="fas fa-phone"></i> +7 (343) 456-78-90<br>
+                <i class="fas fa-envelope"></i> ekb@mfr-mg.ru
+              </p>
+              <p class="region-clubs">Клубы: "Урал", Мотодром "Свердловск"</p>
+              <a href="contacts.html#ekb" class="region-link">Контакты клубов</a>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- Стать представителем -->
+      <section class="become-representative section" aria-labelledby="become-title">
+        <h2 id="become-title" class="section-title">Стать региональным представителем</h2>
+        <div class="representative-content">
+          <div class="representative-info">
+            <p>Если в вашем регионе еще нет представителя комиссии, вы можете подать заявку на это звание.</p>
+            <p>Требования к представителю:</p>
+            <ul class="requirements-list">
+              <li><i class="fas fa-check"></i> Опыт организации мотоспортивных мероприятий</li>
+              <li><i class="fas fa-check"></i> Наличие мотоциклетного клуба или площадки для тренировок</li>
+              <li><i class="fas fa-check"></i> Готовность проводить не менее 2 соревнований в год</li>
+              <li><i class="fas fa-check"></i> Членство в Мотоциклетной Федерации России</li>
+            </ul>
+          </div>
+          <div class="representative-form">
+            <h3>Подать заявку</h3>
+            <form id="representative-form">
+              <div class="form-group">
+                <label for="applicant-name">Ф.И.О.</label>
+                <input type="text" id="applicant-name" class="form-control" required placeholder="Введите ваше ФИО">
+              </div>
+              <div class="form-group">
+                <label for="applicant-region">Регион</label>
+                <input type="text" id="applicant-region" class="form-control" required placeholder="Ваш регион">
+              </div>
+              <div class="form-group">
+                <label for="applicant-email">Email</label>
+                <input type="email" id="applicant-email" class="form-control" required placeholder="example@mail.ru">
+              </div>
+              <div class="form-group">
+                <label for="applicant-phone">Телефон</label>
+                <input type="tel" id="applicant-phone" class="form-control" required placeholder="+7 (XXX) XXX-XX-XX">
+              </div>
+              <button type="submit" class="btn">
+                <i class="fas fa-paper-plane"></i> Отправить заявку
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Подвал сайта -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-logos">
+          <a href="https://www.mfr.ru/" target="_blank" rel="noopener noreferrer">
+            <picture>
+              <source srcset="images/mfr_logo.webp" type="image/webp">
+              <source srcset="images/mfr_logo.png" type="image/png">
+              <img src="images/mfr_logo.png" alt="Логотип Мотоциклетной Федерации России" width="120" height="60" loading="lazy">
+            </picture>
+          </a>
+          <a href="https://www.minsport.gov.ru/" target="_blank" rel="noopener noreferrer">
+            <picture>
+              <source srcset="images/logo_minsport.webp" type="image/webp">
+              <source srcset="images/logo_minsport.png" type="image/png">
+              <img src="images/logo_minsport.png" alt="Логотип Министерства спорта РФ" width="120" height="60" loading="lazy">
+            </picture>
+          </a>
+        </div>
+        <div class="footer-links">
+          <a href="documents.html" class="document-link">Документы комиссии</a>
+          <a href="https://www.mfr.ru/" target="_blank" rel="noopener noreferrer">Официальный сайт МФР</a>
+          <a href="https://www.mfr.ru/disciplines/motodzhimkhana/" target="_blank" rel="noopener noreferrer">Страница мотоджимханы на сайте МФР</a>
+        </div>
+        <div class="footer-contacts">
+          <p><i class="fas fa-envelope" aria-hidden="true"></i> serovdima@list.ru</p>
+          <p><i class="fas fa-phone" aria-hidden="true"></i> +7 (977) 823-63-90</p>
+        </div>
+        <div class="copyright">
+          <p>© 2025 Мотоциклетная Федерация России</p>
+          <p class="powered-by">powered by Motogymkhana NN</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!-- Скрипты -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Активация мобильного меню
+      const menuToggle = document.querySelector('.menu-toggle');
+      const mobileMenu = document.querySelector('.mobile-menu');
+      if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', function() {
+          const isExpanded = this.getAttribute('aria-expanded') === 'true';
+          this.setAttribute('aria-expanded', !isExpanded);
+          mobileMenu.hidden = isExpanded;
+          const icon = this.querySelector('i');
+          if (isExpanded) {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+          } else {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+          }
         });
-    </script>
+      }
+      
+      // Фильтрация регионов
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const regionCards = document.querySelectorAll('.region-card');
+      
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          // Удаляем активный класс у всех кнопок
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          // Добавляем активный класс текущей кнопке
+          this.classList.add('active');
+          
+          const region = this.getAttribute('data-region');
+          
+          // Показываем/скрываем карточки регионов
+          regionCards.forEach(card => {
+            if (region === 'all' || card.getAttribute('data-region') === region) {
+              card.style.display = 'block';
+              setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+              }, 10);
+            } else {
+              card.style.opacity = '0';
+              card.style.transform = 'translateY(20px)';
+              setTimeout(() => {
+                card.style.display = 'none';
+              }, 300);
+            }
+          });
+        });
+      });
+      
+      // Обработка формы
+      const representativeForm = document.getElementById('representative-form');
+      if (representativeForm) {
+        representativeForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          // Здесь должна быть отправка формы на сервер
+          // Временно просто показываем сообщение
+          alert('Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в течение 3 рабочих дней.');
+          this.reset();
+        });
+      }
+      
+      // Плавная прокрутка
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
