@@ -5,10 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Кубок России по ФУМ 2026 | Комиссия МФР</title>
   <link rel="stylesheet" href="styles.css">
-  <style>
-    /* Временные стили для плавной прокрутки (можно перенести в styles.css) */
-    html { scroll-behavior: smooth; }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -17,9 +14,13 @@
   <div class="container header-container">
     <div class="logo">
       <img src="images/logo.png" alt="Комиссия ФУМ МФР" class="logo-img">
-      <!-- Если логотипа нет, можно текстовый вариант -->
     </div>
-    <nav class="main-nav">
+    <button class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="main-nav" id="mainNav">
       <ul>
         <li><a href="#about">О Кубке</a></li>
         <li><a href="#calendar">Этапы</a></li>
@@ -67,45 +68,73 @@
     </div>
   </section>
 
-  <!-- КАЛЕНДАРЬ ЭТАПОВ (из коммерческого предложения) -->
+  <!-- КАЛЕНДАРЬ ЭТАПОВ -->
   <section id="calendar" class="section calendar">
     <div class="container">
       <h2 class="section-title">Календарь этапов 2026</h2>
       <div class="stage-grid">
         <div class="stage-card">
           <div class="stage-date">16–17 мая</div>
-          <div class="stage-place">Нижний Новгород</div>
-          <div class="stage-venue">Совкомбанк Арена</div>
+          <h3 class="stage-title">Этап 1</h3>
+          <div class="stage-region">Нижний Новгород</div>
+          <div class="stage-time">10:00</div>
+          <div class="stage-organizer">Организатор: ООО "Компас"</div>
+          <div class="stage-phone">+7 (969) 600-25-85</div>
+          <a href="#" class="btn btn-protocol">Протокол</a>
         </div>
         <div class="stage-card">
           <div class="stage-date">6–8 июня</div>
-          <div class="stage-place">Ленинградская область</div>
-          <div class="stage-venue">Автодром «Igora Drive»</div>
+          <h3 class="stage-title">Этап 2</h3>
+          <div class="stage-region">Ленинградская область</div>
+          <div class="stage-time">11:00</div>
+          <div class="stage-organizer">Организатор: Игора Драйв</div>
+          <div class="stage-phone">+7 (921) 123-45-67</div>
+          <a href="#" class="btn btn-protocol">Протокол</a>
         </div>
         <div class="stage-card">
           <div class="stage-date">26–28 июня</div>
-          <div class="stage-place">Тверская область</div>
-          <div class="stage-venue">г. Бежецк</div>
+          <h3 class="stage-title">Этап 3</h3>
+          <div class="stage-region">Тверская область</div>
+          <div class="stage-time">10:30</div>
+          <div class="stage-organizer">Организатор: Администрация Бежецка</div>
+          <div class="stage-phone">+7 (910) 987-65-43</div>
+          <a href="#" class="btn btn-protocol">Протокол</a>
         </div>
         <div class="stage-card">
           <div class="stage-date">Июль 2026</div>
-          <div class="stage-place">Московская область</div>
-          <div class="stage-venue">МРВ (уточняется)</div>
+          <h3 class="stage-title">Этап 4</h3>
+          <div class="stage-region">Московская область</div>
+          <div class="stage-time">Уточняется</div>
+          <div class="stage-organizer">Организатор: МРВ</div>
+          <div class="stage-phone">Уточняется</div>
+          <a href="#" class="btn btn-protocol">Протокол</a>
         </div>
         <div class="stage-card">
           <div class="stage-date">Август 2026</div>
-          <div class="stage-place">Казань</div>
-          <div class="stage-venue">Kazan Ring Canyon</div>
+          <h3 class="stage-title">Этап 5</h3>
+          <div class="stage-region">Казань</div>
+          <div class="stage-time">Уточняется</div>
+          <div class="stage-organizer">Организатор: Kazan Ring Canyon</div>
+          <div class="stage-phone">+7 (964) 555-12-34</div>
+          <a href="#" class="btn btn-protocol">Протокол</a>
         </div>
         <div class="stage-card">
           <div class="stage-date">Август 2026</div>
-          <div class="stage-place">Краснодар</div>
-          <div class="stage-venue">Уточняется</div>
+          <h3 class="stage-title">Этап 6</h3>
+          <div class="stage-region">Краснодар</div>
+          <div class="stage-time">Уточняется</div>
+          <div class="stage-organizer">Организатор: Уточняется</div>
+          <div class="stage-phone">Уточняется</div>
+          <a href="#" class="btn btn-protocol">Протокол</a>
         </div>
         <div class="stage-card">
           <div class="stage-date">Сентябрь 2026</div>
-          <div class="stage-place">Ставропольский край</div>
-          <div class="stage-venue">г. Невинномысск</div>
+          <h3 class="stage-title">Этап 7</h3>
+          <div class="stage-region">Ставропольский край</div>
+          <div class="stage-time">Уточняется</div>
+          <div class="stage-organizer">Организатор: Администрация Невинномысска</div>
+          <div class="stage-phone">+7 (928) 111-22-33</div>
+          <a href="#" class="btn btn-protocol">Протокол</a>
         </div>
       </div>
       <p class="calendar-note">* Точные даты и места могут уточняться, следите за новостями.</p>
@@ -143,7 +172,7 @@
           <h3>Алексей Фатьянов</h3>
           <div class="person-role">Заместитель председателя</div>
           <div class="person-contacts">
-            <a href="tel:+79201119177">+7 (920) 111-91-77</a><br>
+            <a href="tel:+79696002585">+7 (969) 600-25-85</a><br>
             <a href="mailto:alexey@fatyanov.com">alexey@fatyanov.com</a>
           </div>
         </div>
@@ -166,7 +195,7 @@
     </div>
   </section>
 
-  <!-- ПАРТНЁРАМ (яркий блок) -->
+  <!-- ПАРТНЁРАМ -->
   <section id="partners" class="section partners">
     <div class="container">
       <h2 class="section-title">Партнёрам Кубка России 2026</h2>
@@ -220,16 +249,18 @@
       <div class="contacts-grid">
         <div class="contact-info">
           <p><strong>Председатель:</strong> Дмитрий Серов<br>Тел: <a href="tel:+79778236390">+7 (977) 823-63-90</a><br>Email: <a href="mailto:serovdima@list.ru">serovdima@list.ru</a></p>
-          <p><strong>Заместитель:</strong> Алексей Фатьянов<br>Тел: <a href="tel:+79201119177">+7 (920) 111-91-77</a><br>Email: <a href="mailto:alexey@fatyanov.com">alexey@fatyanov.com</a></p>
+          <p><strong>Заместитель:</strong> Алексей Фатьянов<br>Тел: <a href="tel:+79696002585">+7 (969) 600-25-85</a><br>Email: <a href="mailto:alexey@fatyanov.com">alexey@fatyanov.com</a></p>
           <p><strong>Соцсети:</strong><br>
-            <a href="#" target="_blank">VK</a> | <a href="#" target="_blank">Telegram-канал</a>
+            <a href="https://vk.com/motodzhimkhana" target="_blank">VK</a> | <a href="https://t.me/motodzhimkhana" target="_blank">Telegram</a>
+          </p>
+          <p><strong>Telegram-бот:</strong><br>
+            <a href="https://t.me/ugol_chemp_bot" target="_blank">@ugol_chemp_bot</a>
           </p>
         </div>
         <div class="join-form" id="join">
           <h3>Предварительная заявка на участие</h3>
           <p>Заполните форму, чтобы мы могли связаться с вами и держать в курсе.</p>
-          <!-- Здесь можно встроить форму Google Forms или свою -->
-          <a href="https://forms.gle/..." class="btn btn-primary" target="_blank">Перейти к форме заявки</a>
+          <a href="https://forms.gle/example" class="btn btn-primary" target="_blank">Перейти к форме заявки</a>
           <p class="form-note">*Официальная регистрация на этапы будет открыта позже.</p>
         </div>
       </div>
@@ -245,8 +276,9 @@
   </div>
 </footer>
 
-<!-- Скрипт для таймера обратного отсчёта до первого этапа (16 мая 2026) -->
+<!-- Скрипт для таймера обратного отсчёта и мобильного меню -->
 <script>
+  // Таймер обратного отсчёта до первого этапа (16 мая 2026)
   (function() {
     const targetDate = new Date(2026, 4, 16, 0, 0, 0); // 16 мая 2026 (месяцы с 0)
     function updateTimer() {
@@ -267,6 +299,28 @@
     }
     updateTimer();
     setInterval(updateTimer, 1000);
+  })();
+
+  // Мобильное меню
+  (function() {
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+    
+    if (menuToggle && mainNav) {
+      menuToggle.addEventListener('click', function() {
+        this.classList.toggle('active');
+        mainNav.classList.toggle('active');
+      });
+      
+      // Закрытие меню при клике на ссылку
+      const navLinks = mainNav.querySelectorAll('a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          menuToggle.classList.remove('active');
+          mainNav.classList.remove('active');
+        });
+      });
+    }
   })();
 </script>
 
