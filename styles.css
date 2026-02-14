@@ -210,11 +210,11 @@ p {
 }
 
 /* ====================== */
-/* ГЕРОЙ-СЕКЦИЯ ABOUT */
+/* ГЕРОЙ-СЕКЦИЯ (новая) */
 /* ====================== */
 
-.about-hero {
-    min-height: 70vh;
+.hero {
+    min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -222,36 +222,15 @@ p {
     text-align: center;
     position: relative;
     overflow: hidden;
-    padding: 40px 20px;
-}
-
-/* Эффект параллакса с движением фона */
-.about-hero {
-    background-image: url('images/hero-moto.webp');
+    padding: 60px 20px;
+    background-image: url('images/hero-bg.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Параллакс-эффект */
-    background-repeat: no-repeat;
+    background-attachment: fixed;
     animation: slowBackgroundMove 30s ease-in-out infinite;
 }
 
-@keyframes slowBackgroundMove {
-    0% {
-        background-position: center;
-        background-size: 100%;
-    }
-    50% {
-        background-position: 20% center;
-        background-size: 110%;
-    }
-    100% {
-        background-position: center;
-        background-size: 100%;
-    }
-}
-
-/* Затемнение фона для лучшей читаемости текста */
-.about-hero::before {
+.hero::before {
     content: '';
     position: absolute;
     top: 0;
@@ -262,42 +241,388 @@ p {
     z-index: 1;
 }
 
-.about-hero-content {
+.hero-content {
     position: relative;
     z-index: 2;
-    max-width: 800px;
+    max-width: 900px;
 }
 
-.about-hero h1 {
+.hero-title {
     font-size: 3.5rem;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
     animation: fadeInUp 1s ease-out;
 }
 
-.about-hero p {
+.hero-title span {
+    color: #f0b90b; /* акцентный цвет из КП */
+}
+
+.hero-subtitle {
     font-size: 1.5rem;
     margin-bottom: 2rem;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
     animation: fadeInUp 1s ease-out 0.3s both;
 }
 
-/* ====================== */
-/* ОСНОВНОЕ СОДЕРЖИМОЕ */
-/* ====================== */
-
-.content {
-    flex: 1;
-    padding: 40px 0;
+/* Таймер */
+.timer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
 }
 
-.section {
-    margin-bottom: 60px;
-    padding: 40px 0;
+.timer-item {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.timer-item span {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #f0b90b;
+}
+
+.timer-ended {
+    font-size: 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
 }
 
 /* ====================== */
-/* ИСТОРИЯ СОЗДАНИЯ */
+/* О КУБКЕ (новая секция) */
+/* ====================== */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-stats {
+    display: flex;
+    justify-content: space-around;
+}
+
+.stat-item {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.stat-item span {
+    display: block;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #f0b90b;
+}
+
+/* ====================== */
+/* КАЛЕНДАРЬ ЭТАПОВ (новая секция) */
+/* ====================== */
+
+.stage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.stage-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stage-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.stage-date {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f0b90b;
+    margin-bottom: 10px;
+}
+
+.stage-place {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.stage-venue {
+    color: #7f8c8d;
+}
+
+.calendar-note {
+    text-align: center;
+    margin-top: 30px;
+    color: #95a5a6;
+}
+
+/* ====================== */
+/* ДОКУМЕНТЫ (новая секция) */
+/* ====================== */
+
+.docs-list {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.docs-list li {
+    margin: 15px 0;
+    padding-left: 30px;
+    background: url('images/icons/pdf-icon.svg') left center no-repeat;
+    background-size: 20px;
+}
+
+.docs-list a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: 500;
+}
+
+.docs-list a:hover {
+    text-decoration: underline;
+}
+
+.docs-note {
+    text-align: center;
+    color: #95a5a6;
+    margin-top: 20px;
+}
+
+/* ====================== */
+/* СТРУКТУРА КОМИССИИ (новая секция) */
+/* ====================== */
+
+.leadership {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.person-card {
+    background: #fff;
+    border: 1px solid #ecf0f1;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.person-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.person-card h3 {
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+.person-role {
+    color: #e74c3c;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.person-contacts a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.person-contacts.samples {
+    color: #bdc3c7;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1.8rem;
+    margin: 40px 0 20px;
+    color: #2c3e50;
+}
+
+.members-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.members-list li {
+    background: rgba(231, 76, 60, 0.1);
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.members-note {
+    text-align: center;
+    color: #95a5a6;
+}
+
+/* ====================== */
+/* ПАРТНЁРАМ (новая секция) */
+/* ====================== */
+
+.partners {
+    background: linear-gradient(135deg, #f9f9f9 0%, #f0b90b10 100%);
+    border-top: 3px solid #f0b90b;
+    border-bottom: 3px solid #f0b90b;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    margin: 40px 0;
+}
+
+.option-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.option-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.option-card h3 {
+    color: #f0b90b;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.option-card ul {
+    padding-left: 20px;
+    margin: 0;
+    color: #555;
+}
+
+.option-card li {
+    margin-bottom: 8px;
+}
+
+.partners-cta {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.partners-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* ====================== */
+/* КОНТАКТЫ И ЗАЯВКИ (новая секция) */
+/* ====================== */
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.contact-info p {
+    margin: 15px 0;
+    line-height: 1.8;
+}
+
+.contact-info a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.join-form {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.join-form h3 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.form-note {
+    margin-top: 15px;
+    color: #95a5a6;
+    font-size: 0.9rem;
+}
+
+/* ====================== */
+/* КНОПКИ (общие) */
+/* ====================== */
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background: #f0b90b;
+    color: #2c3e50;
+}
+
+.btn-primary:hover {
+    background: #d4a00b;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(240, 185, 11, 0.3);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid #f0b90b;
+    color: #f0b90b;
+}
+
+.btn-secondary:hover {
+    background: #f0b90b;
+    color: #2c3e50;
+    transform: translateY(-2px);
+}
+
+/* ====================== */
+/* ИСТОРИЯ СОЗДАНИЯ (ваши старые стили) */
 /* ====================== */
 
 .history-content p {
@@ -347,7 +672,7 @@ p {
 }
 
 /* ====================== */
-/* МИССИЯ И ЦЕЛИ */
+/* МИССИЯ И ЦЕЛИ (ваши старые стили) */
 /* ====================== */
 
 .mission-grid {
@@ -391,7 +716,7 @@ p {
 }
 
 /* ====================== */
-/* НАШИ ЦЕННОСТИ */
+/* НАШИ ЦЕННОСТИ (ваши старые стили) */
 /* ====================== */
 
 .values-container {
@@ -431,7 +756,7 @@ p {
 }
 
 /* ====================== */
-/* ЦИТАТА ПРЕДСЕДАТЕЛЯ */
+/* ЦИТАТА ПРЕДСЕДАТЕЛЯ (ваши старые стили) */
 /* ====================== */
 
 .quote-section {
@@ -471,7 +796,7 @@ p {
 }
 
 /* ====================== */
-/* НАШИ ДОСТИЖЕНИЯ */
+/* НАШИ ДОСТИЖЕНИЯ (ваши старые стили) */
 /* ====================== */
 
 .achievements-section {
@@ -480,10 +805,6 @@ p {
     padding: 80px 20px;
     border-radius: 12px;
     margin: 60px 0;
-}
-
-/* Анимированный фон с движением */
-.achievements-section {
     background-image: url('images/sport-about.webp');
     background-size: cover;
     background-position: center;
@@ -491,30 +812,6 @@ p {
     animation: panBackground 40s ease-in-out infinite alternate;
 }
 
-@keyframes panBackground {
-    0% {
-        background-position: 0% center;
-        background-size: 100%;
-    }
-    25% {
-        background-position: 25% center;
-        background-size: 105%;
-    }
-    50% {
-        background-position: 50% center;
-        background-size: 110%;
-    }
-    75% {
-        background-position: 75% center;
-        background-size: 105%;
-    }
-    100% {
-        background-position: 100% center;
-        background-size: 100%;
-    }
-}
-
-/* Наложение для контраста */
 .achievements-section::before {
     content: '';
     position: absolute;
@@ -654,6 +951,44 @@ p {
     }
 }
 
+@keyframes slowBackgroundMove {
+    0% {
+        background-position: center;
+        background-size: 100%;
+    }
+    50% {
+        background-position: 20% center;
+        background-size: 110%;
+    }
+    100% {
+        background-position: center;
+        background-size: 100%;
+    }
+}
+
+@keyframes panBackground {
+    0% {
+        background-position: 0% center;
+        background-size: 100%;
+    }
+    25% {
+        background-position: 25% center;
+        background-size: 105%;
+    }
+    50% {
+        background-position: 50% center;
+        background-size: 110%;
+    }
+    75% {
+        background-position: 75% center;
+        background-size: 105%;
+    }
+    100% {
+        background-position: 100% center;
+        background-size: 100%;
+    }
+}
+
 /* ====================== */
 /* АДАПТИВНЫЙ ДИЗАЙН */
 /* ====================== */
@@ -674,6 +1009,10 @@ p {
     
     h2 {
         font-size: 1.8rem;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
     }
 }
 
@@ -703,9 +1042,10 @@ p {
         margin-top: 15px;
     }
     
-    .about-hero {
-        min-height: 50vh;
-        background-attachment: scroll; /* Отключаем фиксированный фон на мобильных */
+    /* Герой на мобильных */
+    .hero {
+        min-height: 60vh;
+        background-attachment: scroll;
         animation: slowBackgroundMoveMobile 30s ease-in-out infinite;
     }
     
@@ -724,12 +1064,41 @@ p {
         }
     }
     
-    .about-hero h1 {
+    .hero-title {
         font-size: 2.5rem;
     }
     
-    .about-hero p {
+    .hero-subtitle {
         font-size: 1.2rem;
+    }
+    
+    .timer-item {
+        padding: 10px 15px;
+        font-size: 1rem;
+    }
+    
+    .timer-item span {
+        font-size: 2rem;
+    }
+    
+    .about-grid, .contacts-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-stats {
+        flex-wrap: wrap;
+    }
+    
+    .stage-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .leadership {
+        grid-template-columns: 1fr;
+    }
+    
+    .options-grid {
+        grid-template-columns: 1fr;
     }
     
     .achievements-section {
@@ -786,8 +1155,16 @@ p {
         padding: 0 15px;
     }
     
-    .about-hero h1 {
+    .hero-title {
         font-size: 2rem;
+    }
+    
+    .timer {
+        flex-wrap: wrap;
+    }
+    
+    .timer-item {
+        min-width: 120px;
     }
     
     .milestone {
