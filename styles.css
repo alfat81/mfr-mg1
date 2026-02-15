@@ -575,72 +575,50 @@ h3 {
 }
 
 /* ====================== */
-/* ПАРТНЁРАМ */
+/* ПАРТНЁРАМ (УСИЛЕННЫЙ БЛОК) */
 /* ====================== */
 
-.options-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-  margin: 50px 0;
+.partners-highlight {
+  background: linear-gradient(135deg, #f0b90b20 0%, #f0b90b40 100%), var(--bg-light);
+  border-top: 5px solid var(--accent);
+  border-bottom: 5px solid var(--accent);
+  box-shadow: inset 0 0 30px rgba(240, 185, 11, 0.3), 0 10px 30px -10px var(--accent);
+  position: relative;
+  z-index: 1;
 }
 
-.option-card {
-  background: var(--card-bg);
-  border-radius: var(--radius);
-  padding: 30px 25px;
-  box-shadow: var(--shadow-sm);
-  transition: all 0.25s;
-  border: 1px solid var(--border-light);
-  text-align: center;
-}
-
-.option-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
-}
-
-.option-icon {
-  font-size: 2.5rem;
-  color: var(--accent);
-  margin-bottom: 20px;
-}
-
-.option-card h3 {
-  font-size: 1.4rem;
-  margin-bottom: 20px;
+.partners-highlight .section-title {
   color: var(--primary-dark);
+  text-shadow: 0 2px 5px rgba(255,255,255,0.5);
 }
 
-.option-card ul {
-  list-style: none;
-  padding: 0;
-  color: var(--text-light);
-  text-align: left;
+.partners-highlight .section-title::after {
+  background: var(--primary-dark);
+  height: 5px;
 }
 
-.option-card li {
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.partners-highlight .option-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(5px);
+  border: 1px solid var(--accent);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.option-card li::before {
-  content: "✓";
-  color: var(--accent);
-  font-weight: 700;
+.partners-highlight .option-card:hover {
+  transform: scale(1.02) translateY(-5px);
+  box-shadow: 0 20px 30px -10px var(--accent-dark);
+  background: white;
 }
 
-.partners-cta {
-  text-align: center;
-  margin-top: 30px;
+.partners-highlight .btn-primary {
+  background: var(--primary-dark);
+  color: white;
+  box-shadow: 0 8px 20px -8px var(--primary-dark);
 }
 
-.partners-cta p {
-  font-size: 1.2rem;
-  margin-bottom: 25px;
-  color: var(--text-dark);
+.partners-highlight .btn-primary:hover {
+  background: var(--accent-dark);
+  color: var(--primary-dark);
 }
 
 /* ====================== */
@@ -660,6 +638,14 @@ h3 {
   gap: 25px;
 }
 
+.contact-subtitle {
+  font-size: 1.4rem;
+  color: var(--primary-dark);
+  margin: 10px 0 5px;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 8px;
+}
+
 .contact-item {
   display: flex;
   align-items: center;
@@ -677,15 +663,15 @@ h3 {
 }
 
 .contact-item i {
-  font-size: 2rem;        /* Увеличил для лучшей видимости */
-  color: var(--primary-dark);  /* Тёмный цвет для контраста на белом */
+  font-size: 2rem;
+  color: var(--primary-dark);
   width: 40px;
   text-align: center;
   transition: color 0.2s;
 }
 
 .contact-item:hover i {
-  color: var(--accent);    /* При наведении становятся жёлтыми */
+  color: var(--accent);
 }
 
 .contact-item a {
@@ -746,7 +732,7 @@ h3 {
   height: 60px;
   width: auto;
   object-fit: contain;
-  filter: none;            /* Логотипы в оригинальных цветах */
+  filter: none;
   opacity: 0.9;
   transition: opacity 0.2s ease;
 }
