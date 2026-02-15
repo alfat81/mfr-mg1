@@ -740,9 +740,10 @@ h3 {
 .footer-logos img {
   height: 60px;
   width: auto;
-  filter: brightness(0) invert(1);
-  opacity: 0.8;
-  transition: opacity 0.2s;
+  object-fit: contain;
+  filter: none; /* убрана инверсия, логотипы в оригинальных цветах */
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
 }
 
 .footer-logos img:hover {
