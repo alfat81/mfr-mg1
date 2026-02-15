@@ -1005,9 +1005,27 @@ color: var(--primary-dark);
 color: var(--text-light);
 margin-bottom: 30px;
 }
+/* Контейнер формы */
+.form-container {
+width: 100%;
+max-width: 650px;
+margin: 0 auto;
+background: white;
+border-radius: 16px;
+overflow: hidden;
+box-shadow: var(--shadow-lg);
+}
+.ya-form-iframe {
+width: 100%;
+min-height: 800px;
+border: none;
+display: block;
+}
 .form-note {
 font-size: 0.9rem;
 margin-top: 20px;
+color: var(--text-light);
+font-style: italic;
 }
 /* ====================== */
 /* ПОДВАЛ */
@@ -1201,6 +1219,12 @@ gap: 10px;
 .partners-highlight .section-title {
 font-size: 2.2rem;
 }
+.form-container {
+max-width: 100%;
+}
+.ya-form-iframe {
+min-height: 1000px;
+}
 }
 @media (max-width: 576px) {
 .container { padding: 0 20px; }
@@ -1214,6 +1238,9 @@ font-size: 2.2rem;
 .team-photo { width: 120px; height: 120px; }
 .partners-highlight .section-title {
 font-size: 1.8rem;
+}
+.ya-form-iframe {
+min-height: 1200px;
 }
 }
 /* Эффекты для кнопок */
