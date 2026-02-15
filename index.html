@@ -1,447 +1,434 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Кубок России по ФУМ 2026 | Комиссия по фигурному управлению мотоциклом МФР</title>
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-  <!-- Google Fonts: Inter & Montserrat -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <!-- Font Awesome для иконок -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <!-- Наш CSS -->
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Кубок России по ФУМ 2026 | Комиссия по фигурному управлению мотоциклом МФР</title>
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<!-- Google Fonts: Inter & Montserrat -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+<!-- Font Awesome для иконок -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<!-- Наш CSS -->
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
 <!-- ШАПКА С НАВИГАЦИЕЙ -->
 <header class="header">
-  <div class="container header-container">
-    <div class="logo">
-      <img src="images/mfr_logo.webp" alt="Комиссия по фигурному управлению мотоциклом (мотоджимхане) МФР" class="logo-img">
-      <span class="logo-text">Комиссия ФУМ</span>
-    </div>
-    <button class="menu-toggle" id="menuToggle" aria-label="Меню">
-      <span></span><span></span><span></span>
-    </button>
-    <nav class="main-nav" id="mainNav">
-      <ul>
-        <li><a href="#about">О Кубке</a></li>
-        <li><a href="#calendar">Этапы</a></li>
-        <li><a href="#docs">Документы</a></li>
-        <li><a href="#structure">Комиссия</a></li>
-        <li><a href="#partners">Партнёрам</a></li>
-        <li><a href="#contacts">Контакты</a></li>
-      </ul>
-    </nav>
-  </div>
+<div class="container header-container">
+<div class="logo">
+<img src="images/mfr_logo.webp" alt="Комиссия по фигурному управлению мотоциклом (мотоджимхане) МФР" class="logo-img">
+<span class="logo-text">Комиссия ФУМ</span>
+</div>
+<button class="menu-toggle" id="menuToggle" aria-label="Меню">
+<span></span><span></span><span></span>
+</button>
+<nav class="main-nav" id="mainNav">
+<ul>
+<li><a href="#about">О Кубке</a></li>
+<li><a href="#calendar">Этапы</a></li>
+<li><a href="#docs">Документы</a></li>
+<li><a href="#structure">Комиссия</a></li>
+<li><a href="#partners">Партнёрам</a></li>
+<li><a href="#contacts">Контакты</a></li>
+</ul>
+</nav>
+</div>
 </header>
-
 <main>
-  <!-- HERO: КУБОК РОССИИ 2026 -->
-  <section class="hero" style="background-image: url('images/hero-moto.webp');">
-    <div class="container hero-content">
-      <h1 class="hero-title">Кубок России по фигурному управлению мотоциклом <span>2026</span></h1>
-      <p class="hero-subtitle">Официальные соревнования под эгидой МФР (вид спорта № 0910007511Я)</p>
-      <div class="timer" id="timer">
-        <div class="timer-item"><span class="days">00</span> дней</div>
-        <div class="timer-item"><span class="hours">00</span> часов</div>
-        <div class="timer-item"><span class="minutes">00</span> минут</div>
-        <div class="timer-item"><span class="seconds">00</span> секунд</div>
-      </div>
-      <a href="#join" class="btn btn-primary">Хочу участвовать</a>
-    </div>
-  </section>
-
-  <!-- О КУБКЕ -->
-  <section id="about" class="section">
-    <div class="container">
-      <h2 class="section-title">О Кубке России 2026</h2>
-      <div class="about-grid">
-        <div class="about-text">
-          <p>Фигурное управление мотоциклом / мотоджимхана — техничный, зрелищный и социально значимый вид мотоспорта, объединяющий участников от 6 до 65 лет и привлекающий тысячи зрителей по всей стране. За последние годы интерес к дисциплине вырос на <strong>59%</strong>, что подтверждает её высокий медийный и социальный потенциал.</p>
-          <p>Кубок России 2026 года — главные национальные соревнования, которые пройдут на 7 лучших площадках страны от Нижнего Новгорода до Казани.</p>
-        </div>
-        <div class="about-stats">
-          <div class="stat-item"><span>7</span> этапов</div>
-          <div class="stat-item"><span>>500</span> участников</div>
-          <div class="stat-item"><span>>50</span> регионов</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- КАЛЕНДАРЬ ЭТАПОВ -->
-  <section id="calendar" class="section">
-    <div class="container">
-      <h2 class="section-title">Календарь этапов 2026</h2>
-      <div class="stage-grid">
-        <!-- Этап 1 -->
-        <div class="stage-card">
-          <div class="stage-date">16–17 мая</div>
-          <h3 class="stage-title">Этап 1</h3>
-          <div class="stage-region"><i class="fas fa-map-marker-alt"></i> Нижний Новгород</div>
-          <div class="stage-time"><i class="far fa-clock"></i> 10:00</div>
-          <div class="stage-organizer"><i class="fas fa-user-tie"></i> ООО "Компас"</div>
-          <div class="stage-phone"><i class="fas fa-phone-alt"></i> +7 (969) 600-25-85</div>
-          <a href="#" class="btn-protocol">Протокол <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <!-- Этап 2 -->
-        <div class="stage-card">
-          <div class="stage-date">6–8 июня</div>
-          <h3 class="stage-title">Этап 2</h3>
-          <div class="stage-region"><i class="fas fa-map-marker-alt"></i> Ленинградская область</div>
-          <div class="stage-time"><i class="far fa-clock"></i> 11:00</div>
-          <div class="stage-organizer"><i class="fas fa-user-tie"></i> Игора Драйв</div>
-          <div class="stage-phone"><i class="fas fa-phone-alt"></i> +7 (921) 123-45-67</div>
-          <a href="#" class="btn-protocol">Протокол <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <!-- Этап 3 -->
-        <div class="stage-card">
-          <div class="stage-date">26–28 июня</div>
-          <h3 class="stage-title">Этап 3</h3>
-          <div class="stage-region"><i class="fas fa-map-marker-alt"></i> Тверская область</div>
-          <div class="stage-time"><i class="far fa-clock"></i> 10:30</div>
-          <div class="stage-organizer"><i class="fas fa-user-tie"></i> Администрация Бежецка</div>
-          <div class="stage-phone"><i class="fas fa-phone-alt"></i> +7 (910) 987-65-43</div>
-          <a href="#" class="btn-protocol">Протокол <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <!-- Этап 4 -->
-        <div class="stage-card">
-          <div class="stage-date">Июль 2026</div>
-          <h3 class="stage-title">Этап 4</h3>
-          <div class="stage-region"><i class="fas fa-map-marker-alt"></i> Московская область</div>
-          <div class="stage-time"><i class="far fa-clock"></i> Уточняется</div>
-          <div class="stage-organizer"><i class="fas fa-user-tie"></i> МРВ</div>
-          <div class="stage-phone"><i class="fas fa-phone-alt"></i> Уточняется</div>
-          <a href="#" class="btn-protocol">Протокол <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <!-- Этап 5 -->
-        <div class="stage-card">
-          <div class="stage-date">Август 2026</div>
-          <h3 class="stage-title">Этап 5</h3>
-          <div class="stage-region"><i class="fas fa-map-marker-alt"></i> Казань</div>
-          <div class="stage-time"><i class="far fa-clock"></i> Уточняется</div>
-          <div class="stage-organizer"><i class="fas fa-user-tie"></i> Kazan Ring Canyon</div>
-          <div class="stage-phone"><i class="fas fa-phone-alt"></i> +7 (964) 555-12-34</div>
-          <a href="#" class="btn-protocol">Протокол <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <!-- Этап 6 -->
-        <div class="stage-card">
-          <div class="stage-date">Август 2026</div>
-          <h3 class="stage-title">Этап 6</h3>
-          <div class="stage-region"><i class="fas fa-map-marker-alt"></i> Краснодар</div>
-          <div class="stage-time"><i class="far fa-clock"></i> Уточняется</div>
-          <div class="stage-organizer"><i class="fas fa-user-tie"></i> Уточняется</div>
-          <div class="stage-phone"><i class="fas fa-phone-alt"></i> Уточняется</div>
-          <a href="#" class="btn-protocol">Протокол <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <!-- Этап 7 -->
-        <div class="stage-card">
-          <div class="stage-date">Сентябрь 2026</div>
-          <h3 class="stage-title">Этап 7</h3>
-          <div class="stage-region"><i class="fas fa-map-marker-alt"></i> Ставропольский край</div>
-          <div class="stage-time"><i class="far fa-clock"></i> Уточняется</div>
-          <div class="stage-organizer"><i class="fas fa-user-tie"></i> Администрация Невинномысска</div>
-          <div class="stage-phone"><i class="fas fa-phone-alt"></i> +7 (928) 111-22-33</div>
-          <a href="#" class="btn-protocol">Протокол <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-      <p class="calendar-note">* Точные даты и места могут уточняться, следите за новостями.</p>
-    </div>
-  </section>
-
-  <!-- ДОКУМЕНТЫ -->
-  <section id="docs" class="section">
-    <div class="container">
-      <h2 class="section-title">Регламент и документы</h2>
-      <ul class="docs-list">
-        <li><a href="documents/reglament_2026.pdf" download><i class="fas fa-file-pdf"></i> Регламент Кубка России 2026 (PDF)</a></li>
-        <li><a href="documents/rules_fum.pdf" download><i class="fas fa-file-pdf"></i> Правила вида спорта «Фигурное управление мотоциклом»</a></li>
-        <li><a href="documents/tech_reqs.pdf" download><i class="fas fa-file-pdf"></i> Технические требования к мотоциклам и экипировке</a></li>
-        <li><a href="documents/klas_normy.pdf" download><i class="fas fa-file-pdf"></i> Классификационные нормы (разряды)</a></li>
-      </ul>
-      <p class="docs-note">Документы будут обновляться по мере утверждения. Следите за версиями.</p>
-    </div>
-  </section>
-
-  <!-- СТРУКТУРА КОМИССИИ (все члены с фото и контактами) -->
-  <section id="structure" class="section">
-    <div class="container">
-      <h2 class="section-title">Комиссия по фигурному управлению мотоциклом (мотоджимхане)</h2>
-      <div class="team-grid">
-        <!-- Председатель -->
-        <div class="team-card">
-          <img src="images/Serov.webp" alt="Дмитрий Серов" class="team-photo">
-          <h3 class="team-name">Дмитрий Серов</h3>
-          <div class="team-role">Председатель комиссии</div>
-          <div class="team-contacts">
-            <a href="tel:+79778236390"><i class="fas fa-phone"></i></a>
-            <a href="mailto:serovdima@list.ru"><i class="fas fa-envelope"></i></a>
-          </div>
-        </div>
-        <!-- Зам. председателя -->
-        <div class="team-card">
-          <img src="images/Fatyanov.webp" alt="Алексей Фатьянов" class="team-photo">
-          <h3 class="team-name">Алексей Фатьянов</h3>
-          <div class="team-role">Заместитель председателя</div>
-          <div class="team-contacts">
-            <a href="tel:+79696002585"><i class="fas fa-phone"></i></a>
-            <a href="mailto:alexey@fatyanov.com"><i class="fas fa-envelope"></i></a>
-          </div>
-        </div>
-        <!-- Главный секретарь -->
-        <div class="team-card">
-          <img src="images/Nedavodyina.webp" alt="Наталья Недавойдина" class="team-photo">
-          <h3 class="team-name">Наталья Недавойдина</h3>
-          <div class="team-role">Главный секретарь</div>
-          <div class="team-contacts">
-            <a href="tel:+71234567890"><i class="fas fa-phone"></i></a>
-            <a href="mailto:n.nedavoydina@fum.ru"><i class="fas fa-envelope"></i></a>
-          </div>
-        </div>
-        <!-- Члены комиссии (с контактами-заглушками) -->
-        <div class="team-card">
-          <img src="images/Simdyankin.webp" alt="Глеб Симдянкин" class="team-photo">
-          <h3 class="team-name">Глеб Симдянкин</h3>
-          <div class="team-role">Член комиссии</div>
-          <div class="team-contacts">
-            <a href="tel:+71234567891"><i class="fas fa-phone"></i></a>
-            <a href="mailto:gleb@fum.ru"><i class="fas fa-envelope"></i></a>
-          </div>
-        </div>
-        <div class="team-card">
-          <img src="images/Salnikov.webp" alt="Андрей Сальников" class="team-photo">
-          <h3 class="team-name">Андрей Сальников</h3>
-          <div class="team-role">Член комиссии</div>
-          <div class="team-contacts">
-            <a href="tel:+71234567892"><i class="fas fa-phone"></i></a>
-            <a href="mailto:andrey@fum.ru"><i class="fas fa-envelope"></i></a>
-          </div>
-        </div>
-        <div class="team-card">
-          <img src="images/Safarov.webp" alt="Ильшат Сафаров" class="team-photo">
-          <h3 class="team-name">Ильшат Сафаров</h3>
-          <div class="team-role">Член комиссии</div>
-          <div class="team-contacts">
-            <a href="tel:+71234567893"><i class="fas fa-phone"></i></a>
-            <a href="mailto:ilshat@fum.ru"><i class="fas fa-envelope"></i></a>
-          </div>
-        </div>
-        <div class="team-card">
-          <img src="images/Garanin.webp" alt="Максим Гаранин" class="team-photo">
-          <h3 class="team-name">Максим Гаранин</h3>
-          <div class="team-role">Член комиссии</div>
-          <div class="team-contacts">
-            <a href="tel:+71234567894"><i class="fas fa-phone"></i></a>
-            <a href="mailto:maksim@fum.ru"><i class="fas fa-envelope"></i></a>
-          </div>
-        </div>
-        <div class="team-card">
-          <img src="images/Akimov.webp" alt="Александр Акимов" class="team-photo">
-          <h3 class="team-name">Александр Акимов</h3>
-          <div class="team-role">Член комиссии</div>
-          <div class="team-contacts">
-            <a href="tel:+71234567895"><i class="fas fa-phone"></i></a>
-            <a href="mailto:akimov@fum.ru"><i class="fas fa-envelope"></i></a>
-          </div>
-        </div>
-        <div class="team-card">
-          <img src="images/Cipilev.webp" alt="Александр Ципилев" class="team-photo">
-          <h3 class="team-name">Александр Ципилев</h3>
-          <div class="team-role">Член комиссии</div>
-          <div class="team-contacts">
-            <a href="tel:+71234567896"><i class="fas fa-phone"></i></a>
-            <a href="mailto:cipilev@fum.ru"><i class="fas fa-envelope"></i></a>
-          </div>
-        </div>
-      </div>
-      <p class="members-note">* Контакты членов комиссии будут обновлены.</p>
-    </div>
-  </section>
-
-  <!-- ПАРТНЁРАМ (УСИЛЕННЫЙ БЛОК) -->
-  <section id="partners" class="section partners-highlight">
-    <div class="container">
-      <h2 class="section-title">Партнёрам Кубка России 2026</h2>
-      <div class="partners-intro">
-        <p>Станьте частью главного события года в мотоджимхане! Мы предлагаем гибкие варианты сотрудничества и индивидуальные условия.</p>
-      </div>
-      <div class="options-grid">
-        <div class="option-card">
-          <i class="fas fa-bullhorn option-icon"></i>
-          <h3>Реклама на площадках</h3>
-          <ul>
-            <li>Логотип на главном баннере Кубка</li>
-            <li>Промо-точка в зрительской зоне</li>
-            <li>Баннеры 3×1 м на наградных конструкциях</li>
-          </ul>
-        </div>
-        <div class="option-card">
-          <i class="fas fa-video option-icon"></i>
-          <h3>Медиа-интеграция</h3>
-          <ul>
-            <li>Упоминания в онлайн-трансляциях (4+ раз)</li>
-            <li>Рекламный ролик до 2 мин.</li>
-            <li>Логотип в углу экрана во время трансляции</li>
-          </ul>
-        </div>
-        <div class="option-card">
-          <i class="fas fa-hashtag option-icon"></i>
-          <h3>Digital-продвижение</h3>
-          <ul>
-            <li>Посты в VK и Telegram-канале</li>
-            <li>Упоминания в пресс-релизах и СМИ</li>
-            <li>Истории партнёрства в соцсетях</li>
-          </ul>
-        </div>
-        <div class="option-card">
-          <i class="fas fa-medal option-icon"></i>
-          <h3>Наградная продукция</h3>
-          <ul>
-            <li>Награды с брендом партнёра</li>
-            <li>Приветственное слово представителя</li>
-          </ul>
-        </div>
-      </div>
-      <div class="partners-cta">
-        <p>Срок действия партнёрского соглашения — до 31 декабря 2026 года.</p>
-        <a href="#contacts" class="btn btn-primary">Обсудить сотрудничество</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- КОНТАКТЫ И ЗАЯВКИ (с отдельным блоком руководства) -->
-  <section id="contacts" class="section">
-    <div class="container">
-      <h2 class="section-title">Контакты и предварительные заявки</h2>
-      <div class="contacts-grid">
-        <div class="contact-info">
-          <!-- Руководство комиссии (выделено) -->
-          <h3 class="contact-subtitle">Руководство комиссии</h3>
-          <div class="contact-item">
-            <i class="fas fa-user-tie"></i>
-            <div>
-              <strong>Дмитрий Серов</strong> (председатель)<br>
-              <a href="tel:+79778236390">+7 (977) 823-63-90</a><br>
-              <a href="mailto:serovdima@list.ru">serovdima@list.ru</a>
-            </div>
-          </div>
-          <div class="contact-item">
-            <i class="fas fa-user-tie"></i>
-            <div>
-              <strong>Алексей Фатьянов</strong> (заместитель)<br>
-              <a href="tel:+79696002585">+7 (969) 600-25-85</a><br>
-              <a href="mailto:alexey@fatyanov.com">alexey@fatyanov.com</a>
-            </div>
-          </div>
-          <div class="contact-item">
-            <i class="fas fa-user-tie"></i>
-            <div>
-              <strong>Наталья Недавойдина</strong> (главный секретарь)<br>
-              <a href="tel:+71234567890">+7 (123) 456-78-90</a><br>
-              <a href="mailto:n.nedavoydina@fum.ru">n.nedavoydina@fum.ru</a>
-            </div>
-          </div>
-          
-          <!-- Социальные сети -->
-          <h3 class="contact-subtitle">Социальные сети</h3>
-          <div class="contact-item">
-            <i class="fab fa-vk"></i>
-            <div><a href="https://vk.com/motodzhimkhana" target="_blank">VK</a></div>
-          </div>
-          <div class="contact-item">
-            <i class="fab fa-telegram"></i>
-            <div><a href="https://t.me/motodzhimkhana" target="_blank">Telegram</a></div>
-          </div>
-          <div class="contact-item">
-            <i class="fab fa-telegram"></i>
-            <div><a href="https://t.me/ugol_chemp_bot" target="_blank">Telegram-бот</a></div>
-          </div>
-        </div>
-
-        <!-- Форма заявки -->
-        <div class="join-form" id="join">
-          <h3>Предварительная заявка</h3>
-          <p>Заполните форму, чтобы мы связались с вами.</p>
-          <a href="https://forms.gle/example" class="btn btn-primary" target="_blank">Перейти к форме</a>
-          <p class="form-note">*Официальная регистрация откроется позже.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- HERO: КУБОК РОССИИ 2026 -->
+<section class="hero" style="background-image: url('images/hero-moto.webp');">
+<div class="container hero-content">
+<h1 class="hero-title">Кубок России по фигурному управлению мотоциклом <span>2026</span></h1>
+<p class="hero-subtitle">Официальные соревнования под эгидой МФР (вид спорта № 0910007511Я)</p>
+<div class="timer" id="timer">
+<div class="timer-item"><span class="days">00</span> дней</div>
+<div class="timer-item"><span class="hours">00</span> часов</div>
+<div class="timer-item"><span class="minutes">00</span> минут</div>
+<div class="timer-item"><span class="seconds">00</span> секунд</div>
+</div>
+<a href="#join" class="btn btn-primary">Хочу участвовать</a>
+</div>
+</section>
+<!-- О КУБКЕ -->
+<section id="about" class="section">
+<div class="container">
+<h2 class="section-title">О Кубке России 2026</h2>
+<div class="about-grid">
+<div class="about-text">
+<p>Фигурное управление мотоциклом / мотоджимхана — техничный, зрелищный и социально значимый вид мотоспорта, объединяющий участников от 6 до 65 лет и привлекающий тысячи зрителей по всей стране. За последние годы интерес к дисциплине вырос на <strong>59%</strong>, что подтверждает её высокий медийный и социальный потенциал.</p>
+<p>Кубок России 2026 года — главные национальные соревнования, которые пройдут на 7 лучших площадках страны от Нижнего Новгорода до Казани.</p>
+</div>
+<div class="about-stats">
+<div class="stat-item"><span>7</span> этапов</div>
+<div class="stat-item"><span>>500</span> участников</div>
+<div class="stat-item"><span>>50</span> регионов</div>
+</div>
+</div>
+</div>
+</section>
+<!-- КАЛЕНДАРЬ ЭТАПОВ -->
+<section id="calendar" class="section">
+<div class="container">
+<h2 class="section-title">Календарь этапов 2026</h2>
+<div class="stage-grid">
+<!-- Этап 1 -->
+<div class="stage-card">
+<div class="stage-date">16–17 мая</div>
+<h3 class="stage-title">Этап 1</h3>
+<div class="stage-region"><i class="fas fa-map-marker-alt"></i> Нижний Новгород</div>
+<div class="stage-time"><i class="far fa-clock"></i> 10:00</div>
+<div class="stage-organizer"><i class="fas fa-user-tie"></i> ООО "Компас"</div>
+<div class="stage-phone"><i class="fas fa-phone-alt"></i> +7 (969) 600-25-85</div>
+<a href="#" class="btn-protocol">Протокол <i class="fas fa-arrow-right"></i></a>
+</div>
+<!-- Этап 2 -->
+<div class="stage-card">
+<div class="stage-date">6–8 июня</div>
+<h3 class="stage-title">Этап 2</h3>
+<div class="stage-region"><i class="fas fa-map-marker-alt"></i> Ленинградская область</div>
+<div class="stage-time"><i class="far fa-clock"></i> 11:00</div>
+<div class="stage-organizer"><i class="fas fa-user-tie"></i> Игора Драйв</div>
+<div class="stage-phone"><i class="fas fa-phone-alt"></i> +7 (921) 123-45-67</div>
+<a href="#" class="btn-protocol">Протокол <i class="fas fa-arrow-right"></i></a>
+</div>
+<!-- Этап 3 -->
+<div class="stage-card">
+<div class="stage-date">26–28 июня</div>
+<h3 class="stage-title">Этап 3</h3>
+<div class="stage-region"><i class="fas fa-map-marker-alt"></i> Тверская область</div>
+<div class="stage-time"><i class="far fa-clock"></i> 10:30</div>
+<div class="stage-organizer"><i class="fas fa-user-tie"></i> Администрация Бежецка</div>
+<div class="stage-phone"><i class="fas fa-phone-alt"></i> +7 (910) 987-65-43</div>
+<a href="#" class="btn-protocol">Протокол <i class="fas fa-arrow-right"></i></a>
+</div>
+<!-- Этап 4 -->
+<div class="stage-card">
+<div class="stage-date">Июль 2026</div>
+<h3 class="stage-title">Этап 4</h3>
+<div class="stage-region"><i class="fas fa-map-marker-alt"></i> Московская область</div>
+<div class="stage-time"><i class="far fa-clock"></i> Уточняется</div>
+<div class="stage-organizer"><i class="fas fa-user-tie"></i> МРВ</div>
+<div class="stage-phone"><i class="fas fa-phone-alt"></i> Уточняется</div>
+<a href="#" class="btn-protocol">Протокол <i class="fas fa-arrow-right"></i></a>
+</div>
+<!-- Этап 5 -->
+<div class="stage-card">
+<div class="stage-date">Август 2026</div>
+<h3 class="stage-title">Этап 5</h3>
+<div class="stage-region"><i class="fas fa-map-marker-alt"></i> Казань</div>
+<div class="stage-time"><i class="far fa-clock"></i> Уточняется</div>
+<div class="stage-organizer"><i class="fas fa-user-tie"></i> Kazan Ring Canyon</div>
+<div class="stage-phone"><i class="fas fa-phone-alt"></i> +7 (964) 555-12-34</div>
+<a href="#" class="btn-protocol">Протокол <i class="fas fa-arrow-right"></i></a>
+</div>
+<!-- Этап 6 -->
+<div class="stage-card">
+<div class="stage-date">Август 2026</div>
+<h3 class="stage-title">Этап 6</h3>
+<div class="stage-region"><i class="fas fa-map-marker-alt"></i> Краснодар</div>
+<div class="stage-time"><i class="far fa-clock"></i> Уточняется</div>
+<div class="stage-organizer"><i class="fas fa-user-tie"></i> Уточняется</div>
+<div class="stage-phone"><i class="fas fa-phone-alt"></i> Уточняется</div>
+<a href="#" class="btn-protocol">Протокол <i class="fas fa-arrow-right"></i></a>
+</div>
+<!-- Этап 7 -->
+<div class="stage-card">
+<div class="stage-date">Сентябрь 2026</div>
+<h3 class="stage-title">Этап 7</h3>
+<div class="stage-region"><i class="fas fa-map-marker-alt"></i> Ставропольский край</div>
+<div class="stage-time"><i class="far fa-clock"></i> Уточняется</div>
+<div class="stage-organizer"><i class="fas fa-user-tie"></i> Администрация Невинномысска</div>
+<div class="stage-phone"><i class="fas fa-phone-alt"></i> +7 (928) 111-22-33</div>
+<a href="#" class="btn-protocol">Протокол <i class="fas fa-arrow-right"></i></a>
+</div>
+</div>
+<p class="calendar-note">* Точные даты и места могут уточняться, следите за новостями.</p>
+</div>
+</section>
+<!-- ДОКУМЕНТЫ -->
+<section id="docs" class="section">
+<div class="container">
+<h2 class="section-title">Регламент и документы</h2>
+<ul class="docs-list">
+<li><a href="documents/reglament_2026.pdf" download><i class="fas fa-file-pdf"></i> Регламент Кубка России 2026 (PDF)</a></li>
+<li><a href="documents/rules_fum.pdf" download><i class="fas fa-file-pdf"></i> Правила вида спорта «Фигурное управление мотоциклом»</a></li>
+<li><a href="documents/tech_reqs.pdf" download><i class="fas fa-file-pdf"></i> Технические требования к мотоциклам и экипировке</a></li>
+<li><a href="documents/klas_normy.pdf" download><i class="fas fa-file-pdf"></i> Классификационные нормы (разряды)</a></li>
+</ul>
+<p class="docs-note">Документы будут обновляться по мере утверждения. Следите за версиями.</p>
+</div>
+</section>
+<!-- СТРУКТУРА КОМИССИИ (все члены с фото и контактами) -->
+<section id="structure" class="section">
+<div class="container">
+<h2 class="section-title">Комиссия по фигурному управлению мотоциклом (мотоджимхане)</h2>
+<div class="team-grid">
+<!-- Председатель -->
+<div class="team-card">
+<img src="images/Serov.webp" alt="Дмитрий Серов" class="team-photo">
+<h3 class="team-name">Дмитрий Серов</h3>
+<div class="team-role">Председатель комиссии</div>
+<div class="team-contacts">
+<a href="tel:+79778236390"><i class="fas fa-phone"></i></a>
+<a href="mailto:serovdima@list.ru"><i class="fas fa-envelope"></i></a>
+</div>
+</div>
+<!-- Зам. председателя -->
+<div class="team-card">
+<img src="images/Fatyanov.webp" alt="Алексей Фатьянов" class="team-photo">
+<h3 class="team-name">Алексей Фатьянов</h3>
+<div class="team-role">Заместитель председателя</div>
+<div class="team-contacts">
+<a href="tel:+79696002585"><i class="fas fa-phone"></i></a>
+<a href="mailto:alexey@fatyanov.com"><i class="fas fa-envelope"></i></a>
+</div>
+</div>
+<!-- Главный секретарь -->
+<div class="team-card">
+<img src="images/Nedavodyina.webp" alt="Наталья Недавойдина" class="team-photo">
+<h3 class="team-name">Наталья Недавойдина</h3>
+<div class="team-role">Главный секретарь</div>
+<div class="team-contacts">
+<a href="tel:+71234567890"><i class="fas fa-phone"></i></a>
+<a href="mailto:n.nedavoydina@fum.ru"><i class="fas fa-envelope"></i></a>
+</div>
+</div>
+<!-- Члены комиссии (с контактами-заглушками) -->
+<div class="team-card">
+<img src="images/Simdyankin.webp" alt="Глеб Симдянкин" class="team-photo">
+<h3 class="team-name">Глеб Симдянкин</h3>
+<div class="team-role">Член комиссии</div>
+<div class="team-contacts">
+<a href="tel:+71234567891"><i class="fas fa-phone"></i></a>
+<a href="mailto:gleb@fum.ru"><i class="fas fa-envelope"></i></a>
+</div>
+</div>
+<div class="team-card">
+<img src="images/Salnikov.webp" alt="Андрей Сальников" class="team-photo">
+<h3 class="team-name">Андрей Сальников</h3>
+<div class="team-role">Член комиссии</div>
+<div class="team-contacts">
+<a href="tel:+71234567892"><i class="fas fa-phone"></i></a>
+<a href="mailto:andrey@fum.ru"><i class="fas fa-envelope"></i></a>
+</div>
+</div>
+<div class="team-card">
+<img src="images/Safarov.webp" alt="Ильшат Сафаров" class="team-photo">
+<h3 class="team-name">Ильшат Сафаров</h3>
+<div class="team-role">Член комиссии</div>
+<div class="team-contacts">
+<a href="tel:+71234567893"><i class="fas fa-phone"></i></a>
+<a href="mailto:ilshat@fum.ru"><i class="fas fa-envelope"></i></a>
+</div>
+</div>
+<div class="team-card">
+<img src="images/Garanin.webp" alt="Максим Гаранин" class="team-photo">
+<h3 class="team-name">Максим Гаранин</h3>
+<div class="team-role">Член комиссии</div>
+<div class="team-contacts">
+<a href="tel:+71234567894"><i class="fas fa-phone"></i></a>
+<a href="mailto:maksim@fum.ru"><i class="fas fa-envelope"></i></a>
+</div>
+</div>
+<div class="team-card">
+<img src="images/Akimov.webp" alt="Александр Акимов" class="team-photo">
+<h3 class="team-name">Александр Акимов</h3>
+<div class="team-role">Член комиссии</div>
+<div class="team-contacts">
+<a href="tel:+71234567895"><i class="fas fa-phone"></i></a>
+<a href="mailto:akimov@fum.ru"><i class="fas fa-envelope"></i></a>
+</div>
+</div>
+<div class="team-card">
+<img src="images/Cipilev.webp" alt="Александр Ципилев" class="team-photo">
+<h3 class="team-name">Александр Ципилев</h3>
+<div class="team-role">Член комиссии</div>
+<div class="team-contacts">
+<a href="tel:+71234567896"><i class="fas fa-phone"></i></a>
+<a href="mailto:cipilev@fum.ru"><i class="fas fa-envelope"></i></a>
+</div>
+</div>
+</div>
+<p class="members-note">* Контакты членов комиссии будут обновлены.</p>
+</div>
+</section>
+<!-- ПАРТНЁРАМ (УСИЛЕННЫЙ БЛОК) -->
+<section id="partners" class="section partners-highlight">
+<div class="container">
+<h2 class="section-title">Партнёрам Кубка России 2026</h2>
+<div class="partners-intro">
+<p>Станьте частью главного события года в мотоджимхане! Мы предлагаем гибкие варианты сотрудничества и индивидуальные условия.</p>
+</div>
+<div class="options-grid">
+<div class="option-card">
+<i class="fas fa-bullhorn option-icon"></i>
+<h3>Реклама на площадках</h3>
+<ul>
+<li>Логотип на главном баннере Кубка</li>
+<li>Промо-точка в зрительской зоне</li>
+<li>Баннеры 3×1 м на наградных конструкциях</li>
+</ul>
+</div>
+<div class="option-card">
+<i class="fas fa-video option-icon"></i>
+<h3>Медиа-интеграция</h3>
+<ul>
+<li>Упоминания в онлайн-трансляциях (4+ раз)</li>
+<li>Рекламный ролик до 2 мин.</li>
+<li>Логотип в углу экрана во время трансляции</li>
+</ul>
+</div>
+<div class="option-card">
+<i class="fas fa-hashtag option-icon"></i>
+<h3>Digital-продвижение</h3>
+<ul>
+<li>Посты в VK и Telegram-канале</li>
+<li>Упоминания в пресс-релизах и СМИ</li>
+<li>Истории партнёрства в соцсетях</li>
+</ul>
+</div>
+<div class="option-card">
+<i class="fas fa-medal option-icon"></i>
+<h3>Наградная продукция</h3>
+<ul>
+<li>Награды с брендом партнёра</li>
+<li>Приветственное слово представителя</li>
+</ul>
+</div>
+</div>
+<div class="partners-cta">
+<p>Срок действия партнёрского соглашения — до 31 декабря 2026 года.</p>
+<a href="#contacts" class="btn btn-primary">Обсудить сотрудничество</a>
+</div>
+</div>
+</section>
+<!-- КОНТАКТЫ И ЗАЯВКИ (с отдельным блоком руководства) -->
+<section id="contacts" class="section">
+<div class="container">
+<h2 class="section-title">Контакты и предварительные заявки</h2>
+<div class="contacts-grid">
+<div class="contact-info">
+<!-- Руководство комиссии (выделено) -->
+<h3 class="contact-subtitle">Руководство комиссии</h3>
+<div class="contact-item">
+<i class="fas fa-user-tie"></i>
+<div>
+<strong>Дмитрий Серов</strong> (председатель)<br>
+<a href="tel:+79778236390">+7 (977) 823-63-90</a><br>
+<a href="mailto:serovdima@list.ru">serovdima@list.ru</a>
+</div>
+</div>
+<div class="contact-item">
+<i class="fas fa-user-tie"></i>
+<div>
+<strong>Алексей Фатьянов</strong> (заместитель)<br>
+<a href="tel:+79696002585">+7 (969) 600-25-85</a><br>
+<a href="mailto:alexey@fatyanov.com">alexey@fatyanov.com</a>
+</div>
+</div>
+<div class="contact-item">
+<i class="fas fa-user-tie"></i>
+<div>
+<strong>Наталья Недавойдина</strong> (главный секретарь)<br>
+<a href="tel:+71234567890">+7 (123) 456-78-90</a><br>
+<a href="mailto:n.nedavoydina@fum.ru">n.nedavoydina@fum.ru</a>
+</div>
+</div>
+<!-- Социальные сети -->
+<h3 class="contact-subtitle">Социальные сети</h3>
+<div class="contact-item">
+<i class="fab fa-vk"></i>
+<div><a href="https://vk.com/motodzhimkhana" target="_blank">VK</a></div>
+</div>
+<div class="contact-item">
+<i class="fab fa-telegram"></i>
+<div><a href="https://t.me/motodzhimkhana" target="_blank">Telegram</a></div>
+</div>
+<div class="contact-item">
+<i class="fab fa-telegram"></i>
+<div><a href="https://t.me/ugol_chemp_bot" target="_blank">Telegram-бот</a></div>
+</div>
+</div>
+<!-- Форма заявки -->
+<div class="join-form" id="join">
+<h3>Предварительная заявка</h3>
+<p>Заполните форму, чтобы мы связались с вами.</p>
+<a href="https://forms.gle/example" class="btn btn-primary" target="_blank">Перейти к форме</a>
+<p class="form-note">*Официальная регистрация откроется позже.</p>
+</div>
+</div>
+</div>
+</section>
 </main>
-
 <!-- ПОДВАЛ С ЛОГОТИПАМИ -->
 <footer class="footer">
-  <div class="container">
-    <div class="footer-logos">
-      <img src="images/mfr_logo.webp" alt="МФР">
-      <img src="images/logo_minsport.webp" alt="Минспорт">
-      <img src="images/logo_sm.webp" alt="Спорт">
-      <!-- Добавьте другие логотипы при необходимости -->
-    </div>
-    <div class="footer-links">
-      <a href="#about">О Кубке</a>
-      <a href="#calendar">Этапы</a>
-      <a href="#docs">Документы</a>
-      <a href="#structure">Комиссия</a>
-      <a href="#partners">Партнёрам</a>
-      <a href="#contacts">Контакты</a>
-    </div>
-    <div class="footer-info">
-      <p>© 2026 Комиссия по фигурному управлению мотоциклом (мотоджимхане) МФР. Все права защищены.</p>
-      <p>Официальный сайт: <a href="http://mfr-mg.ru">mfr-mg.ru</a></p>
-    </div>
-  </div>
+<div class="container">
+<div class="footer-logos">
+<img src="images/mfr_logo.webp" alt="МФР">
+<img src="images/logo_minsport.webp" alt="Минспорт">
+<img src="images/logo_sm.webp" alt="Спорт">
+<!-- Добавьте другие логотипы при необходимости -->
+</div>
+<div class="footer-links">
+<a href="#about">О Кубке</a>
+<a href="#calendar">Этапы</a>
+<a href="#docs">Документы</a>
+<a href="#structure">Комиссия</a>
+<a href="#partners">Партнёрам</a>
+<a href="#contacts">Контакты</a>
+</div>
+<div class="footer-info">
+<p>© 2026 Комиссия по фигурному управлению мотоциклом (мотоджимхане) МФР. Все права защищены.</p>
+<p>Официальный сайт: <a href="http://mfr-mg.ru">mfr-mg.ru</a></p>
+</div>
+</div>
 </footer>
-
 <!-- Скрипты -->
 <script>
-  // Таймер обратного отсчёта до первого этапа (16 мая 2026)
-  (function() {
-    const targetDate = new Date(2026, 4, 16, 0, 0, 0);
-    function updateTimer() {
-      const now = new Date();
-      const diff = targetDate - now;
-      if (diff <= 0) {
-        document.querySelector('.timer').innerHTML = '<div class="timer-ended">Соревнования начались!</div>';
-        return;
-      }
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff % (86400000)) / (3600000));
-      const minutes = Math.floor((diff % 3600000) / 60000);
-      const seconds = Math.floor((diff % 60000) / 1000);
-      document.querySelector('.days').textContent = days.toString().padStart(2, '0');
-      document.querySelector('.hours').textContent = hours.toString().padStart(2, '0');
-      document.querySelector('.minutes').textContent = minutes.toString().padStart(2, '0');
-      document.querySelector('.seconds').textContent = seconds.toString().padStart(2, '0');
-    }
-    updateTimer();
-    setInterval(updateTimer, 1000);
-  })();
-
-  // Мобильное меню
-  (function() {
-    const menuToggle = document.getElementById('menuToggle');
-    const mainNav = document.getElementById('mainNav');
-    if (menuToggle && mainNav) {
-      menuToggle.addEventListener('click', function() {
-        this.classList.toggle('active');
-        mainNav.classList.toggle('active');
-      });
-      const navLinks = mainNav.querySelectorAll('a');
-      navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-          menuToggle.classList.remove('active');
-          mainNav.classList.remove('active');
-        });
-      });
-    }
-  })();
+// Таймер обратного отсчёта до первого этапа (16 мая 2026)
+(function() {
+const targetDate = new Date(2026, 4, 16, 0, 0, 0);
+function updateTimer() {
+const now = new Date();
+const diff = targetDate - now;
+if (diff <= 0) {
+document.querySelector('.timer').innerHTML = '<div class="timer-ended">Соревнования начались!</div>';
+return;
+}
+const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+const hours = Math.floor((diff % (86400000)) / (3600000));
+const minutes = Math.floor((diff % 3600000) / 60000);
+const seconds = Math.floor((diff % 60000) / 1000);
+document.querySelector('.days').textContent = days.toString().padStart(2, '0');
+document.querySelector('.hours').textContent = hours.toString().padStart(2, '0');
+document.querySelector('.minutes').textContent = minutes.toString().padStart(2, '0');
+document.querySelector('.seconds').textContent = seconds.toString().padStart(2, '0');
+}
+updateTimer();
+setInterval(updateTimer, 1000);
+})();
+// Мобильное меню
+(function() {
+const menuToggle = document.getElementById('menuToggle');
+const mainNav = document.getElementById('mainNav');
+if (menuToggle && mainNav) {
+menuToggle.addEventListener('click', function() {
+this.classList.toggle('active');
+mainNav.classList.toggle('active');
+});
+const navLinks = mainNav.querySelectorAll('a');
+navLinks.forEach(link => {
+link.addEventListener('click', function() {
+menuToggle.classList.remove('active');
+mainNav.classList.remove('active');
+});
+});
+}
+})();
 </script>
 </body>
 </html>
