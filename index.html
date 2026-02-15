@@ -220,7 +220,7 @@
 <a href="mailto:n.nedavoydina@fum.ru"><i class="fas fa-envelope"></i></a>
 </div>
 </div>
-<!-- Члены комиссии (с контактами-заглушками) -->
+<!-- Члены комиссии -->
 <div class="team-card">
 <img src="images/Simdyankin.webp" alt="Глеб Симдянкин" class="team-photo">
 <h3 class="team-name">Глеб Симдянкин</h3>
@@ -401,13 +401,13 @@
 </div>
 </div>
 </section>
-<!-- КОНТАКТЫ И ЗАЯВКИ (с отдельным блоком руководства) -->
+<!-- КОНТАКТЫ И ЗАЯВКИ -->
 <section id="contacts" class="section">
 <div class="container">
 <h2 class="section-title">Контакты и предварительные заявки</h2>
 <div class="contacts-grid">
 <div class="contact-info">
-<!-- Руководство комиссии (выделено) -->
+<!-- Руководство комиссии -->
 <h3 class="contact-subtitle">Руководство комиссии</h3>
 <div class="contact-item">
 <i class="fas fa-user-tie"></i>
@@ -451,11 +451,19 @@
 <!-- Форма заявки -->
 <div class="join-form" id="join">
 <h3>Предварительная регистрация</h3>
-<p>Заполните форму для предварительной регистрации на Кубок России 2026</p>
+<p>Заполните форму для участия в Кубке России 2026</p>
 <div class="form-container">
-<iframe src="https://forms.yandex.ru/u/6991d14c02848fb44b6f9537?iframe=1" frameborder="0" name="ya-form-6991d14c02848fb44b6f9537" class="ya-form-iframe"></iframe>
+<iframe 
+  src="https://forms.yandex.ru/cloud/6991d860493639bacb236b9c/?iframe=1" 
+  frameborder="0" 
+  name="ya-form-6991d860493639bacb236b9c" 
+  class="ya-form-iframe"
+  allow="clipboard-write"
+  loading="lazy"
+  title="Форма предварительной регистрации на Кубок России по ФУМ 2026">
+</iframe>
 </div>
-<p class="form-note">*Официальная регистрация откроется позже. Предварительная регистрация поможет нам подготовиться к вашему участию.</p>
+<p class="form-note">*Поля, отмеченные звёздочкой (<span class="required">*</span>), обязательны для заполнения</p>
 </div>
 </div>
 </div>
@@ -468,7 +476,6 @@
 <img src="images/mfr_logo.webp" alt="МФР">
 <img src="images/logo_minsport.webp" alt="Минспорт">
 <img src="images/logo_sm.webp" alt="Спорт">
-<!-- Добавьте другие логотипы при необходимости -->
 </div>
 <div class="footer-links">
 <a href="#about">О Кубке</a>
@@ -574,15 +581,29 @@ ripple.remove();
 (function() {
 const iframe = document.querySelector('.ya-form-iframe');
 if (iframe) {
-// Автоматическая настройка высоты
-iframe.onload = function() {
-iframe.style.height = '800px'; // Установите нужную высоту
-};
-// Динамическая настройка высоты при изменении контента
+// Установка начальной высоты
+iframe.style.height = '850px';
+// Обработка сообщений от формы
 window.addEventListener('message', function(event) {
-if (event.origin !== 'https://forms.yandex.ru') return;
-if (event.data && event.data.type === 'ya-form-height') {
-iframe.style.height = event.data.height + 'px';
+// Проверка источника сообщения
+if (!event.origin.includes('yandex.ru')) return;
+try {
+const data = typeof event.data === 'string' ? JSON.parse(event.data) : event.data;
+// Обработка изменения высоты
+if (data.type === 'ya-form-resize' || data.type === 'ya-form-height') {
+const newHeight = data.height || 850;
+iframe.style.height = newHeight + 'px';
+}
+// Обработка успешной отправки
+if (data.type === 'ya-form-submit-success') {
+console.log('✅ Форма успешно отправлена!');
+}
+// Обработка ошибок
+if (data.type === 'ya-form-submit-error') {
+console.error('❌ Ошибка отправки формы:', data.error);
+}
+} catch (e) {
+console.error('Ошибка обработки сообщения:', e);
 }
 });
 }
