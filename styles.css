@@ -510,7 +510,7 @@ margin-top: 30px;
 color: var(--text-light);
 }
 /* ====================== */
-/* КОМИССИЯ (ТИМ) */
+/* КОМИССИЯ */
 /* ====================== */
 .team-grid {
 display: grid;
@@ -587,7 +587,7 @@ margin-top: 40px;
 color: var(--text-light);
 }
 /* ====================== */
-/* ПАРТНЁРАМ (УЛУЧШЕННЫЙ БЛОК) */
+/* ПАРТНЁРАМ */
 /* ====================== */
 .partners-highlight {
 background: url('images/sport-about.webp') center/cover no-repeat;
@@ -1024,6 +1024,7 @@ border-radius: 16px;
 overflow: hidden;
 box-shadow: var(--shadow-lg);
 border: 1px solid var(--border-light);
+position: relative;
 }
 .ya-form-iframe {
 width: 100%;
@@ -1031,6 +1032,27 @@ min-height: 850px;
 border: none;
 display: block;
 background: #f9fafb;
+}
+/* Резервный вариант */
+.form-fallback {
+padding: 60px 30px;
+text-align: center;
+}
+.fallback-text {
+font-size: 1.3rem;
+color: var(--text-dark);
+margin-bottom: 25px;
+font-weight: 600;
+}
+.fallback-btn {
+display: inline-block;
+margin: 20px auto;
+}
+.fallback-note {
+font-size: 0.95rem;
+color: var(--text-light);
+margin-top: 25px;
+font-style: italic;
 }
 .required {
 color: var(--red);
@@ -1213,6 +1235,12 @@ max-width: 100%;
 .ya-form-iframe {
 min-height: 1100px;
 }
+.form-fallback {
+padding: 40px 20px;
+}
+.fallback-text {
+font-size: 1.1rem;
+}
 }
 @media (max-width: 576px) {
 .container { padding: 0 20px; }
@@ -1229,6 +1257,10 @@ font-size: 1.8rem;
 }
 .ya-form-iframe {
 min-height: 1300px;
+}
+.fallback-btn {
+width: 100%;
+padding: 16px;
 }
 }
 /* Эффекты для кнопок */
