@@ -1271,7 +1271,3 @@ transform: scale(0);
 background: rgba(255, 255, 255, 0.7);
 pointer-events: none;
 }
-/* Оптимизация производительности */
-img[loading="lazy"] {
-will-change: auto;
-}
