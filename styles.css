@@ -677,10 +677,15 @@ h3 {
 }
 
 .contact-item i {
-  font-size: 1.8rem;
-  color: var(--accent);
+  font-size: 2rem;        /* Увеличил для лучшей видимости */
+  color: var(--primary-dark);  /* Тёмный цвет для контраста на белом */
   width: 40px;
   text-align: center;
+  transition: color 0.2s;
+}
+
+.contact-item:hover i {
+  color: var(--accent);    /* При наведении становятся жёлтыми */
 }
 
 .contact-item a {
@@ -741,7 +746,7 @@ h3 {
   height: 60px;
   width: auto;
   object-fit: contain;
-  filter: none; /* убрана инверсия, логотипы в оригинальных цветах */
+  filter: none;            /* Логотипы в оригинальных цветах */
   opacity: 0.9;
   transition: opacity 0.2s ease;
 }
