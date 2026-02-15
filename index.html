@@ -185,7 +185,7 @@
 <p class="docs-note">Документы будут обновляться по мере утверждения. Следите за версиями.</p>
 </div>
 </section>
-<!-- СТРУКТУРА КОМИССИИ (все члены с фото и контактами) -->
+<!-- СТРУКТУРА КОМИССИИ -->
 <section id="structure" class="section">
 <div class="container">
 <h2 class="section-title">Комиссия по фигурному управлению мотоциклом (мотоджимхане)</h2>
@@ -279,7 +279,7 @@
 <p class="members-note">* Контакты членов комиссии будут обновлены.</p>
 </div>
 </section>
-<!-- ПАРТНЁРАМ (УЛУЧШЕННЫЙ БЛОК С ФОНОМ) -->
+<!-- ПАРТНЁРАМ -->
 <section id="partners" class="section partners-highlight">
 <div class="container">
 <h2 class="section-title">Партнёрам Кубка России 2026</h2>
@@ -301,7 +301,7 @@
 </div>
 </div>
 <div class="options-grid">
-<!-- Опция 1: Генеральный партнёр -->
+<!-- Генеральный партнёр -->
 <div class="option-card premium">
 <div class="option-badge">⭐ Премиум</div>
 <div class="option-icon-large">
@@ -319,7 +319,7 @@
 <div class="option-price">Индивидуально</div>
 <a href="#contacts" class="btn btn-premium">Обсудить условия</a>
 </div>
-<!-- Опция 2: Официальный партнёр -->
+<!-- Официальный партнёр -->
 <div class="option-card official">
 <div class="option-badge">🎯 Официальный</div>
 <div class="option-icon-large">
@@ -337,7 +337,7 @@
 <div class="option-price">От 300 000 ₽</div>
 <a href="#contacts" class="btn btn-official">Стать партнёром</a>
 </div>
-<!-- Опция 3: Региональный партнёр -->
+<!-- Региональный партнёр -->
 <div class="option-card regional">
 <div class="option-badge">📍 Региональный</div>
 <div class="option-icon-large">
@@ -355,7 +355,7 @@
 <div class="option-price">От 150 000 ₽</div>
 <a href="#contacts" class="btn btn-regional">Выбрать регион</a>
 </div>
-<!-- Опция 4: Технический спонсор -->
+<!-- Технический спонсор -->
 <div class="option-card technical">
 <div class="option-badge">⚙️ Технический</div>
 <div class="option-icon-large">
@@ -460,8 +460,18 @@
   class="ya-form-iframe"
   allow="clipboard-write"
   loading="lazy"
-  title="Форма предварительной регистрации на Кубок России по ФУМ 2026">
+  title="Форма предварительной регистрации на Кубок России по ФУМ 2026"
+  id="yaFormIframe">
 </iframe>
+<div class="form-fallback" id="formFallback" style="display: none;">
+  <p class="fallback-text">Форма заблокирована расширением браузера</p>
+  <a href="https://forms.yandex.ru/cloud/6991d860493639bacb236b9c/" 
+     target="_blank" 
+     class="btn btn-primary btn-large fallback-btn">
+    <i class="fas fa-edit"></i> Перейти к форме регистрации
+  </a>
+  <p class="fallback-note">Форма откроется в новом окне. После отправки вы получите подтверждение на указанный email.</p>
+</div>
 </div>
 <p class="form-note">*Поля, отмеченные звёздочкой (<span class="required">*</span>), обязательны для заполнения</p>
 </div>
@@ -469,7 +479,7 @@
 </div>
 </section>
 </main>
-<!-- ПОДВАЛ С ЛОГОТИПАМИ -->
+<!-- ПОДВАЛ -->
 <footer class="footer">
 <div class="container">
 <div class="footer-logos">
@@ -499,7 +509,7 @@
 </footer>
 <!-- Скрипты -->
 <script>
-// Таймер обратного отсчёта до первого этапа (16 мая 2026)
+// Таймер обратного отсчёта
 (function() {
 const targetDate = new Date(2026, 4, 16, 0, 0, 0);
 function updateTimer() {
@@ -520,20 +530,6 @@ document.querySelector('.seconds').textContent = seconds.toString().padStart(2, 
 }
 updateTimer();
 setInterval(updateTimer, 1000);
-})();
-
-// Анимация появления элементов при прокрутке
-(function() {
-const observer = new IntersectionObserver((entries) => {
-entries.forEach(entry => {
-if (entry.isIntersecting) {
-entry.target.classList.add('visible');
-}
-});
-}, { threshold: 0.1 });
-document.querySelectorAll('.animate-on-scroll').forEach(el => {
-observer.observe(el);
-});
 })();
 
 // Мобильное меню
@@ -577,28 +573,56 @@ ripple.remove();
 });
 })();
 
-// Настройка высоты iframe Яндекс.Форм
+// Проверка блокировки фрейма
+(function() {
+const iframe = document.getElementById('yaFormIframe');
+const fallback = document.getElementById('formFallback');
+if (iframe && fallback) {
+setTimeout(() => {
+try {
+if (!iframe.contentWindow || iframe.contentWindow.document.body.innerHTML === '') {
+iframe.style.display = 'none';
+fallback.style.display = 'block';
+console.log('Фрейм заблокирован, показываем резервную кнопку');
+}
+} catch (e) {
+iframe.style.display = 'none';
+fallback.style.display = 'block';
+console.log('Фрейм заблокирован, показываем резервную кнопку');
+}
+}, 3000);
+iframe.addEventListener('load', function() {
+setTimeout(() => {
+try {
+if (iframe.contentDocument && iframe.contentDocument.body) {
+const bodyContent = iframe.contentDocument.body.innerHTML.trim();
+if (bodyContent === '' || bodyContent.includes('blocked')) {
+iframe.style.display = 'none';
+fallback.style.display = 'block';
+}
+}
+} catch (e) {}
+}, 500);
+});
+}
+})();
+
+// Настройка высоты iframe
 (function() {
 const iframe = document.querySelector('.ya-form-iframe');
 if (iframe) {
-// Установка начальной высоты
 iframe.style.height = '850px';
-// Обработка сообщений от формы
 window.addEventListener('message', function(event) {
-// Проверка источника сообщения
 if (!event.origin.includes('yandex.ru')) return;
 try {
 const data = typeof event.data === 'string' ? JSON.parse(event.data) : event.data;
-// Обработка изменения высоты
 if (data.type === 'ya-form-resize' || data.type === 'ya-form-height') {
 const newHeight = data.height || 850;
 iframe.style.height = newHeight + 'px';
 }
-// Обработка успешной отправки
 if (data.type === 'ya-form-submit-success') {
 console.log('✅ Форма успешно отправлена!');
 }
-// Обработка ошибок
 if (data.type === 'ya-form-submit-error') {
 console.error('❌ Ошибка отправки формы:', data.error);
 }
