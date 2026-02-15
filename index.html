@@ -14,6 +14,36 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <!-- Наш CSS -->
 <link rel="stylesheet" href="styles.css">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E9E8BXB7CJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E9E8BXB7CJ');
+</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=106839810', 'ym');
+
+    ym(106839810, 'init', {
+        ssr: true,
+        webvisor: true,
+        clickmap: true,
+        ecommerce: "dataLayer",
+        referrer: document.referrer,
+        url: location.href,
+        accurateTrackBounce: true,
+        trackLinks: true
+    });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/106839810" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 <!-- Яндекс.Формы -->
 <script src="https://forms.yandex.ru/_static/embed.js"></script>
 </head>
@@ -82,7 +112,7 @@
 <div class="stage-date">16–17 мая</div>
 <h3 class="stage-title">Этап 1</h3>
 <div class="stage-region"><i class="fas fa-map-marker-alt"></i> Нижний Новгород</div>
-<div class="stage-venue"><i class="fas fa-building"></i> "Совкомбанк Арена"</div>
+<div class="stage-venue"><i class="fas fa-building"></i> СК "Кристалл"</div>
 <div class="stage-organizer"><i class="fas fa-user-tie"></i> ФМСНО</div>
 <div class="stage-phone"><i class="fas fa-phone-alt"></i> +7 (920) 111-91-77</div>
 <div class="stage-buttons">
@@ -108,7 +138,7 @@
 <div class="stage-date">26–28 июня</div>
 <h3 class="stage-title">Этап 3</h3>
 <div class="stage-region"><i class="fas fa-map-marker-alt"></i> Тверская область, г. Бежецк</div>
-<div class="stage-venue"><i class="fas fa-building"></i> Бежецк</div>
+<div class="stage-venue"><i class="fas fa-building"></i> Центральная площадь</div>
 <div class="stage-organizer"><i class="fas fa-user-tie"></i> Комиссия по ФУМ</div>
 <div class="stage-phone"><i class="fas fa-phone-alt"></i> +7 (977) 823-63-90</div>
 <div class="stage-buttons">
@@ -147,7 +177,7 @@
 <div class="stage-date">Август 2026</div>
 <h3 class="stage-title">Этап 6</h3>
 <div class="stage-region"><i class="fas fa-map-marker-alt"></i> Краснодарский край, г. Краснодар</div>
-<div class="stage-venue"><i class="fas fa-building"></i> Краснодар</div>
+<div class="stage-venue"><i class="fas fa-building"></i> СК "Олимп"</div>
 <div class="stage-organizer"><i class="fas fa-user-tie"></i> Комиссия по ФУМ</div>
 <div class="stage-phone"><i class="fas fa-phone-alt"></i> +7 (977) 823-63-90</div>
 <div class="stage-buttons">
@@ -160,7 +190,7 @@
 <div class="stage-date">Сентябрь 2026</div>
 <h3 class="stage-title">Этап 7</h3>
 <div class="stage-region"><i class="fas fa-map-marker-alt"></i> Ставропольский край, г. Невинномысск</div>
-<div class="stage-venue"><i class="fas fa-building"></i> Невинномысск</div>
+<div class="stage-venue"><i class="fas fa-building"></i> Площадь Победы</div>
 <div class="stage-organizer"><i class="fas fa-user-tie"></i> Комиссия по ФУМ</div>
 <div class="stage-phone"><i class="fas fa-phone-alt"></i> +7 (977) 823-63-90</div>
 <div class="stage-buttons">
@@ -178,7 +208,7 @@
 <h2 class="section-title">Регламент и документы</h2>
 <ul class="docs-list">
 <li><a href="documents/reglament_2026.pdf" download><i class="fas fa-file-pdf"></i> Регламент Кубка России 2026 (PDF)</a></li>
-<li><a href="documents/Pravila_moto.pdf" download><i class="fas fa-file-pdf"></i>  Правила вида спорта «Мотоциклетный спорт» </a></li>
+<li><a href="documents/rules_fum.pdf" download><i class="fas fa-file-pdf"></i> Правила вида спорта «Фигурное управление мотоциклом»</a></li>
 <li><a href="documents/tech_reqs.pdf" download><i class="fas fa-file-pdf"></i> Технические требования к мотоциклам и экипировке</a></li>
 <li><a href="documents/klas_normy.pdf" download><i class="fas fa-file-pdf"></i> Классификационные нормы (разряды)</a></li>
 </ul>
@@ -584,11 +614,31 @@ if (!iframe.contentWindow || iframe.contentWindow.document.body.innerHTML === ''
 iframe.style.display = 'none';
 fallback.style.display = 'block';
 console.log('Фрейм заблокирован, показываем резервную кнопку');
+// Отправка события в аналитику
+if (typeof gtag === 'function') {
+gtag('event', 'form_blocked', {
+'event_category': 'registration',
+'event_label': 'adblock_detected'
+});
+}
+if (typeof ym !== 'undefined') {
+ym(106839810, 'reachGoal', 'form_blocked');
+}
 }
 } catch (e) {
 iframe.style.display = 'none';
 fallback.style.display = 'block';
 console.log('Фрейм заблокирован, показываем резервную кнопку');
+// Отправка события в аналитику
+if (typeof gtag === 'function') {
+gtag('event', 'form_blocked', {
+'event_category': 'registration',
+'event_label': 'adblock_detected'
+});
+}
+if (typeof ym !== 'undefined') {
+ym(106839810, 'reachGoal', 'form_blocked');
+}
 }
 }, 3000);
 iframe.addEventListener('load', function() {
@@ -599,6 +649,16 @@ const bodyContent = iframe.contentDocument.body.innerHTML.trim();
 if (bodyContent === '' || bodyContent.includes('blocked')) {
 iframe.style.display = 'none';
 fallback.style.display = 'block';
+// Отправка события в аналитику
+if (typeof gtag === 'function') {
+gtag('event', 'form_blocked', {
+'event_category': 'registration',
+'event_label': 'adblock_detected'
+});
+}
+if (typeof ym !== 'undefined') {
+ym(106839810, 'reachGoal', 'form_blocked');
+}
 }
 }
 } catch (e) {}
@@ -622,9 +682,29 @@ iframe.style.height = newHeight + 'px';
 }
 if (data.type === 'ya-form-submit-success') {
 console.log('✅ Форма успешно отправлена!');
+// Отправка события в аналитику
+if (typeof gtag === 'function') {
+gtag('event', 'form_submit', {
+'event_category': 'registration',
+'event_label': 'success'
+});
+}
+if (typeof ym !== 'undefined') {
+ym(106839810, 'reachGoal', 'form_submit_success');
+}
 }
 if (data.type === 'ya-form-submit-error') {
 console.error('❌ Ошибка отправки формы:', data.error);
+// Отправка события в аналитику
+if (typeof gtag === 'function') {
+gtag('event', 'form_error', {
+'event_category': 'registration',
+'event_label': data.error
+});
+}
+if (typeof ym !== 'undefined') {
+ym(106839810, 'reachGoal', 'form_submit_error');
+}
 }
 } catch (e) {
 console.error('Ошибка обработки сообщения:', e);
@@ -632,6 +712,41 @@ console.error('Ошибка обработки сообщения:', e);
 });
 }
 })();
+
+// Отслеживание кликов по кнопкам этапов
+document.addEventListener('click', function(e) {
+if (e.target.closest('.btn-stage')) {
+const btnType = e.target.closest('.btn-protocol') ? 'protocol' : 'track';
+const stageNum = e.target.closest('.stage-card').querySelector('.stage-title').textContent.match(/\d+/)[0];
+// Отправка в аналитику
+if (typeof gtag === 'function') {
+gtag('event', 'stage_button_click', {
+'event_category': 'stage',
+'event_label': `${btnType}_stage${stageNum}`
+});
+}
+if (typeof ym !== 'undefined') {
+ym(106839810, 'reachGoal', `stage_${btnType}_click`);
+}
+}
+});
+
+// Отслеживание кликов по кнопкам партнёров
+document.addEventListener('click', function(e) {
+if (e.target.closest('.btn-premium, .btn-official, .btn-regional, .btn-technical')) {
+const partnerType = e.target.className.match(/btn-(\w+)/)[1];
+// Отправка в аналитику
+if (typeof gtag === 'function') {
+gtag('event', 'partner_button_click', {
+'event_category': 'partners',
+'event_label': partnerType
+});
+}
+if (typeof ym !== 'undefined') {
+ym(106839810, 'reachGoal', `partner_${partnerType}_click`);
+}
+}
+});
 </script>
 </body>
 </html>
