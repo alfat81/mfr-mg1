@@ -161,6 +161,19 @@ color: white;
 background-color: var(--accent);
 color: var(--primary-dark);
 }
+/* Выделение кнопки Партнёрам */
+.main-nav a.nav-highlight {
+background-color: var(--accent);
+color: var(--primary-dark);
+font-weight: 700;
+box-shadow: 0 4px 10px rgba(240, 185, 11, 0.4);
+border: 2px solid var(--accent);
+}
+.main-nav a.nav-highlight:hover {
+background-color: var(--accent-dark);
+border-color: var(--accent-dark);
+transform: translateY(-2px);
+}
 /* ====================== */
 /* HERO */
 /* ====================== */
