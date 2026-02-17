@@ -1284,3 +1284,15 @@ transform: scale(0);
 background: rgba(255, 255, 255, 0.7);
 pointer-events: none;
 }
+
+/* ====================== */
+/* ДОПОЛНИТЕЛЬНЫЕ СТИЛИ */
+/* ====================== */
+/* Примечание со статистикой в секции "О Кубке" */
+.stats-note {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-top: 1rem;
+  font-style: italic;
+}
