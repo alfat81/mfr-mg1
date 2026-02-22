@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Кубок России по мотоджимхане 2026 | Официальный сайт МФР</title>
-  <meta name="description" content="Официальный сайт Кубка России по фигурному управлению мотоциклом 2026. Календарь этапов, регистрация, регламент и контакты комиссии МФР.">
+  <meta name="description" content="Официальный сайт Кубка России по фигурному управлению мотоциклом 2026. Календарь этапов, регламент и контакты комиссии МФР.">
   <link rel="canonical" href="https://mfr-mg.ru/">
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="styles.css">
   <!-- Open Graph -->
   <meta property="og:title" content="Кубок России по ФУМ 2026">
-  <meta property="og:description" content="Главные соревнования по мотоджимхане. 7 этапов, регистрация открыта.">
+  <meta property="og:description" content="Главные соревнования по мотоджимхане. 7 этапов.">
   <meta property="og:image" content="https://mfr-mg.ru/images/hero-moto.webp">
   <meta property="og:url" content="https://mfr-mg.ru/">
   <meta property="og:type" content="website">
@@ -28,9 +28,11 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-E9E8BXB7CJ');
+    gtag('config', 'G-E9E8BXB7CJ', {
+      'anonymize_ip': true
+    });
   </script>
-  <!-- Yandex.Metrika counter -->
+  <!-- Yandex.Metrika counter (БЕЗ вебвизора) -->
   <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
       m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -39,20 +41,15 @@
       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
     })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=106839810', 'ym');
     ym(106839810, 'init', {
-      ssr: true,
-      webvisor: true,
       clickmap: true,
-      ecommerce: "dataLayer",
-      referrer: document.referrer,
-      url: location.href,
+      trackLinks: true,
       accurateTrackBounce: true,
-      trackLinks: true
+      webvisor: false, // ⚠️ ВЕБВИЗОР ОТКЛЮЧЁН для соответствия 152-ФЗ
+      ecommerce: "dataLayer"
     });
   </script>
   <noscript><div><img src="https://mc.yandex.ru/watch/106839810" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
   <!-- /Yandex.Metrika counter -->
-  <!-- Яндекс.Формы -->
-  <script src="https://forms.yandex.ru/_static/embed.js"></script>
   <!-- Structured Data -->
   <script type="application/ld+json">
   {
@@ -71,6 +68,14 @@
   </script>
 </head>
 <body>
+  <!-- БАННЕР СОГЛАСИЯ НА КУКИ -->
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-container">
+      <p>Сайт использует куки для аналитики и улучшения работы. <a href="/privacy">Подробнее</a></p>
+      <button class="btn-cookie" id="acceptCookies">Понятно</button>
+    </div>
+  </div>
+
   <!-- ШАПКА С НАВИГАЦИЕЙ -->
   <header class="header">
     <div class="container header-container">
@@ -106,7 +111,7 @@
           <div class="timer-item"><span class="minutes">00</span> минут</div>
           <div class="timer-item"><span class="seconds">00</span> секунд</div>
         </div>
-        <a href="#join" class="btn btn-primary">Хочу участвовать</a>
+        <a href="#contacts" class="btn btn-primary">Связаться с организаторами</a>
       </div>
     </section>
 
@@ -434,7 +439,7 @@
             <div class="option-price">От 50 000 ₽</div>
             <a href="#contacts" class="btn btn-technical">Предложить сотрудничество</a>
           </div>
-          <!-- Информационный партнёр (НОВАЯ КАРТОЧКА) -->
+          <!-- Информационный партнёр -->
           <div class="option-card media">
             <div class="option-badge">📰 Информационный</div>
             <div class="option-icon-large">
@@ -481,10 +486,10 @@
       </div>
     </section>
 
-    <!-- КОНТАКТЫ И ЗАЯВКИ -->
+    <!-- КОНТАКТЫ (БЕЗ ФОРМЫ РЕГИСТРАЦИИ) -->
     <section id="contacts" class="section">
       <div class="container">
-        <h2 class="section-title">Контакты и предварительные заявки</h2>
+        <h2 class="section-title">Контакты комиссии</h2>
         <div class="contacts-grid">
           <div class="contact-info">
             <!-- Руководство комиссии -->
@@ -527,33 +532,30 @@
               <i class="fab fa-telegram"></i>
               <div><a href="https://t.me/FUM_MFR" target="_blank">Telegram-бот</a></div>
             </div>
-          </div>
-          <!-- Форма заявки -->
-          <div class="join-form" id="join">
-            <h3>Предварительная регистрация</h3>
-            <p>Заполните форму для участия в Кубке России 2026</p>
-            <div class="form-container">
-              <iframe
-                src="https://forms.yandex.ru/cloud/6991d860493639bacb236b9c/?iframe=1"
-                frameborder="0"
-                name="ya-form-6991d860493639bacb236b9c"
-                class="ya-form-iframe"
-                allow="clipboard-write"
-                loading="lazy"
-                title="Форма предварительной регистрации на Кубок России по ФУМ 2026"
-                id="yaFormIframe">
-              </iframe>
-              <div class="form-fallback" id="formFallback" style="display: none;">
-                <p class="fallback-text">Форма заблокирована расширением браузера</p>
-                <a href="https://forms.yandex.ru/cloud/6991d860493639bacb236b9c/"
-                  target="_blank"
-                  class="btn btn-primary btn-large fallback-btn">
-                  <i class="fas fa-edit"></i> Перейти к форме регистрации
-                </a>
-                <p class="fallback-note">Форма откроется в новом окне. После отправки вы получите подтверждение на указанный email.</p>
+            <!-- Важная информация -->
+            <div class="info-box">
+              <i class="fas fa-info-circle"></i>
+              <div>
+                <strong>Информация для участников:</strong><br>
+                Регистрация на этапы Кубка России 2026 будет открыта позже.<br>
+                Следите за новостями на сайте и в социальных сетях.
               </div>
             </div>
-            <p class="form-note">*Поля, отмеченные звёздочкой (<span class="required">*</span>), обязательны для заполнения</p>
+          </div>
+          <!-- Информация о конфиденциальности -->
+          <div class="privacy-info">
+            <div class="info-card">
+              <i class="fas fa-shield-alt"></i>
+              <h3>Защита персональных данных</h3>
+              <p>На сайте не осуществляется сбор персональных данных пользователей. Контактная информация руководства комиссии размещена в служебных целях для организации соревнований.</p>
+              <a href="/privacy" class="btn btn-secondary">Подробнее о конфиденциальности</a>
+            </div>
+            <div class="info-card">
+              <i class="fas fa-file-contract"></i>
+              <h3>Документы для участников</h3>
+              <p>Все необходимые документы для участия в соревнованиях доступны в разделе «Документы». Скачивайте регламенты, правила и технические требования.</p>
+              <a href="#docs" class="btn btn-primary">Перейти к документам</a>
+            </div>
           </div>
         </div>
       </div>
@@ -575,10 +577,15 @@
         <a href="#structure">Комиссия</a>
         <a href="#partners">Партнёрам</a>
         <a href="#contacts">Контакты</a>
+        <a href="/privacy">Конфиденциальность</a>
       </div>
       <div class="footer-info">
         <p>© 2026 Комиссия по фигурному управлению мотоциклом (мотоджимхане) МФР. Все права защищены.</p>
         <p>Официальный сайт: <a href="http://mfr-mg.ru">mfr-mg.ru</a></p>
+        <p class="footer-legal">
+          <a href="/privacy">Политика обработки персональных данных</a> | 
+          <a href="#contacts">Контакты</a>
+        </p>
       </div>
       <div class="footer-credit">
         <a href="https://vk.com/motogymkhana_nn" target="_blank" class="credit-link">
@@ -633,6 +640,35 @@
       }
     })();
 
+    // Баннер куки
+    (function() {
+      const cookieBanner = document.getElementById('cookieBanner');
+      const acceptBtn = document.getElementById('acceptCookies');
+      
+      if (cookieBanner && acceptBtn) {
+        // Проверяем, было ли уже принято согласие
+        if (!localStorage.getItem('cookiesAccepted')) {
+          cookieBanner.style.display = 'block';
+        }
+        
+        acceptBtn.addEventListener('click', function() {
+          cookieBanner.style.display = 'none';
+          localStorage.setItem('cookiesAccepted', 'true');
+          
+          // Отправка события в аналитику
+          if (typeof gtag === 'function') {
+            gtag('event', 'cookies_accepted', {
+              'event_category': 'privacy',
+              'event_label': 'user_accepted'
+            });
+          }
+          if (typeof ym !== 'undefined') {
+            ym(106839810, 'reachGoal', 'cookies_accepted');
+          }
+        });
+      }
+    })();
+
     // Анимация кнопок
     (function() {
       const buttons = document.querySelectorAll('.btn');
@@ -654,151 +690,6 @@
         });
       });
     })();
-
-    // Проверка блокировки фрейма
-    (function() {
-      const iframe = document.getElementById('yaFormIframe');
-      const fallback = document.getElementById('formFallback');
-      if (iframe && fallback) {
-        setTimeout(() => {
-          try {
-            if (!iframe.contentWindow || iframe.contentWindow.document.body.innerHTML === '') {
-              iframe.style.display = 'none';
-              fallback.style.display = 'block';
-              console.log('Фрейм заблокирован, показываем резервную кнопку');
-              // Отправка события в аналитику
-              if (typeof gtag === 'function') {
-                gtag('event', 'form_blocked', {
-                  'event_category': 'registration',
-                  'event_label': 'adblock_detected'
-                });
-              }
-              if (typeof ym !== 'undefined') {
-                ym(106839810, 'reachGoal', 'form_blocked');
-              }
-            }
-          } catch (e) {
-            iframe.style.display = 'none';
-            fallback.style.display = 'block';
-            console.log('Фрейм заблокирован, показываем резервную кнопку');
-            // Отправка события в аналитику
-            if (typeof gtag === 'function') {
-              gtag('event', 'form_blocked', {
-                'event_category': 'registration',
-                'event_label': 'adblock_detected'
-              });
-            }
-            if (typeof ym !== 'undefined') {
-              ym(106839810, 'reachGoal', 'form_blocked');
-            }
-          }
-        }, 3000);
-        iframe.addEventListener('load', function() {
-          setTimeout(() => {
-            try {
-              if (iframe.contentDocument && iframe.contentDocument.body) {
-                const bodyContent = iframe.contentDocument.body.innerHTML.trim();
-                if (bodyContent === '' || bodyContent.includes('blocked')) {
-                  iframe.style.display = 'none';
-                  fallback.style.display = 'block';
-                  // Отправка события в аналитику
-                  if (typeof gtag === 'function') {
-                    gtag('event', 'form_blocked', {
-                      'event_category': 'registration',
-                      'event_label': 'adblock_detected'
-                    });
-                  }
-                  if (typeof ym !== 'undefined') {
-                    ym(106839810, 'reachGoal', 'form_blocked');
-                  }
-                }
-              }
-            } catch (e) {}
-          }, 500);
-        });
-      }
-    })();
-
-    // Настройка высоты iframe
-    (function() {
-      const iframe = document.querySelector('.ya-form-iframe');
-      if (iframe) {
-        iframe.style.height = '850px';
-        window.addEventListener('message', function(event) {
-          if (!event.origin.includes('yandex.ru')) return;
-          try {
-            const data = typeof event.data === 'string' ? JSON.parse(event.data) : event.data;
-            if (data.type === 'ya-form-resize' || data.type === 'ya-form-height') {
-              const newHeight = data.height || 850;
-              iframe.style.height = newHeight + 'px';
-            }
-            if (data.type === 'ya-form-submit-success') {
-              console.log('✅ Форма успешно отправлена!');
-              // Отправка события в аналитику
-              if (typeof gtag === 'function') {
-                gtag('event', 'form_submit', {
-                  'event_category': 'registration',
-                  'event_label': 'success'
-                });
-              }
-              if (typeof ym !== 'undefined') {
-                ym(106839810, 'reachGoal', 'form_submit_success');
-              }
-            }
-            if (data.type === 'ya-form-submit-error') {
-              console.error('❌ Ошибка отправки формы:', data.error);
-              // Отправка события в аналитику
-              if (typeof gtag === 'function') {
-                gtag('event', 'form_error', {
-                  'event_category': 'registration',
-                  'event_label': data.error
-                });
-              }
-              if (typeof ym !== 'undefined') {
-                ym(106839810, 'reachGoal', 'form_submit_error');
-              }
-            }
-          } catch (e) {
-            console.error('Ошибка обработки сообщения:', e);
-          }
-        });
-      }
-    })();
-
-    // Отслеживание кликов по кнопкам этапов
-    document.addEventListener('click', function(e) {
-      if (e.target.closest('.btn-stage')) {
-        const btnType = e.target.closest('.btn-protocol') ? 'protocol' : 'track';
-        const stageNum = e.target.closest('.stage-card').querySelector('.stage-title').textContent.match(/\d+/)[0];
-        // Отправка в аналитику
-        if (typeof gtag === 'function') {
-          gtag('event', 'stage_button_click', {
-            'event_category': 'stage',
-            'event_label': `${btnType}_stage${stageNum}`
-          });
-        }
-        if (typeof ym !== 'undefined') {
-          ym(106839810, 'reachGoal', `stage_${btnType}_click`);
-        }
-      }
-    });
-
-    // Отслеживание кликов по кнопкам партнёров
-    document.addEventListener('click', function(e) {
-      if (e.target.closest('.btn-premium, .btn-official, .btn-regional, .btn-technical, .btn-media')) {
-        const partnerType = e.target.className.match(/btn-(\w+)/)[1];
-        // Отправка в аналитику
-        if (typeof gtag === 'function') {
-          gtag('event', 'partner_button_click', {
-            'event_category': 'partners',
-            'event_label': partnerType
-          });
-        }
-        if (typeof ym !== 'undefined') {
-          ym(106839810, 'reachGoal', `partner_${partnerType}_click`);
-        }
-      }
-    });
   </script>
 </body>
 </html>
