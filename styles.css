@@ -734,6 +734,7 @@ h3 {
 .option-card.official .option-badge { background: linear-gradient(135deg, #4caf50, #2e7d32); }
 .option-card.regional .option-badge { background: linear-gradient(135deg, #2196f3, #1565c0); }
 .option-card.technical .option-badge { background: linear-gradient(135deg, #9c27b0, #6a1b9a); }
+.option-card.media .option-badge { background: linear-gradient(135deg, #00bcd4, #00838f); }
 /* Иконка опции */
 .option-icon-large {
   width: 100px;
@@ -769,6 +770,10 @@ h3 {
 .option-card.technical .option-icon-large {
   background: linear-gradient(135deg, #9c27b0, #6a1b9a);
   border: 5px solid rgba(106, 27, 154, 0.3);
+}
+.option-card.media .option-icon-large {
+  background: linear-gradient(135deg, #00bcd4, #00838f);
+  border: 5px solid rgba(0, 131, 143, 0.3);
 }
 /* Заголовок и описание */
 .option-title {
@@ -864,6 +869,17 @@ h3 {
   background: linear-gradient(135deg, #8e24aa, #4a148c);
   transform: translateY(-3px);
   box-shadow: 0 15px 35px rgba(106, 27, 154, 0.6);
+}
+/* Кнопка информационного партнёра */
+.btn-media {
+  background: linear-gradient(135deg, #00bcd4, #00838f);
+  color: white;
+  box-shadow: 0 8px 25px rgba(0, 131, 143, 0.4);
+}
+.btn-media:hover {
+  background: linear-gradient(135deg, #00acc1, #006064);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(0, 131, 143, 0.6);
 }
 /* CTA блок */
 .partners-cta {
