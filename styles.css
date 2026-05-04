@@ -427,8 +427,14 @@ h3 {
   font-size: 0.95rem;
 }
 .stage-organizer,
-.stage-phone {
+.stage-phone,
+.stage-email {
   font-size: 0.9rem;
+}
+.stage-email {
+  color: var(--text-light);
+  font-size: 0.85rem;
+  margin-top: 4px;
 }
 /* Кнопки этапа */
 .stage-buttons {
