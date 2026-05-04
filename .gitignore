@@ -1,2 +1,1 @@
-.gitignore
-temp_repo/
+Nothing should be ignored based on the provided file changes, as only source files (`index.html`, `styles.css`) were modified without any build artifacts, dependencies, or temporary files present in the change list.
