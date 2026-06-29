@@ -1,21 +1,14 @@
-# Robots.txt для mfr-mg.ru
-# Комиссия по фигурному управлению мотоциклом МФР
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
 
 User-agent: *
 Allow: /
-Allow: /index.html
-Allow: /images/
-Allow: /documents/
-Allow: /styles.css
-
-# Запрет служебных путей
-Disallow: /admin/
-Disallow: /private/
-Disallow: /*.log$
-Disallow: /*.tmp$
-
-# Ссылка на sitemap
-Sitemap: https://mfr-mg.ru/sitemap.xml
-
-# Crawl-delay (опционально)
-Crawl-delay: 1
